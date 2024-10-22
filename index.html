@@ -16,7 +16,13 @@
         href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+        }
+
         body {
+            display: flex;
+            flex-direction: column;
             background-color: #FFE2DB;
         }
 
@@ -44,14 +50,18 @@
 
         .subject {
             margin-top: 20px;
-            font-size: 80px;
             font-family: 'Arvo', serif;
-            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             margin-left: 45px;
             color: #755F9C;
+        }
+
+        .subject h3 {
+            font-size: 32px;
+            font-weight: bold;
+
         }
 
         .projects-reveal {
@@ -140,12 +150,13 @@
         }
 
         .polaroid h4 {
-            font-size: 20px;
-            color: #2F383A;
+            font-size: 24px;
+            color: #8D89C7;
+            font-weight: bold;
         }
 
         .polaroid .description {
-            font-size: 14px;
+            font-size: 18px;
             color: #2F383A;
         }
 
@@ -158,10 +169,10 @@
             margin-top: 40px;
             text-align: center;
             font-family: 'Crimson Text', serif;
-            font-size: 16px;
+            font-size: 18px;
             color: #FFE2DB;
             background-color: #755F9C;
-            padding: 20px;
+            padding: 15px;
             width: 100%;
             position: relative;
             bottom: 0;
@@ -178,8 +189,8 @@
     <div class="container-fluid">
         <img src="images/catpfp.jpg" alt="pfp">
         <div class="info">
-            <h1 style="font-size: 48px">Ma. Loreen M. Marajas</h1>
-            <h2 style="font-size: 32px">BSIT 3-1</h2>
+            <h1 style="font-size: 60px" >Ma. Loreen M. Marajas</h1>
+            <h2 style="font-size: 48px">BSIT 3-1</h2>
         </div>
     </div>
 
