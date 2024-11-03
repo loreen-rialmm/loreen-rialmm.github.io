@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naruto API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+            font-family: 'NarutoFont', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'NarutoFont';
+            src: url('njnaruto.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icon {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card:hover {
+            background-color: #fcad5dd6;
+            color: #2F2F2F;
+        }
+
+        .learnMoreButton {
+            margin: 15px 0;
+            color: #fcad5dd6;
+        }
+
+        .fullscreenSection {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F2F2F;
+        }
+
+        .fullscreenSection h1 {
+            font-size: 64px;
+            background-color: #bebebed6;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'NarutoFont', sans-serif;
+        }
+
+        .aboutSection {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .aboutContent {
+            background-color: #FFED8C;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+        }
+
+        .aboutCard {
+            margin: 20px;
+        }
+
+        .worksSection {
+            background-image: url('https://narutodb.xyz/cards/villages.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            color: #bebebed6;
+        }
+
+        .nav-item {
+            font-family: 'NarutoFont', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .footer {
+            text-align: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #FFED8C;
+            color: #2F2F2F;
+            font-family: Verdana, sans-serif;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light" id="body">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand" style="font-size: 40px; font-family: 'NarutoFont', sans-serif;">NARUTO</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <div style="cursor: pointer;" onclick="changeColorMode()" class="d-flex align-items-center">
+                            <label class="form-check-label" id="btnColor" style="margin-left: 5px;">Dark Mode</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="fullscreenSection" style="background-image: url('https://narutodb.xyz/cards/characters.jpg');">
+        <h1>THE WAY OF THE NINJA</h1>
+    </section>
+
+    <section id="about" class="aboutSection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <img src="https://narutodb.xyz/cards/teams.webp" alt="Background Image of About"
+                        class="img-fluid w-100">
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="aboutContent">
+                        <div class="card aboutCard">This website was developed as part of an activity to enhance our API
+                            skills.
+                            By building
+                            and integrating interactive features, we aimed to deepen our understanding of API
+                            functionalities and
+                            improve our ability to create responsive, data-driven applications. It provides information
+                            on Naruto
+                            characters, clans, tailed beasts, and more, inviting you to discover the world of Naruto and
+                            explore the
+                            legacy of the ninja way.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col text-center">
+                    <a href="https://narutodb.xyz/docs" class="learnMoreButton"
+                        style="display: inline-block; padding: 10px; font-size: 24px; font-weight: bold; border-radius: 10px; font-family: NarutoFont, sans-serif;">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="worksSection">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col mt-3">
+                    <a href="character.html">
+                        <div class="card p-3 text-center d-flex flex-column align-items-center">
+                            <svg class="icon" viewBox="0 0 26 7">
+                                <path
+                                    d="M16.172,7,26,3.412,16.213,0l-4,2.66H5.692A2.913,2.913,0,0,0,2.912.527,2.942,2.942,0,0,0,0,3.5,2.942,2.942,0,0,0,2.912,6.473,2.913,2.913,0,0,0,5.692,4.34h6.431ZM2.912,4.792a1.293,1.293,0,0,1,0-2.584,1.293,1.293,0,0,1,0,2.584">
+                                </path>
+                            </svg>
+                            <div class="h3">
+                                Characters
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col mt-3">
+                    <a href="clans/clan.html">
+                        <div class="card p-3 text-center d-flex flex-column align-items-center">
+                            <svg class="icon" viewBox="0 0 26 7">
+                                <path
+                                    d="M16.172,7,26,3.412,16.213,0l-4,2.66H5.692A2.913,2.913,0,0,0,2.912.527,2.942,2.942,0,0,0,0,3.5,2.942,2.942,0,0,0,2.912,6.473,2.913,2.913,0,0,0,5.692,4.34h6.431ZM2.912,4.792a1.293,1.293,0,0,1,0-2.584,1.293,1.293,0,0,1,0,2.584">
+                                </path>
+                            </svg>
+                            <div class="h3">
+                                Clans
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col mt-3">
+                    <a href="tailedBeasts/tailedbeast.html">
+                        <div class="card p-3 text-center d-flex flex-column align-items-center">
+                            <svg class="icon" viewBox="0 0 26 7">
+                                <path
+                                    d="M16.172,7,26,3.412,16.213,0l-4,2.66H5.692A2.913,2.913,0,0,0,2.912.527,2.942,2.942,0,0,0,0,3.5,2.942,2.942,0,0,0,2.912,6.473,2.913,2.913,0,0,0,5.692,4.34h6.431ZM2.912,4.792a1.293,1.293,0,0,1,0-2.584,1.293,1.293,0,0,1,0,2.584">
+                                </path>
+                            </svg>
+                            <div class="h3">
+                                Tailed Beasts
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col mt-3">
+                    <a href="akatsuki/akatsuki.html">
+                        <div class="card p-3 text-center d-flex flex-column align-items-center">
+                            <svg class="icon" viewBox="0 0 26 7">
+                                <path
+                                    d="M16.172,7,26,3.412,16.213,0l-4,2.66H5.692A2.913,2.913,0,0,0,2.912.527,2.942,2.942,0,0,0,0,3.5,2.942,2.942,0,0,0,2.912,6.473,2.913,2.913,0,0,0,5.692,4.34h6.431ZM2.912,4.792a1.293,1.293,0,0,1,0-2.584,1.293,1.293,0,0,1,0,2.584">
+                                </path>
+                            </svg>
+                            <div class="h3">
+                                Akatsuki
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row mt-2">
+                    <div class="col mt-3">
+                        <a href="search/search.html">
+                            <div class="card p-3 text-center d-flex flex-column align-items-center">
+                                <svg class="icon" viewBox="0 0 26 7">
+                                    <path
+                                        d="M16.172,7,26,3.412,16.213,0l-4,2.66H5.692A2.913,2.913,0,0,0,2.912.527,2.942,2.942,0,0,0,0,3.5,2.942,2.942,0,0,0,2.912,6.473,2.913,2.913,0,0,0,5.692,4.34h6.431ZM2.912,4.792a1.293,1.293,0,0,1,0-2.584,1.293,1.293,0,0,1,0,2.584">
+                                    </path>
+                                </svg>
+                                <div class="h3">
+                                    Search
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Loreen Marajas | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        var colorMode = "light";
+        function changeColorMode() {
+            if (colorMode === "light") {
+                document.getElementById("body").setAttribute("data-bs-theme", "dark");
+                document.getElementById("btnColor").innerHTML = "Light Mode";
+                colorMode = "dark";
+            } else {
+                document.getElementById("body").setAttribute("data-bs-theme", "light");
+                document.getElementById("btnColor").innerHTML = "Dark Mode";
+                colorMode = "light";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
