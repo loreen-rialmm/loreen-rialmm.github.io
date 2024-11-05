@@ -15,23 +15,23 @@ const loadAkatsukiMembers = async () => {
         const debutAnime = member.debut?.anime || "Debut Unknown";
 
         const akatsukiDetails = `
-        <div class="card infoMemberDetails" style="padding: 15px; border-radius: 5px;">
-            <div class="card debutCard mb-1" style="padding: 15px; background-color: #c5d2ce;">
+        <div class="card infoMemberDetails">
+            <div class="card debutCard mb-1">
                 <h5>Debut (Anime): <span style="font-weight: normal;">` + debutAnime + `</span></h5>
             </div>
-            <div class="card jutsuCard mb-1" style="padding: 15px; background-color: #b3c6b4;">
+            <div class="card jutsuCard mb-1">
                 <h5>Jutsu: <span style="font-weight: normal;">` + jutsu + `</span></h5>
             </div>
-            <div class="card natureTypeCard mb-1" style="padding: 15px; background-color: #8eb29a;">
+            <div class="card natureTypeCard mb-1">
                 <h5>Nature Type: <span style="font-weight: normal;">` + natureType + `</span></h5>
             </div>
-            <div class="card statusCard mb-1" style="padding: 15px; background-color: #7bad9f;">
+            <div class="card statusCard mb-1">
                 <h5>Status: <span style="font-weight: normal;">` + status + `</span></h5>
             </div>
-            <div class="card occupationCard mb-1" style="padding: 15px; background-color: #6a9395;">
+            <div class="card occupationCard mb-1">
                 <h5>Occupation: <span style="font-weight: normal;">` + occupation + `</span></h5>
             </div>
-            <div class="card affiliationCard mb-1" style="padding: 15px; background-color: #5d7680;">
+            <div class="card affiliationCard mb-1">
                 <h5>Affiliation: <span style="font-weight: normal;">` + affiliation + `</span></h5>
             </div>
         </div>
@@ -40,7 +40,7 @@ const loadAkatsukiMembers = async () => {
         const akatsukiCardHtml = `
         <div class="col-md-4 mb-4" data-name="` + member.name + `" data-img="` + member.images[0] + `">
             <div class="card cardDetails">
-                <img src="` + member.images[0] + `" class="card-img-top text-center" style="padding:10px; color: #2f2f2f;" alt="` + member.name + `">
+                <img src="` + member.images[0] + `" class="card-img-top text-center akatsukiImage" alt="` + member.name + `">
                 <div class="card-body">
                     <h4 class="card-title text-center nameCard">` + member.name + `</h4>
                     ` + akatsukiDetails +`
