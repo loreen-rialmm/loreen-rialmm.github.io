@@ -19,8 +19,8 @@ const loadClanTypes = async (page) => {
         clanContainer.innerHTML += `
         <div class="col-6 col-sm-6 col-md-4 col-lg-3">
             <a href="#" onclick="loadClanMembers(` + clanId + `)">
-                <div class="card my-3 cardClanName" style="font-weight: bold;">
-                    <div class="card-title text-center">` + clanName + `</div>
+                <div class="card my-3 cardClanName">
+                    <div class="text-center">` + clanName + `</div>
                 </div>
             </a>
         </div>
@@ -40,11 +40,11 @@ const loadClanMembers = async (clanId) => {
     clanData.characters.forEach(character => {
         membersHtml += `
         <div class="col-6 col-md-4 my-3">
-            <div class="card character-card">
-                <img src="` + character.images[0] + `" class="card-img-top" alt="` + character.name + `">
-                <div class="card-body">
-                    <h5 class="card-title text-center" style="font-size: 24px; font-weight: bold;">` + character.name + `</h5>
-                    <p class="card-text text-center">Debut: ` + (character.debut && character.debut.anime ? character.debut.anime : 'N/A') + `</p>
+            <div class="card characterCard">
+                <img src="` + character.images[0] + `" class="characterImage text-center" alt="` + character.name + `">
+                <div class="characterInfoContainer">
+                    <h5 class="characterName text-center">` + character.name + `</h5>
+                    <p class="text-center">Debut: ` + (character.debut && character.debut.anime ? character.debut.anime : 'N/A') + `</p>
                 </div>
             </div>
         </div>
@@ -107,28 +107,6 @@ const prevPage = () => {
 }
 
 loadClanTypes(currentPage);
-
-document.addEventListener('mouseover', function (event) {
-    if (event.target.closest('.character-card')) {
-        const hoveredCard = event.target.closest('.character-card');
-        const allCards = document.querySelectorAll('.character-card');
-
-        allCards.forEach(card => {
-            if (card !== hoveredCard) {
-                card.classList.add('blur');
-            }
-        });
-    }
-});
-
-document.addEventListener('mouseout', function (event) {
-    if (event.target.closest('.character-card')) {
-        const allCards = document.querySelectorAll('.character-card');
-
-        allCards.forEach(card => card.classList.remove('blur'));
-    }
-});
-
 
 var colorMode = "light";
 function changeColorMode() {

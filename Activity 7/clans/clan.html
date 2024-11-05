@@ -15,8 +15,7 @@
 <body data-bs-theme="light" id="body">
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a href="../index.html" class="navbar-brand"
-                style="font-size: 40px; font-family: 'NarutoFont', sans-serif;">NARUTO_CLANS</a>
+            <a href="../index.html" class="navbar-brand clanLogo">NARUTO_CLANS</a>
             <!-- Dark Mode Toggle Button -->
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="darkModeToggle" onclick="changeColorMode()">
@@ -30,11 +29,10 @@
     </div>
 
     <div class="container d-flex justify-content-center my-4">
-        <button id="backButton"
-            style="display: none; padding: 10px; font-size: 24px; font-weight: bold; border-radius: 10px; font-family: NarutoFont, sans-serif;"
-            onclick="goBack()">Back</button>
+        <button id="backButton" class="backButton" onclick="goBack()">Back</button>
     </div>
-    <div id="clanDetails" style="display: none;"></div>
+    
+    <div id="clanDetails" class="clanDetails"></div>
 
     <div class="container">
         <div class="row my-5">
