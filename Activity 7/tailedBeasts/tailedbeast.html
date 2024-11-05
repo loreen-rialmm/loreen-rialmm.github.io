@@ -14,8 +14,7 @@
 <body data-bs-theme="light" id="body">
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a href="../index.html" class="navbar-brand"
-                style="font-size: 40px; font-family: 'NarutoFont', sans-serif;">NARUTO_TAILED BEASTS</a>
+            <a href="../index.html" class="navbarBrand">NARUTO_TAILED BEASTS</a>
             <!-- Dark Mode Toggle Button -->
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="darkModeToggle" onclick="changeColorMode()">
@@ -24,7 +23,7 @@
         </div>
     </nav>
 
-    <h1 class="my-3 text-center" style="font-family: 'NarutoFont', sans-serif; font-size: 48px;">Tailed Beasts</h1>
+    <h1 class="my-3 text-center title">Tailed Beasts</h1>
 
     <div class="container">
         <div id="tailedBeastContainer" class="row tailedBeastContainer"></div>
@@ -43,48 +42,32 @@
             tailedBeasts.forEach(beast => {
                 var beastDetails =
                     '<div class="col-md-4 mb-4">' +
-                    '<div class="card tailed-beast-card hover-effect">' +
-                    '<div class="card d-flex align-items-stretch" style="margin: 20px;">' +
-                    '<img src="' + beast.images[0] + '" class="card-img-top" alt="' + beast.name + '" onclick="createRipple(event, this.parentNode.parentNode)">' +
-                    '</div>' +
-                    '<div class="card-body">' +
-                    '<div class="d-flex justify-content-between" style="font-weight: bold; padding: 10px; margin: 0;">' +
-                    '<h5 class="card-title" style="font-weight: bold; font-size: 30px;">' + beast.name + '</h5>' +
-                    '<p class="card-text">ID: ' + beast.id + '</p>' +
-                    '</div>' +
-                    '<hr>' +
-                    '</div>' +
-                    '<div class="cardInfoDetails" style="padding: 20px; margin: 0;">' +
-                    '<p><strong>Jinchūriki:</strong> ' + (beast.personal?.jinchūriki ? beast.personal.jinchūriki.join(", ") : "N/A") + '</p>' +
-                    '<hr>' +
-                    '<p><strong>Unique Traits:</strong> ' + (beast.uniqueTraits ? beast.uniqueTraits.join(", ") : "N/A") + '</p>' +
-                    '<hr>' +
-                    '</div>' +
-                    '</div>' +
+                        '<div class="card tailedBeastCard" onclick="addCardColor(this)">' +
+                            '<div class="card d-flex align-items-stretch">' +
+                                '<img src="' + beast.images[0] + '" alt="' + beast.name + '">' +
+                            '</div>' +
+                            '<div class="card-body">' +
+                                '<div class="d-flex justify-content-between infoBeastContainer">' +
+                                    '<h5 class="card-title beastName">' + beast.name + '</h5>' +
+                                    '<p class="beastID">ID: ' + beast.id + '</p>' +
+                                '</div>' +
+                                '<hr>' +
+                            '</div>' +
+                            '<div class="cardInfoDetails">' +
+                                '<p><strong>Jinchūriki:</strong> ' + (beast.personal?.jinchūriki ? beast.personal.jinchūriki.join(", ") : "N/A") + '</p>' +
+                                '<hr>' +
+                                '<p><strong>Unique Traits:</strong> ' + (beast.uniqueTraits ? beast.uniqueTraits.join(", ") : "N/A") + '</p>' +
+                                '<hr>' +
+                            '</div>' +
+                        '</div>' +
                     '</div>';
 
                 tailedBeastContainer.innerHTML += beastDetails;
             });
         }
 
-        function createRipple(event, card) {
-            var img = event.currentTarget;
-            var ripple = document.createElement("span");
-
-            var diameter = Math.max(img.clientWidth, img.clientHeight);
-            var radius = diameter / 2;
-
-            ripple.style.width = ripple.style.height = diameter + 'px';
-            ripple.style.left = (event.clientX - img.getBoundingClientRect().left - radius) + 'px';
-            ripple.style.top = (event.clientY - img.getBoundingClientRect().top - radius) + 'px';
-            ripple.classList.add("ripple");
-
-            img.parentElement.appendChild(ripple);
-            ripple.addEventListener("animationend", function () {
-                ripple.remove();
-            });
-
-            card.style.backgroundColor = "rgba(244, 140, 37, 0.84)"; 
+        function addCardColor(card) {
+            card.style.backgroundColor = '#fcad5dd6';
         }
 
         loadTailedBeasts();
