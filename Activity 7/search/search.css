@@ -1,8 +1,3 @@
-a {
-    text-decoration: none;
-    font-family: 'NarutoFont', sans-serif;
-}
-
 @font-face {
     font-family: 'NarutoFont';
     src: url('../njnaruto.ttf') format('truetype');
@@ -10,44 +5,32 @@ a {
     font-style: normal;
 }
 
-.search {
-    position: relative;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-.search svg {
-    position: absolute;
-    left: 15px;
-    color: #888;
-    font-size: 20px;
+a {
+    text-decoration: none;
+    font-family: 'NarutoFont', sans-serif;
 }
 
-.search input {
-    height: 60px;
-    text-indent: 45px;
-    border: 2px solid #d6d4d4;
-    width: 100%;
-    outline: none;
-    border-radius: 0;
-    padding-right: 100px;
-}
-
-.search button {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    border: none;
-    padding: 0 20px;
-    font-size: 16px;
-    border-radius: 0;
+body[data-bs-theme="dark"] .noInfoCard {
+    color: #f8e4d0;
 }
 
 .container {
     padding: 20px;
+}
+
+.data {
+    color: #d8c0f3;
+    transition: color 0.3s ease;
 }
 
 .img-container img {
@@ -70,17 +53,6 @@ a {
     background-color: #ffbf83;
 }
 
-.label {
-    font-weight: bold;
-    color: #f8e4d0;
-    margin-right: 10px;
-}
-
-.data {
-    color: #d8c0f3;
-    transition: color 0.3s ease;
-}
-
 .infoCard:hover .label {
     color: #360072;
 }
@@ -89,12 +61,54 @@ a {
     color: #360072;
 }
 
+.label {
+    font-weight: bold;
+    color: #f8e4d0;
+    margin-right: 10px;
+}
+
 .noInfoCard {
     text-align: center;
     color: #360072;
     font-size: 36px;
     font-weight: bolder;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.search input {
+    height: 60px;
+    text-indent: 45px;
+    border: 2px solid #d6d4d4;
+    width: 100%;
+    outline: none;
+    border-radius: 0;
+    padding-right: 100px;
+}
+
+.search svg {
+    position: absolute;
+    left: 15px;
+    color: #888;
+    font-size: 20px;
 }
 
 .ticker {
@@ -115,16 +129,7 @@ a {
     flex-shrink: 0;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-body[data-bs-theme="dark"] .noInfoCard {
-    color: #f8e4d0;
+.title {
+    font-family: 'NarutoFont', sans-serif; 
+    font-size: 48px;
 }
