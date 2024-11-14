@@ -4,232 +4,602 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Website</title>
+    <title>Loreen's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
-        html, body {
-            height: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        html,
         body {
-            display: flex;
-            flex-direction: column;
-            background-color: #FFE2DB;
+            min-height: 100%;
+            overflow-x: hidden;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 500;
+            /* background: #ecaddf; */
         }
 
-        .container-fluid {
+        #splash {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             align-items: center;
-            padding: 20px;
-            background-color: #8D89C7;
-            color: #FFE2DB;
-            flex-grow: 1;
+            justify-content: center;
         }
 
-        .container-fluid img {
-            width: 160px;
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 5px;
+        }
+
+        #title {
+            color: #F4EBCF;
+            text-shadow: 10px 10px #ae2893;
+        }
+
+        .aboutPic {
+            max-width: 100%;
             height: auto;
-            border-radius: 100px;
-            margin-left: 10px;
+            border-radius: 10%;
+            transition: opacity 0.5 ease;
         }
 
-        .info {
-            margin-left: 40px;
-            font-family: 'Crimson Text', serif;
-            font-weight: 700;
-        }
-
-        .subject {
-            margin-top: 20px;
-            font-family: 'Arvo', serif;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-left: 45px;
-            color: #755F9C;
-        }
-
-        .subject h3 {
+        .aboutTitle {
             font-size: 32px;
             font-weight: bold;
-
-        }
-
-        .projects-reveal {
-            margin-left: 10px;
-            display: inline-block;
-        }
-
-        .projects-reveal span {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .subject:hover .projects-reveal span {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .projects-reveal span:nth-child(1) {
-            transition-delay: 0.1s;
-        }
-
-        .projects-reveal span:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-
-        .projects-reveal span:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-
-        .projects-reveal span:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-
-        .projects-reveal span:nth-child(5) {
-            transition-delay: 0.5s;
-        }
-
-        .projects-reveal span:nth-child(6) {
-            transition-delay: 0.6s;
-        }
-
-        .projects-reveal span:nth-child(7) {
-            transition-delay: 0.7s;
-        }
-
-        .projects-reveal span:nth-child(8) {
-            transition-delay: 0.8s;
-        }
-
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-
-        .polaroid {
-            background-color: #D9A7C6;
-            padding: 10px;
-            width: 220px;
-            height: 300px;
-            text-align: center;
-            font-family: 'Arvo', serif;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            margin: 10px;
-            transition: transform 0.2s, box-shadow 0.3s;
-        }
-
-        .polaroid img {
-            width: 200px;
-            height: 180px;
-            object-fit: cover;
             margin-bottom: 10px;
-            border-radius: 5px;
+            color: #ae2893;
         }
 
-        .polaroid h4 {
-            font-size: 24px;
-            color: #8D89C7;
+        .aboutInfo {
+            font-family: "Roboto Mono", serif;
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 70px;
+                letter-spacing: 4px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 50px;
+                letter-spacing: 3px;
+            }
+
+            .cardHidden {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 35px;
+                letter-spacing: 2px;
+            }
+
+            .photoshopCards {
+                flex-direction: column;
+            }
+
+            .cardHidden {
+                width: 100%;
+            }
+        }
+
+        .socials {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .socials li {
+            margin: 0 10px;
+        }
+
+        .text-caps-small {
+            color: #615d59;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 14px;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
-        .polaroid .description {
-            font-size: 18px;
-            color: #2F383A;
+        .text-caps-small i {
+            font-size: 24px;
         }
 
-        .polaroid:hover {
-            transform: scale(1.05);
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+        .text-caps-small:hover {
+            color: #ae2893;
+        }
+
+        .footerCopyright {
+            color: #ae2893;
+            font-family: Rubik, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
         }
 
         footer {
-            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
             text-align: center;
-            font-family: 'Crimson Text', serif;
-            font-size: 18px;
-            color: #FFE2DB;
-            background-color: #755F9C;
-            padding: 15px;
-            width: 100%;
-            position: relative;
-            bottom: 0;
+            background-color: #d4d3d2;
+            /* margin-top: 10px; */
         }
 
-        a {
-            text-decoration: none !important;
-            color: inherit;
+        .container-fluid {
+            width: 100%;
+            padding: 0;
         }
+
+        .footerContent {
+            margin-bottom: 10px;
+        }
+
+        .footerTitle {
+            font-size: 18px;
+            color: #ae2893;
+        }
+
+        .skillsContainer {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: antiquewhite;
+            margin: 30px 20px 20px 20px;
+            border-radius: 10px;
+        }
+
+        .skillsTitle {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ae2893;
+        }
+
+        .card {
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3 ease, box-shadow 0.3 ease;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background-color: #c780ca;
+            color: #F4EBCF;
+        }
+
+        .photoshopCards,
+        .traditionalCards {
+            display: none;
+            margin-top: 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .photoshopCards.visible,
+        .traditionalCards.visible {
+            display: flex;
+        }
+
+
+        .cardHidden img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .cardHidden {
+            width: 300px;
+            margin: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .projectLink {
+            color: inherit;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 
-<body>
-    <div class="container-fluid">
-        <img src="images/catpfp.jpg" alt="pfp">
-        <div class="info">
-            <h1 style="font-size: 60px" >Ma. Loreen M. Marajas</h1>
-            <h2 style="font-size: 48px">BSIT 3-1</h2>
+<body id="body">
+    <nav class="navbar navbar-expand-lg bg-body tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logoIcon.png" width="90" height="30" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse container" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <div style="cursor: pointer;" onclick="changeColorMode()" class="d-flex align-items-center">
+                            <label class="form-check-label" id="btnColor" style="margin-left: 5px;">Dark</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="splash">
+        <h1 id="title">Loreen</h1>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="imgProfileContainer">
+                    <img src="images/aboutPic.jpg" class="aboutPic" alt="Profile Image"
+                        onmouseover="this.src='images/aboutPic2.jpg'" onmouseout="this.src='images/aboutPic.jpg'">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="aboutTitle text-center">ABOUT ME</div>
+                <div class="aboutInfo text-center">Hello and welcome! I’m Loreen Marajas, an IT student from the Polytechnic
+                    University of the Philippines - Sto. Tomas Campus. My journey in web development is fueled
+                    by a passion for crafting interactive, engaging digital experiences. Driven by a creative
+                    vision, I focus on designing websites that are both visually striking and highly functional,
+                    making sure each one delivers a smooth, intuitive user experience. Each project I work on is a
+                    step forward in my goal of mastering both front-end and back-end development, with a strong
+                    focus on staying current with the latest trends and technologies. Explore my portfolio to see
+                    the projects that have defined my skills along the way, and let’s work together to bring
+                    something truly inspiring to life!
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="subject">
-        <h3>Web Development</h3>
-        <h3 class="projects-reveal">
-            <span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
-        </h3>
+
+    <div class="skillsContainer">
+        <h2 class="skillsTitle">A Glimpse Into MY Creative Skills and Projects</h2>
+        <div class="cardContainer">
+            <div class="card" id="photoshopCard" onclick="showPhotoshopCards()">
+                <h3 class="cardTitle">Photoshop</h3>
+                <div id="photoshopCards" class="photoshopCards">
+                    <div class="cardHidden">
+                        <img src="images/ps1.jpg" class="cardImage">
+                        <div class="descriptionCard"> Disintegration Effect
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/ps2.jpg" class="cardImage">
+                        <div class="descriptionCard"> Out of Bounds
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/ps3.jpg" class="cardImage">
+                        <div class="descriptionCard"> Watercolor Effect
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/ps4.jpg" class="cardImage"> Hamlet
+                        <div class="descriptionCard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="traditionalCard" onclick="showTraditionalCards()">
+                <h3 class="cardTitle">Traditional</h3>
+                <div id="traditionalCards" class="traditionalCards">
+                    <div class="cardHidden">
+                        <img src="images/trad1.jpg" class="cardImage">
+                        <div class="descriptionCard"> Daisy
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/trad2.jpg" class="cardImage">
+                        <div class="descriptionCard"> I bet on losing Dogs
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/trad3.jpg" class="cardImage">
+                        <div class="descriptionCard"> Bags
+                        </div>
+                    </div>
+                    <div class="cardHidden">
+                        <img src="images/trad4.jpg" class="cardImage"> Snooze
+                        <div class="descriptionCard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="cardTitle" onclick="toggleDigitalSection()">Digital</h3>
+
+                <div id="digitalSection" style="display: none; margin-bottom: 20px;">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <!-- Carousel -->
+                                <div id="carouselDigital1" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/digArt1.jpg" class="d-block w-100" alt="First Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt2.jpg" class="d-block w-100" alt="Second Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt3.jpg" class="d-block w-100" alt="Third Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt4.jpg" class="d-block w-100" alt="Fourth Image">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselDigital1" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselDigital1" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Meow</h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <!-- Carousel -->
+                                <div id="carouselDigital2" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/digArt5.jpg" class="d-block w-100" alt="First Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt6.jpg" class="d-block w-100" alt="Second Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt7.jpg" class="d-block w-100" alt="Third Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt8.jpg" class="d-block w-100" alt="Fourth Image">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselDigital2" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselDigital2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Mark</h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <!-- Carousel -->
+                                <div id="carouselDigital3" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/digArt9.jpg" class="d-block w-100" alt="First Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt10.jpg" class="d-block w-100" alt="Second Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt11.jpg" class="d-block w-100" alt="Third Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt12.jpg" class="d-block w-100" alt="Fourth Image">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselDigital3" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselDigital3" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Saiki</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <!-- Carousel -->
+                                <div id="carouselDigital4" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/digArt13.jpg" class="d-block w-100" alt="First Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt14.jpg" class="d-block w-100" alt="Second Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt15.jpg" class="d-block w-100" alt="Third Image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/digArt16.jpg" class="d-block w-100" alt="Fourth Image">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselDigital4" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselDigital4" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Haru</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="cardTitle">
+                    <a href="projects.html" class="projectLink">Projects</a>
+                </h3>
+            </div>
+        </div>
     </div>
 
-    <div class="projects">
-        <a href="Activity 4/project1.html" class="polaroid">
-            <img src="images/imgProj1.jpeg" alt="Project 1">
-            <h4>Project 1</h4>
-            <p class="description">Activity 4: HUAWEI MateBook D14</p>
-        </a>
-
-        <a href="Activity 5/index.html" class="polaroid">
-            <img src="images/imgProj2.png" alt="Project 2">
-            <h4>Project 2</h4>
-            <p class="description">Activity 5: Welcome to Japan!</p>
-        </a>
-
-        <a href="Activity 6/code/index.html" class="polaroid">
-            <img src="images/imgProj3.png" alt="Project 3">
-            <h4>Project 3</h4>
-            <p class="description">Activity 6: My Interests</p>
-        </a>
-
-        <a href="Activity 7/index.html" class="polaroid">
-            <img src="images/imgProj4.png" alt="Project 4">
-            <h4>Project 4</h4>
-            <p class="description">Activity 7: API</p>
-        </a>
-    </div>
-    
     <footer>
-        <p>&copy; 2024 Loreen Marajas | All Rights Reserved</p>
+        <div class="container-fluid">
+            <div class="footerContent">
+                <div class="footerTitle">Let's Connect</div>
+                <ul class="socials">
+                    <li>
+                        <a class="text-caps-small" href="mailto:marajasmaloreen@gmail.com" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-envelope" style="font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-caps-small" href="https://github.com/loreen-rialmm" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-github" style="font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-caps-small" href="https://www.instagram.com/ria_oreen/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-instagram" style="font-size: 24px;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-caps-small" href="https://www.facebook.com/loreen.marajas" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-facebook" style="font-size: 24px;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerCopyright">
+                <span>© 2024 Loreen Marajas</span>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        function showPhotoshopCards() {
+            const photoshopCards = document.getElementById('photoshopCards');
+            photoshopCards.classList.toggle('visible');
+        }
+
+        function showTraditionalCards() {
+            const photoshopCards = document.getElementById('traditionalCards');
+            traditionalCards.classList.toggle('visible');
+        }
+
+        function toggleDigitalSection() {
+            var section = document.getElementById("digitalSection");
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+
+        const container = document.getElementById('splash');
+        const text = document.getElementById('title');
+
+        const distance = 30;
+
+        function setShadow(e) {
+            const width = this.offsetWidth;
+            const height = this.offsetHeight;
+
+            let x = e.offsetX;
+            let y = e.offsetY;
+
+            if (this !== e.target) {
+                x = x + e.target.offsetLeft;
+                y = y + e.target.offsetTop;
+            }
+
+            const xDistance = Math.round((x / width * distance) - (distance / 2));
+            const yDistance = Math.round((y / height * distance) - (distance / 2));
+
+            text.style.textShadow = `${xDistance}px ${yDistance}px #ae2893`;
+        }
+
+        container.addEventListener('mousemove', setShadow);
+
+        var colorMode = "light";
+        function changeColorMode() {
+            if (colorMode === "light") {
+                document.getElementById("body").setAttribute("data-bs-theme", "dark");
+                document.getElementById("btnColor").innerHTML = "Light";
+                colorMode = "dark";
+            } else {
+                document.getElementById("body").setAttribute("data-bs-theme", "light");
+                document.getElementById("btnColor").innerHTML = "Dark";
+                colorMode = "light";
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
