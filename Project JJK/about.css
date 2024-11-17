@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.cardContent {
+    padding: 30px;
+    background-color: rgb(200, 200, 200);
+    border: none;
+    font-family: 'Asul', serif;
+    line-height: 1.6;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: 100vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutSection {
+    background-image: url('./images/bg5.jpg');
+    background-position: right center;
+    text-align: left;
+    width: 100%;
+    padding-right: 400px;
+}
+
+.creatorSection {
+    background-image: url('./images/bg6.jpg');
+    background-position: left center;
+    text-align: right;
+    width: 100%;
+    padding-left: 500px;
+}
+
+.aboutContainer {
+    max-width: 900px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.creatorButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #2F2F2F;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3 ease;
+}
+
+.creatorButton:hover {
+    background-color: dimgray;
+}
+
+.nav-link.about {
+    text-decoration: none;
+    color: #2F2F2F;
+    font-weight: bold;
+    font-family: "Goldman", sans-serif;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #2F2F2F;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Asul', serif;
+}
+
+.footerLogo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footerContent a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.footerContent a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .cardContent {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .aboutContainer {
+        max-width: 750px;
+    }
+
+    .aboutSection,
+    .creatorSection {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardContent {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .aboutContainer {
+        max-width: 600px;
+    }
+
+    .aboutSection,
+    .creatorSection {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .creatorButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardContent {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .aboutContainer {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .aboutSection,
+    .creatorSection {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .creatorButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

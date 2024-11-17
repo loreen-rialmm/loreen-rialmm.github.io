@@ -1,0 +1,405 @@
+body,
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.storyContainer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url('./images/bg2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card.storyContent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue;
+    padding: 20px;
+    font-family: 'Asul', serif;
+    max-width: 50%;
+    border-radius: 14px;
+    margin-left: 20px;
+}
+
+.card.storyContent h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.storyContent p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.moreStoryContext {
+    padding: 10px 20px;
+    background-color: #dbeaf8;
+    color: #481111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.moreStoryContext:hover {
+    background-color: #a6c0d6;
+}
+
+.nav-link.about {
+    text-decoration: none;
+    color: #2F2F2F;
+    font-weight: bold;
+    font-family: "Goldman", sans-serif;
+    font-size: 20px;
+}
+
+.songMvsContainer {
+    background-image: url('./images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: auto;
+}
+
+.mvsTitle h2 {
+    font-family: 'Asul', serif;
+    font-size: 60px;
+    color: aliceblue;
+    text-shadow: 0 0 10px #af6a6e, 0 0 20px aliceblue, 0 0 30px aliceblue, 0 0 40px aliceblue;
+}
+
+.jjkTitle {
+    font-family: 'Asul', serif;
+    font-size: 100px;
+    color: aliceblue;
+    text-shadow: 0 0 10px aliceblue, 0 0 20px aliceblue, 0 0 30px aliceblue, 0 0 40px aliceblue;
+}
+
+.card.netflixButton {
+    font-family: 'Asul', serif;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #943136;
+    color: #f4f8fc;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.card.netflixButton:hover {
+    background-color: #948f90;
+    color: #6d2a2d;
+    text-shadow: 0 0 10px #af6a6e, 0 0 20px aliceblue, 0 0 30px aliceblue, 0 0 40px aliceblue;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery a {
+    width: 100%;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 14px;
+}
+
+.videoContainer iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.thumbnailRow a img {
+    margin: 10px;
+}
+
+.jujutsuCursedContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.jujutsuCursedBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: aliceblue;
+}
+
+.jujutsuCursedBox a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.jujutsuCursedImage {
+    flex: 7;
+    max-width: 70%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.jujutsuCursedImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform o.3 ease;
+}
+
+.jujutsuCursedText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20%;
+    background-color: rgb(23, 30, 36);
+    color: aliceblue;
+    transition: text-shadow 0.3 ease;
+    text-align: center;
+}
+
+.jujutsuCursedBox:hover .jujutsuCursedText {
+    text-shadow: 0 0 10px aliceblue, 0 0 20px aliceblue, 0 0 30px aliceblue, 0 0 40px aliceblue;
+}
+
+.jujutsuCursedBox:hover .jujutsuCursedImage img {
+    transform: scale(1.1);
+}
+
+.jujutsuCursedBox h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer {
+    background-color: #2F2F2F;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Asul', serif;
+}
+
+.footerLogo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footerContent a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.footerContent a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .songMvsContainer {
+        padding: 15px;
+        height: auto;
+    }
+
+    .mvsTitle h2 {
+        font-size: 45px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .jjkTitle {
+        font-size: 80px;
+    }
+
+    .netflixButton {
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    .storyContent {
+        max-width: 60%;
+        padding: 15px;
+    }
+
+    .storyContent h1 {
+        font-size: 30px;
+    }
+
+    .storyContent p {
+        font-size: 16px;
+    }
+
+    .moreStoryContext {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .songMvsContainer {
+        padding: 10px;
+    }
+
+    .mvsTitle h2 {
+        font-size: 35px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+
+    .jjkTitle {
+        font-size: 50px;
+    }
+
+    .netflixButton {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+    }
+
+    .storyContent {
+        max-width: 80%;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .storyContent h1 {
+        font-size: 24px;
+    }
+
+    .storyContent p {
+        font-size: 14px;
+    }
+
+    .moreStoryContext {
+        font-size: 12px;
+    }
+
+    .jujutsuCursedContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .jujutsuCursedBox {
+        flex-direction: column;
+    }
+
+    .jujutsuCursedImage {
+        height: 300px;
+    }
+
+    .jujutsuCursedText {
+        padding: 15%;
+    }
+
+    .jujutsuCursedBox h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .songMvsContainer {
+        padding: 5px;
+    }
+
+    .mvsTitle h2 {
+        display: block;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .jjkTitle {
+        font-size: 30px;
+    }
+
+    .gallery {
+        display: block;
+    }
+
+    .gallery a {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .netflixButton {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .storyContent {
+        max-width: 90%;
+        padding: 8px;
+        margin-left: 5px;
+    }
+
+    .storyContent h1 {
+        font-size: 20px;
+    }
+
+    .storyContent p {
+        font-size: 12px;
+    }
+
+    .moreStoryContext {
+        font-size: 10px;
+    }
+
+    .jujutsuCursedContainer {
+        margin: 10px;
+    }
+
+    .jujutsuCursedBox {
+        flex-direction: column;
+    }
+
+    .jujutsuCursedImage {
+        height: 200px;
+    }
+
+    .jujutsuCursedText {
+        padding: 10%;
+    }
+
+    .jujutsuCursedBox h2 {
+        font-size: 16px;
+    }
+}
