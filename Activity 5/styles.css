@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.image-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 920px;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-family: 'Bevan', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-title {
+    font-family: 'Bevan', cursive;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    padding: 10px;
+}
+
+.card-text {
+    font-family: 'Ledger', serif;
+    font-size: 1.0rem;
+    padding: 10px;
+}
+
+.see-all-btn {
+    padding: 10px 20px;
+    background-color: #b7d4f1;
+    color: #2c3e50;
+    font-family: 'Ledger', serif;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.see-all-btn:hover {
+    background-color: #d6f7d8;
+    color: #162f22;
+}
+
+.beautyJapanContainer {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.theme-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.theme-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Ledger', serif;
+}
+
+.theme-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.theme-explanation {
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-card:hover .theme-explanation {
+    opacity: 1;
+}
+
+.base-picture {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #b7d4f1;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+    font-family: 'Ledger', serif;
+}
+
+.footerLogo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}

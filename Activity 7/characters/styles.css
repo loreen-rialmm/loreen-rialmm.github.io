@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'NarutoFont';
+    src: url('../njnaruto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body[data-bs-theme="dark"] .characterName,
+body[data-bs-theme="dark"] .characterID,
+body[data-bs-theme="dark"] .imgcontainer span {
+    color: #2F2F2F;
+}
+
+.card {
+    padding: 30px;
+    text-align: center;
+    height: 450px;
+    margin: 10px;
+}
+
+.cardInfo {
+    transition: transform 0.4 ease;
+}
+
+.cardInfo:hover {
+    transform: translateY(-20px);
+}
+
+.characterID {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.characterLogo {
+    font-size: 40px;
+    font-family: 'NarutoFont', sans-serif;
+}
+
+.characterName {
+    font-weight: bold;
+}
+
+.gallery {
+    font-size: 38px;
+    font-family: 'NarutoFont', sans-serif;
+}
+
+.imgCharacterContainer {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.imgCharacterContainer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.loadingBar {
+    background-color: blue;
+    height: 5px;
+    width: 0%;
+}
+
+.loadingBarContainer {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.natureType {
+    font-family: 'NarutoFont', sans-serif;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+        height: auto;
+    }
+
+    .imgCharacterContainer img {
+        height: 150px;
+    }
+
+    .characterName {
+        font-size: 5vw;
+    }
+
+    .cardInfo {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .card {
+        padding: 20px;
+    }
+
+    .imgCharacterContainer img {
+        height: 180px;
+    }
+
+    .characterName {
+        font-size: 4vw;
+    }
+
+    .cardInfo {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .card {
+        height: 450px;
+        padding: 20px;
+    }
+
+    .characterName {
+        font-size: 1.9vw;
+    }
+
+    .cardInfo {
+        width: 25%;
+    }
+}

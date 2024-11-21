@@ -239,9 +239,11 @@ html {
         font-size: 80px;
     }
 
-    .netflixButton {
-        font-size: 25px;
-        padding: 15px;
+    .card.netflixButton {
+        font-size: 16px;
+        padding: 5px;
+        transform: translateY(-250%);
+        margin: 0;
     }
 
     .storyContent {
@@ -290,17 +292,18 @@ html {
     }
 
     .storyContent {
-        max-width: 80%;
+        max-width: 100%;
         padding: 10px;
         margin-left: 10px;
     }
 
     .storyContent h1 {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .storyContent p {
         font-size: 14px;
+        line-height: 0.9;
     }
 
     .moreStoryContext {

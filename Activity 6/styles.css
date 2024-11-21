@@ -1,0 +1,126 @@
+.navbar-brand {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.card-title {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-outline-primary {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: purple;
+    border-color: purple;
+}
+
+.btn-check:checked+.btn-outline-primary {
+    background-color: #52796f;
+    color: white;
+    border-color: #52796f;
+}
+
+.btn-primary {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #52796f;
+    border-color: #52796f;
+}
+
+.card-text {
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+}
+
+a.btn-primary {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-check-label {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(0.8);
+}
+
+#btnExpand {
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+}
+
+iframe {
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.songInspo {
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    width: 550px;
+    text-align: center;
+}
+
+.songEmbed {
+    width: 550px;
+    text-align: center;
+}
+
+.noBorder {
+    border: none;
+}
+
+.drawingTitle {
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.footerLogo {
+    max-height: 60px;
+    margin: auto;
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .songInspo iframe {
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+    .songInspo iframe {
+        height: 450px;
+    }
+}
+
+@media (min-width: 992px) {
+    .songInspo iframe {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .songInspo iframe {
+        height: 550px;
+    }
+}

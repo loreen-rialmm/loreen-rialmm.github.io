@@ -1,0 +1,91 @@
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card {
+    height: 600px;
+    border-radius: 28px;
+}
+
+.card-title {
+    font-family: 'Bevan', sans-serif;
+    font-size: 20px;
+}
+
+.card-text {
+    font-family: 'Ledger', serif;
+    font: 16px;
+}
+
+.container-title {
+    font-family: 'Bevan', cursive;
+    margin-left: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #162f22;
+}
+
+.bg-custom {
+    background-color: #d6f7d8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.btn-custom {
+    position: absolute;
+    font-family: 'Ledger', serif;
+    top: 10px;
+    right: 20px;
+    background: linear-gradient(to right, #ccdfcd, #c8d0d8);
+    color: rgb(54, 37, 37);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(to right, #b7d4f1, #162f22);
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #d6f7d8;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+    font-family: 'Ledger', serif;
+}
+
+.footerLogo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}

@@ -4,157 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 2</title>
+    <title>Japan | Activity 5</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow-x: hidden;
-        }
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .image-container {
-            position: relative;
-            max-width: 1920px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            max-height: 920px;
-            display: block;
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3rem;
-            font-family: 'Bevan', cursive;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .card-title {
-            font-family: 'Bevan', cursive;
-            font-size: 2.5rem;
-            color: #2c3e50;
-            padding: 10px;
-        }
-
-        .card-text {
-            font-family: 'Ledger', serif;
-            font-size: 1.0rem;
-            padding: 10px;
-        }
-
-        .see-all-btn {
-            padding: 10px 20px;
-            background-color: #b7d4f1;
-            color: #2c3e50;
-            font-family: 'Ledger', serif;
-            font-size: 16px;
-            display: inline-block;
-            border-radius: 5px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .see-all-btn:hover {
-            background-color: #d6f7d8;
-            color: #162f22;
-        }
-
-        .theme-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .theme-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .theme-overlay {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            color: white;
-            border-radius: 5px;
-            font-family: 'Ledger', serif;
-        }
-
-        .theme-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            z-index: 1;
-            margin: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 3px;
-        }
-
-        .theme-explanation {
-            font-size: 1rem;
-            margin-top: 10px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            text-align: center;
-            margin-top: 5px;
-            text-align: left;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .theme-card:hover .theme-explanation {
-            opacity: 1;
-        }
-
-        .base-picture {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .modal-img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        footer {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: #b7d4f1;
-            color: #2c3e50;
-            font-family: 'Ledger', serif;
-            width: 100%;
-        }
-    </style>
+    <link rel="icon" href="../images/logoIcon.png">
 </head>
 
 <body>
@@ -163,77 +23,86 @@
         <div class="overlay-text">Welcome to JAPAN!</div>
     </div>
 
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="card-body">
-                <h5 class="card-title">Explore the Beauty of Japan</h5>
-                <p class="card-text">From serene temples and stunning landscapes to vibrant cities and
-                    mouthwatering cuisine, Japan offers an unforgettable experience. Whether you're drawn to nature,
-                    culture, or food, there's something here for everyone. Discover the charm of Japan, where tradition
-                    and modernity blend seamlessly.</p>
-                <a href="japan.html" class="see-all-btn">See all</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="theme-card">
-                <img src="https://res.cloudinary.com/jnto/image/upload/w_1400,c_fill,f_auto,fl_lossy,q_auto/v1/media_national_parks/filer_public/ea/2e/ea2ed68d-58bc-4d8f-8c5b-598181d65d7c/oze_hatomachi_pass__deq7hd" class="card-img-top" alt="NaturePrev">
-                <div class="theme-overlay">
-                    <h5 class="theme-title">Nature</h5>
-                    <p class="theme-explanation">Escape into Japan’s stunning landscapes, from majestic mountains to
-                        serene coastlines.
-                    </p>
+    <div class="container beautyJapanContainer">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">Explore the Beauty of Japan</h5>
+                    <p class="card-text">From serene temples and stunning landscapes to vibrant cities and
+                        mouthwatering cuisine, Japan offers an unforgettable experience. Whether you're drawn to nature,
+                        culture, or food, there's something here for everyone. Discover the charm of Japan, where
+                        tradition
+                        and modernity blend seamlessly.</p>
+                    <a href="japan.html" class="see-all-btn">See all</a>
                 </div>
             </div>
-        </div>
+            <div class="col-md-4">
+                <div class="theme-card">
+                    <img src="https://res.cloudinary.com/jnto/image/upload/w_1400,c_fill,f_auto,fl_lossy,q_auto/v1/media_national_parks/filer_public/ea/2e/ea2ed68d-58bc-4d8f-8c5b-598181d65d7c/oze_hatomachi_pass__deq7hd"
+                        class="card-img-top" alt="NaturePrev">
+                    <div class="theme-overlay">
+                        <h5 class="theme-title">Nature</h5>
+                        <p class="theme-explanation">Escape into Japan’s stunning landscapes, from majestic mountains to
+                            serene coastlines.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="col-md-4">
-            <div class="theme-card">
-                <img src="https://d1bv4heaa2n05k.cloudfront.net/user-images/1692710533430/cherry-blossom-castle-osaka-japan-shutterstock-407488465_inspirationSmall_1692710553872.jpeg" class="card-img-top" alt="CulturePrev">
-                <div class="theme-overlay">
-                    <h5 class="theme-title">Culture</h5>
-                    <p class="theme-explanation">Step back in time with ancient temples, historic castles, and rich
-                        cultural traditions.
-                    </p>
+            <div class="col-md-4">
+                <div class="theme-card">
+                    <img src="https://d1bv4heaa2n05k.cloudfront.net/user-images/1692710533430/cherry-blossom-castle-osaka-japan-shutterstock-407488465_inspirationSmall_1692710553872.jpeg"
+                        class="card-img-top" alt="CulturePrev">
+                    <div class="theme-overlay">
+                        <h5 class="theme-title">Culture</h5>
+                        <p class="theme-explanation">Step back in time with ancient temples, historic castles, and rich
+                            cultural traditions.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4"> <!-- Second column -->
-            <div class="theme-card">
-                <img src="https://elviajerofeliz.com/wp-content/uploads/2018/09/10-Platos-tipicos-de-Japon-Tienes-que-probarlos-Con-Imagenes.jpg" class="card-img-top" alt="FoodPrev">
-                <div class="theme-overlay">
-                    <h5 class="theme-title">Food</h5>
-                    <p class="theme-explanation">Indulge in Japan’s world-famous cuisine, from fresh sushi to flavorful
-                        ramen.
-                    </p>
+            <div class="col-md-4">
+                <div class="theme-card">
+                    <img src="https://elviajerofeliz.com/wp-content/uploads/2018/09/10-Platos-tipicos-de-Japon-Tienes-que-probarlos-Con-Imagenes.jpg"
+                        class="card-img-top" alt="FoodPrev">
+                    <div class="theme-overlay">
+                        <h5 class="theme-title">Food</h5>
+                        <p class="theme-explanation">Indulge in Japan’s world-famous cuisine, from fresh sushi to
+                            flavorful
+                            ramen.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4"> <!-- Third column -->
-            <div class="theme-card">
-                <img src="https://images.coolwallpapers.me/picsup/3336120-japan-tokyo-buildings-evening-lights-city.jpg" class="card-img-top" alt="SceneryPrev">
-                <div class="theme-overlay">
-                    <h5 class="theme-title">Scenery</h5>
-                    <p class="theme-explanation">Capture unforgettable views of Japan’s iconic landmarks and
-                        breathtaking scenery. .
-                    </p>
+            <div class="col-md-4">
+                <div class="theme-card">
+                    <img src="https://images.coolwallpapers.me/picsup/3336120-japan-tokyo-buildings-evening-lights-city.jpg"
+                        class="card-img-top" alt="SceneryPrev">
+                    <div class="theme-overlay">
+                        <h5 class="theme-title">Scenery</h5>
+                        <p class="theme-explanation">Capture unforgettable views of Japan’s iconic landmarks and
+                            breathtaking scenery. .
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4"> <!-- Third column -->
-            <div class="theme-card">
-                <img src="https://japantour.xyz/wp-content/uploads/2019/11/15561111402_792582a343_b-1024x683.jpg" class="card-img-top" alt="AnimePrev">
-                <div class="theme-overlay">
-                    <h5 class="theme-title">Anime</h5>
-                    <p class="theme-explanation">Immerse yourself in the heart of anime and manga culture with vibrant
-                        shops, themed cafés, and life-sized figures.
-                    </p>
+            <div class="col-md-4">
+                <div class="theme-card">
+                    <img src="https://japantour.xyz/wp-content/uploads/2019/11/15561111402_792582a343_b-1024x683.jpg"
+                        class="card-img-top" alt="AnimePrev">
+                    <div class="theme-overlay">
+                        <h5 class="theme-title">Anime</h5>
+                        <p class="theme-explanation">Immerse yourself in the heart of anime and manga culture with
+                            vibrant
+                            shops, themed cafés, and life-sized figures.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="card mb-3" style="max-width: 100%; margin-top: 20px;">
@@ -257,7 +126,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="https://i1.wp.com/media.premiumtimesng.com/wp-content/files/2017/12/Japan-on-map.png?fit=1036%2C733&ssl=1" class="img-fluid rounded-end float-end" alt="..."
+                <img src="https://i1.wp.com/media.premiumtimesng.com/wp-content/files/2017/12/Japan-on-map.png?fit=1036%2C733&ssl=1"
+                    class="img-fluid rounded-end float-end" alt="..."
                     style="max-width: 100%; max-height: 350px; object-fit: cover;">
             </div>
         </div>
@@ -277,56 +147,56 @@
         <div class="row">
             <!-- First Picture -->
             <div class="col-md-4">
-                <img src="https://i.pinimg.com/564x/24/49/8a/24498ab67c90c42750041afc157089c6.jpg" class="base-picture" alt="Picture 1" data-bs-toggle="modal"
-                    data-bs-target="#imageModal1">
+                <img src="https://i.pinimg.com/564x/24/49/8a/24498ab67c90c42750041afc157089c6.jpg" class="base-picture"
+                    alt="Picture 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
             </div>
 
             <!-- Second Picture -->
             <div class="col-md-4">
-                <img src="https://i.pinimg.com/564x/89/31/0e/89310e3d2d6d371a112e842d923daefb.jpg" class="base-picture" alt="Picture 2" data-bs-toggle="modal"
-                    data-bs-target="#imageModal2">
+                <img src="https://i.pinimg.com/564x/89/31/0e/89310e3d2d6d371a112e842d923daefb.jpg" class="base-picture"
+                    alt="Picture 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
             </div>
 
             <!-- Third Picture -->
             <div class="col-md-4">
-                <img src="https://i.pinimg.com/564x/73/01/1e/73011ed0452852374e64e161b40e3842.jpg" class="base-picture" alt="Picture 3" data-bs-toggle="modal"
-                    data-bs-target="#imageModal3">
+                <img src="https://i.pinimg.com/564x/73/01/1e/73011ed0452852374e64e161b40e3842.jpg" class="base-picture"
+                    alt="Picture 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
             </div>
 
             <!-- Fourth Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/4f/0e/4c/4f0e4c2ab11d7503194c8d37bb25a8e4.jpg" class="base-picture" alt="Picture 4" data-bs-toggle="modal"
-                    data-bs-target="#imageModal4">
+                <img src="https://i.pinimg.com/564x/4f/0e/4c/4f0e4c2ab11d7503194c8d37bb25a8e4.jpg" class="base-picture"
+                    alt="Picture 4" data-bs-toggle="modal" data-bs-target="#imageModal4">
             </div>
 
             <!-- Fifth Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/1d/15/cd/1d15cd4155ffcac892f51755dba1e91b.jpg" class="base-picture" alt="Picture 5" data-bs-toggle="modal"
-                    data-bs-target="#imageModal5">
+                <img src="https://i.pinimg.com/564x/1d/15/cd/1d15cd4155ffcac892f51755dba1e91b.jpg" class="base-picture"
+                    alt="Picture 5" data-bs-toggle="modal" data-bs-target="#imageModal5">
             </div>
 
             <!-- Sixth Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/9c/53/57/9c5357a9325507c12994a774101f19fe.jpg" class="base-picture" alt="Picture 6" data-bs-toggle="modal"
-                    data-bs-target="#imageModal6">
+                <img src="https://i.pinimg.com/564x/9c/53/57/9c5357a9325507c12994a774101f19fe.jpg" class="base-picture"
+                    alt="Picture 6" data-bs-toggle="modal" data-bs-target="#imageModal6">
             </div>
 
             <!-- Seventh Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/f3/21/29/f321290b872fae7f0177eac800fa59f5.jpg" class="base-picture" alt="Picture 7" data-bs-toggle="modal"
-                    data-bs-target="#imageModal7">
+                <img src="https://i.pinimg.com/564x/f3/21/29/f321290b872fae7f0177eac800fa59f5.jpg" class="base-picture"
+                    alt="Picture 7" data-bs-toggle="modal" data-bs-target="#imageModal7">
             </div>
 
             <!-- Eighth Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/b9/4c/7e/b94c7e0896a13468564b9cc57c9122b5.jpg" class="base-picture" alt="Picture 8" data-bs-toggle="modal"
-                    data-bs-target="#imageModal8">
+                <img src="https://i.pinimg.com/564x/b9/4c/7e/b94c7e0896a13468564b9cc57c9122b5.jpg" class="base-picture"
+                    alt="Picture 8" data-bs-toggle="modal" data-bs-target="#imageModal8">
             </div>
 
             <!-- Ninth Picture -->
             <div class="col-md-4 mt-4">
-                <img src="https://i.pinimg.com/564x/54/de/6f/54de6f35e937c15e08fe07a46e4f7563.jpg" class="base-picture" alt="Picture 9" data-bs-toggle="modal"
-                    data-bs-target="#imageModal9">
+                <img src="https://i.pinimg.com/564x/54/de/6f/54de6f35e937c15e08fe07a46e4f7563.jpg" class="base-picture"
+                    alt="Picture 9" data-bs-toggle="modal" data-bs-target="#imageModal9">
             </div>
         </div>
     </div>
@@ -336,7 +206,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/24/49/8a/24498ab67c90c42750041afc157089c6.jpg" class="modal-img" alt="Full Picture 1">
+                    <img src="https://i.pinimg.com/564x/24/49/8a/24498ab67c90c42750041afc157089c6.jpg" class="modal-img"
+                        alt="Full Picture 1">
                 </div>
             </div>
         </div>
@@ -347,7 +218,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/89/31/0e/89310e3d2d6d371a112e842d923daefb.jpg" class="modal-img" alt="Full Picture 2">
+                    <img src="https://i.pinimg.com/564x/89/31/0e/89310e3d2d6d371a112e842d923daefb.jpg" class="modal-img"
+                        alt="Full Picture 2">
                 </div>
             </div>
         </div>
@@ -358,7 +230,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/73/01/1e/73011ed0452852374e64e161b40e3842.jpg" class="modal-img" alt="Full Picture 3">
+                    <img src="https://i.pinimg.com/564x/73/01/1e/73011ed0452852374e64e161b40e3842.jpg" class="modal-img"
+                        alt="Full Picture 3">
                 </div>
             </div>
         </div>
@@ -369,7 +242,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/4f/0e/4c/4f0e4c2ab11d7503194c8d37bb25a8e4.jpg" class="modal-img" alt="Full Picture 4">
+                    <img src="https://i.pinimg.com/564x/4f/0e/4c/4f0e4c2ab11d7503194c8d37bb25a8e4.jpg" class="modal-img"
+                        alt="Full Picture 4">
                 </div>
             </div>
         </div>
@@ -380,7 +254,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/1d/15/cd/1d15cd4155ffcac892f51755dba1e91b.jpg" class="modal-img" alt="Full Picture 5">
+                    <img src="https://i.pinimg.com/564x/1d/15/cd/1d15cd4155ffcac892f51755dba1e91b.jpg" class="modal-img"
+                        alt="Full Picture 5">
                 </div>
             </div>
         </div>
@@ -391,7 +266,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/9c/53/57/9c5357a9325507c12994a774101f19fe.jpg" class="modal-img" alt="Full Picture 6">
+                    <img src="https://i.pinimg.com/564x/9c/53/57/9c5357a9325507c12994a774101f19fe.jpg" class="modal-img"
+                        alt="Full Picture 6">
                 </div>
             </div>
         </div>
@@ -402,7 +278,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/f3/21/29/f321290b872fae7f0177eac800fa59f5.jpg" class="modal-img" alt="Full Picture 7">
+                    <img src="https://i.pinimg.com/564x/f3/21/29/f321290b872fae7f0177eac800fa59f5.jpg" class="modal-img"
+                        alt="Full Picture 7">
                 </div>
             </div>
         </div>
@@ -413,7 +290,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/b9/4c/7e/b94c7e0896a13468564b9cc57c9122b5.jpg" class="modal-img" alt="Full Picture 8">
+                    <img src="https://i.pinimg.com/564x/b9/4c/7e/b94c7e0896a13468564b9cc57c9122b5.jpg" class="modal-img"
+                        alt="Full Picture 8">
                 </div>
             </div>
         </div>
@@ -424,14 +302,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="https://i.pinimg.com/564x/54/de/6f/54de6f35e937c15e08fe07a46e4f7563.jpg" class="modal-img" alt="Full Picture 9">
+                    <img src="https://i.pinimg.com/564x/54/de/6f/54de6f35e937c15e08fe07a46e4f7563.jpg" class="modal-img"
+                        alt="Full Picture 9">
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Loreen Marajas | All Rights Reserved</p>
+    <footer class="footer">
+        <div class="footerContent">
+            <img src="../images/logoIcon.png" alt="Loreen's Logo" class="footerLogo">
+            <p style="font-size: 16px;">© 2024 Loreen Marajas</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

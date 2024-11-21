@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'NarutoFont';
+    src: url('../njnaruto.ttf') format('truetype');
+}
+
+.backButton {
+    background: radial-gradient(circle, #FFED8C, #EC7F6C);
+    margin: 20px;
+    font-weight: bold;
+    font-family: 'NarutoFont', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.characterDetails {
+    font-family: Verdana, sans-serif;
+    margin-top: 30px;
+}
+
+.characterInfoCard {
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.characterInfoCard:hover {
+    transform: rotate(3deg);
+}
+
+.clanInfo {
+    font-size: 30px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imgContainer {
+    background-color: lightgrey;
+}
+
+.nameInfo {
+    font-weight: bold;
+}
+
+.narutoLogo {
+    font-size: 40px;
+    font-family: 'NarutoFont', sans-serif;
+}
+
+.otherInfo {
+    font-size: 18px;
+}
+
+.otherInfo:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}

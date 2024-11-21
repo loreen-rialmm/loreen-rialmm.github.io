@@ -1,126 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Agency+FB&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
-
-body {
-    font-family: 'Abril Fatface', sans-serif;
-    background-color: #161A30;
-    color: #F0ECE5;
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
-.header {
-    padding: 20px;
-    background-color: #31304D;
-    color: #B6BBC4;
+
+.container-fluid {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    background: url('./images/img1.png') no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.titleContainer {
+    position: absolute;
+    color: #2F2F2F;
+    text-align: right;
+    font-family: "Roboto Mono", serif;
+    font-size: 50px;
+    font-weight: 600;
+    z-index: 1;
 }
 
 .imgContainer {
-    border-radius: 10px;
-    width: 340px;
-    margin-right: 20px;
+    width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .info {
-    margin-top: 20px;
-    font-family: 'Abril Fatface', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     text-align: center;
-    flex-grow: 1;
-}
-
-.info h1 {
-    font-size: 60px;
-    color: #F0ECE5;
+    margin-top: 20px;
 }
 
 .info h2 {
-    margin: 5px 0 0;
-    font-size: 18px;
-    font-family: 'Slabo 27px', serif;
-    color: #B6BBC4;
+    margin-top: 0;
+    font-size: 24px;
+    color:#31304D;
+    padding-left: 20px;
 }
 
-.subject h3 {
-    margin-top: 5px;
-    font-size: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 5vw;
+.specificationContainer {
+    padding: 20px;
+    text-align: center;
 }
 
-.projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+.specificationCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
+    margin: 0 auto;
 }
 
-.specifications-section {
-    margin: 20px;
+.specificationCard {
+    background: #F7F7F7;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3 ease;
 }
 
-.toggle {
-    display: none;
+.specificationTitle {
+    font-family: 'Verdana', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.specifications-button {
-    background-color: #31304D;
-    color: #F0ECE5;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-family: 'Agency FB', sans-serif;
-    transition: background-color 0.3s;
-}
-
-.specifications-button:hover {
-    background-color: #31304D;
-    color: #ECDFCC;
-}
-
-.specifications-content {
+.specContextInfo {
     display: none;
     margin-top: 10px;
-    font-family: 'Slabo 27px', serif;
-    color: #F0ECE5;
+    color: #2F2F2F;
 }
 
-.toggle:checked+.specifications-button+.specifications-content {
+.specificationCard:hover .specContextInfo {
     display: block;
 }
 
-.toggle:checked+.specifications-button::before {
-    content: "Hide Specifications";
+.specificationCard:hover {
+    background-color: rgb(234, 204, 165);
 }
 
-.toggle:not(:checked)+.specifications-button::before {
-    content: "Show Specifications";
+.specContext {
+    font-weight: 600;
 }
 
-.specifications-button::before {
-    content: "Show Specifications";
+.featureSection h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .feature {
     background-color: #31304D;
     padding: 20px;
     width: 300px;
-    height: auto;
+    height: 500px;
     text-align: center;
     font-family: 'Slabo 27px', serif;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .feature h4 {
-    font-family: 'Agency FB', sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-size: 24px;
     color: #F0ECE5;
     margin-bottom: 10px;
@@ -141,17 +144,84 @@ body {
 }
 
 .feature:hover {
-    transform: translateY(10px) scale(1);
+    transform: translateY(-10px) scale(1);
     box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
-footer {
-    margin-top: 40px;
+.footer {
+    margin-top: 20px;
+    background-color: #31304D;
+    color: #F0ECE5;
     text-align: center;
-    font-size: 14px;
-    font-family: 'Abril Fatface', sans-serif;
-    color: #B6BBC4;
-    background-color: #161A30;
     padding: 20px;
-    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Slabo 27px', serif;
+}
+
+.footerLogo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footerContent a {
+    color: #d577f5;
+    text-decoration: none;
+}
+
+.footerContent a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .specificationCards {
+        grid-template-columns: 1fr; 
+    }
+
+    .specificationTitle {
+        font-size: 32px;
+    }
+    .feature {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    .container-fluid {
+        padding: 0 30px; 
+    }
+
+    .titleContainer {
+        font-size: 40px; 
+        margin-top: 75%;
+        text-align: center;
+    }
+
+    .info h2 {
+        font-size: 18px; 
+    }
+
+    .laptopInfoRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-4, .col-8 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleContainer {
+        font-size: 30px; 
+    }
+
+    .info h2 {
+        font-size: 16px; 
+    }
+
+    .feature {
+        width: 100%; 
+    }
 }
