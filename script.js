@@ -1,43 +1,20 @@
-function showPhotoshopCards() {
-    const photoshopCards = document.getElementById('photoshopCards');
-
-    photoshopCards.classList.toggle('visible');
-}
-
-function showTraditionalCards() {
-    const photoshopCards = document.getElementById('photoshopCards');
-
-    traditionalCards.classList.toggle('visible');
-}
-
-function toggleDigitalSection() {
-    var section = document.getElementById("digitalSection");
-    if (section.style.display === "none") {
-        section.style.display = "block";
-    } else {
-        section.style.display = "none";
-    }
-}
-
-var colorMode = "light";
 function changeColorMode() {
-    const body = document.body;
+    const body = document.getElementById('body');
     const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const btnColor = document.getElementById('btnColor');
+    const icon = document.getElementById('btnColor');
 
-    if (colorMode === "light") {
-        body.setAttribute("data-bs-theme", "dark");
-        navbar.classList.add('dark-mode');
-        navLinks.forEach(link => link.classList.add('dark-mode'));
-        btnColor.innerHTML = "Light";
-        colorMode = "dark";
-    } else {
-        body.setAttribute("data-bs-theme", "light");
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
         navbar.classList.remove('dark-mode');
-        navLinks.forEach(link => link.classList.remove('dark-mode'));
-        btnColor.innerHTML = "Dark";
-        colorMode = "light";
+        icon.classList.remove('bi-brightness-high');
+        icon.classList.add('bi-moon');
+        icon.style.color = '';
+    } else {
+        body.classList.add('dark-mode');
+        navbar.classList.add('dark-mode');
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-brightness-high');
+        icon.style.color = '#F4EBCF';
     }
 }
 

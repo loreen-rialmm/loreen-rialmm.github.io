@@ -13,7 +13,8 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     font-family: "Rubik Mono One", monospace;
-    font-weight: 500;
+    font-weight: 400;
+    background-color: #FFF5EE;
 }
 
 @font-face {
@@ -21,50 +22,193 @@ body {
     src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
 }
 
-.breatheContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#body.dark-mode {
+    background-color: #2F2F2F;
+    color: #EDFFCD;
+}
+
+#body.dark-mode .navbar {
+    background-color: #2F2F2F;
+}
+
+#body.dark-mode .nav-link {
+    color: #EDFFCD;
+}
+
+#body.dark-mode .breatheAnimation span {
+    color: #C3EDAA; 
+}
+
+#body.dark-mode .introInfo {
+    color: #EDFFCD; 
+}
+
+#body.dark-mode .aboutTitle {
+    color: #C3EDAA; 
+}
+
+#body.dark-mode .aboutInfo {
+    border: 2px solid #C3EDAA; 
+    color: #EDFFCD; 
+}
+
+#body.dark-mode .skillsTitle {
+    color: #C3EDAA; 
+}
+
+#body.dark-mode .projectTitle {
+    color: #C3EDAA; 
 }
 
 .breatheAnimation span {
     font-family: 'TheFont';
-    font-size: clamp(10vw, 20vw, 40vh);
-    color: #ae2893;
-    text-align: center;
+    font-size: clamp(7vw, 13vw, 15vh);
+    color: #01463C;
     animation: letter-breathe 3s ease-in-out infinite;
+    animation-delay: 1s;
 }
 
 @keyframes letter-breathe {
-
     from,
     to {
         font-variation-settings: 'wght' 100;
     }
 
     40% {
-        font-variation-settings: 'wght' 900;
+        font-variation-settings: 'wght' 700;
     }
 }
 
 .aboutPic {
-    max-width: 100%;
     height: auto;
-    border-radius: 10%;
-    transition: opacity 0.5 ease;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 20px;
+    display: block;
+}
+
+.introInfo {
+    font-family: "Roboto Mono", serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    color: #4E7567;
+}
+
+.aboutContainer {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .aboutTitle {
-    font-size: 40px;
+    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #ae2893;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: #01463C;
 }
 
 .aboutInfo {
     font-family: "Roboto Mono", serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-style: normal;
+    margin: 0px;
+    border: 2px solid #01463C; 
+    padding: 20px;            
+    border-radius: 15px;      
+    color: #4E7567;
+}
+
+.skillsTitle {
+    text-align: center;
+    margin-top: 40px;
+    color: #01463C;
+}
+
+.categoryContainer {
+    background-color: #99AFA7;  
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto Mono", serif;
+}
+
+.categoryTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #01463C; 
+    margin-bottom: 20px;
+}
+
+.creativeSkillsGallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.creativeSkillsLogo img {
+    width: 80px; 
+    height: auto;
+    filter: grayscale(40%); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.creativeSkillsLogo img:hover {
+    transform: scale(1.1);  
+    filter: grayscale(0%);
+}
+
+.projectTitle {
+    color: #01463C;
+}
+
+.projectRow {
+    background-color: #99AFA7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.projectImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.contentText {
+    padding: 30px;
+}
+
+h2 {
+    color: #01463C;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #4E7567;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", serif;
+}
+
+.exploreButton {
+    border: 2px solid #01463C;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #01463C;
+}
+
+.exploreButton:hover {
+    background-color: #01463C;
+    color: #FFF5EE;
 }
 
 .socials {
@@ -72,6 +216,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 .socials li {
@@ -92,11 +237,11 @@ body {
 }
 
 .text-caps-small:hover {
-    color: #ae2893;
+    color: #01463C;
 }
 
 .footerCopyright {
-    color: #ae2893;
+    color: #01463C;
     font-family: Rubik, sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -111,7 +256,7 @@ footer {
     justify-content: center;
     padding: 20px 0;
     text-align: center;
-    background-color: #d4d3d2;
+    background-color: #CEE8D0;
 }
 
 .container-fluid {
@@ -125,203 +270,30 @@ footer {
 
 .footerTitle {
     font-size: 18px;
-    color: #ae2893;
+    color: #01463C;
 }
-
-.skillsContainer {
-    padding: 30px 20px;
-    text-align: center;
-    background-color: #2F2F2F;
-    margin: 30px 20px 20px 20px;
-    border-radius: 10px;
-}
-
-.skillsTitle {
-    font-family: "Roboto Mono", serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: aliceblue;
-}
-
-.cardRow {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.cardSkills {
-    flex: 1 0 30%;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3 ease, box-shadow 0.3 ease;
-    height: auto;
-    color: #ae2893;
-    background-color: aliceblue;
-}
-
-.cardSkills:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    background-color: #c780ca;
-    color: #2F2F2F;
-}
-
-.photoshopCards,
-.traditionalCards,
-.digitalSection {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin-top: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    transition: opacity 0.3 ease, visibility 0s 0.3s;
-    overflow: hidden;
-}
-
-.photoshopCards.visible,
-.traditionalCards.visible,
-.digitalSection.visible {
-    display: flex;
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-}
-
-
-.cardHidden img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-}
-
-.cardHidden {
-    width: 300px;
-    margin: 10px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.projectContainer {
-    background-color: #e6c4e7;
-    color: #2F2F2F;
-}
-.projects {
-    font-size: 32px;
-}
-
-.projectLink {
-    color: inherit;
-    text-decoration: none;
-}
-
-.projectDescription {
-    font-family: "Roboto Mono", serif;
-    font-size: 20px;
-}
-
-.card {
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-    padding: 20px;
-}
-
-.buttonLink {
-    display: inline-block;
-    padding: 10px 20px;
-    transition: all 0.3s ease-in-out;
-    margin: 20px;
-    color: #2F2F2F;
-    background-color: #F4EBCF;
-    text-decoration: none;
-    border: 2 px solid #c780ca;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "Rubik Mono One", monospace;
-    text-align: center;
-}
-
-.buttonLink:hover {
-    background-color: #2F2F2F;
-    color: #F4EBCF;
-    border-color: #c780ca;
-    transform: translateY(-3px);
-}
-
-.img-fluid {
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3 ease;
-}
-
 
 @media (max-width: 768px) {
     h1 {
         font-size: 50px;
         letter-spacing: 3px;
     }
-
-    .cardHidden {
-        width: 150px;
-    }
-
-    .cardSkills {
-        flex: 1 0 100%;
-    }
-
-    .projectContainer .row {
-        flex-direction: column;
-    }
-
-    .projectContainer img {
-        max-width: 100%;
-    }
-
-    .buttonLink {
-        display: block;
-        margin-bottom: 10px;
-    }
 }
 
 @media (max-width: 480px) {
+    .introInfo {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    .aboutContainer {
+        padding-left: 12px;
+        padding-right: 12px; 
+    }
+    .aboutInfo {
+        font-size: 1.25rem;
+    }
     h1 {
         font-size: 35px;
         letter-spacing: 2px;
-    }
-
-    .photoshopCards {
-        flex-direction: column;
-    }
-
-    .cardHidden {
-        width: 100%;
-    }
-
-    .cardSkills {
-        flex: 1 0 100%;
-    }
-
-    .projectContainer .row {
-        flex-direction: column;
-    }
-
-    .projectContainer img {
-        max-width: 100%;
-    }
-
-    .buttonLink {
-        display: block;
-        margin-bottom: 10px;
     }
 }
