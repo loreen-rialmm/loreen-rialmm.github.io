@@ -1,0 +1,331 @@
+body {
+    background-color: #526652;
+    font-family: "Luxurious Roman", serif;
+}
+
+/* This section contains the CSS rules mainly for styling the index.html page. */
+.headerText {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+}
+
+.navTabRow {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    background-color: #cde5cd;
+}
+
+.thick-top-bottom {
+    border-top: 3px solid #27342b;
+    border-bottom: 3px solid #27342b;
+}
+
+.custom-iframe {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 270px;
+}
+
+.hover-card {
+    position: relative;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.hover-card img {
+    transition: transform 0.3s ease;
+}
+
+.hover-card:hover img {
+    transform: scale(1.07); 
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.hover-card:hover .overlay-text {
+    opacity: 1;
+}
+
+/* This section contains the CSS rules mainly for styling the profile.html page. */
+.profileIntro {
+    font-family: "Luxurious Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    background-color: transparent; 
+    border: none;
+    line-height: 2.0;
+    color: #cde5cd;
+}
+
+.biographyImg {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.biographyText {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 2.0;
+    color: #cde5cd;
+    align-content: center;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #203e31;
+    color: #adeab8;
+    text-decoration: none;
+    font-family: "Maitree", serif;
+    font-style: normal;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: max-content;
+    text-align: center;
+}
+  
+.button-link:hover {
+    background-color: #cde5cd;
+    color: #27342b;
+}
+
+.awardsText {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 2.0;
+    color: #cde5cd;
+}
+
+/* This section contains the CSS rules mainly for styling the discography.html page. */
+.albumTitle {
+    color: #cde5cd;
+}
+
+.albumImg {
+    height: 500px;
+}
+
+.diaryImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.photoCard {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This section contains the CSS rules mainly for styling the 404.html page. */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.content-top {
+    position: absolute;
+    top: 30px; 
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.content-top p {
+    color: #0a0a0a;
+    margin-top: 10px;
+}
+
+.content-bottom {
+    position: absolute;
+    bottom: 30px; 
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #203e31;
+    color: #adeab8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
+
+/* This section contains the CSS rules mainly for styling the about.html page. */
+.aboutSection {
+    color: #cde5cd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.aboutSection p {
+    text-align: center;
+    padding: 15px;
+}
+
+.btn-portfolio {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #203e31;
+    color: #cde5cd;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn-portfolio:hover {
+    background-color: #cde5cd;
+    color: #27342b;
+}
+  
+/* Media queries for responsiveness in mobile devices*/
+@media (max-width: 576px) {
+    .navTabRow {
+        font-size: 14px;
+    }
+
+    .bagsImg {
+        height: 500px;
+    }
+
+    .biographyImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .biographyText,
+    .profileIntro p,
+    .awardsText {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .button-link {
+        display: block;
+        text-align: center;
+        margin: 10px auto 0;
+    }
+
+    .letterC,
+    .cat,
+    .cd,
+    .star,
+    .strawberry,
+    .butterfly,
+    .sparkle,
+    .clover,
+    .charm,
+    .smiski,
+    .immunity,
+    .name,
+    .charm2,
+    .merch1,
+    .merch2,
+    .merch3,
+    .merch4 {
+        width: 90px !important;
+        opacity: 0.70;
+    }
+
+    .sparkle {
+        right: 0 !important;
+    }
+
+    .clover {
+        left: 0 !important;
+    }
+
+    .cd {
+        transform: translateY(-10px);
+    }
+
+    .clover {
+        transform: translateX(-20px);
+    }
+
+    .sparkle {
+        transform: translateY(40px);
+    }
+
+    .cat, 
+    .butterfly {
+        transform: translateX(40px);
+    }
+
+    .button-link {
+        padding: 20px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Media queries for responsiveness in tablets*/
+@media (min-width: 577px) and (max-width: 1024px) {
+    .biographyImg {
+        max-width: 100%;
+        height: auto;
+        transform: scale(1.1);
+    }
+
+    .letterC,
+    .cat,
+    .cd,
+    .star,
+    .strawberry,
+    .butterfly,
+    .sparkle,
+    .clover,
+    .charm,
+    .smiski,
+    .immunity,
+    .name,
+    .charm2,
+    .merch1,
+    .merch2,
+    .merch3,
+    .merch4 {
+        width: 120px !important;
+        opacity: 0.70;
+    }
+}
+
+
