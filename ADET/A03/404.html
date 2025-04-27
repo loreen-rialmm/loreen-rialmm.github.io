@@ -6,7 +6,12 @@
     <title>Clairo's 404</title>
 
     <script type="text/javascript">
-      window.location.replace("/ADET/A03/404.html");  // Redirect to A03's specific 404.html page
+      // Check if the current path includes 'A03'
+      if (window.location.pathname.includes("/ADET/A03/")) {
+        window.location.replace("https://loreen-rialmm.github.io/ADET/A03/404.html");  // Redirect to A03's specific 404 page
+      } else {
+          window.location.replace("https://loreen-rialmm.github.io/404.html");  // Redirect to main 404 page
+      }
     </script>
     
     <link
