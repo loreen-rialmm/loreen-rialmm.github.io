@@ -43,21 +43,30 @@
     <div class="content-bottom">
         <a href="index.html" class="back-button">Back to Home</a>
     </div>
-
-    <script type="text/javascript">
-      window.addEventListener('load', function() {
-        if (window.location.pathname.includes("/ADET/A03/")) {
-            window.location.replace("https://loreen-rialmm.github.io/ADET/A03/404.html");  // Redirect to A03's specific 404 page
-        } else {
-            window.location.replace("https://loreen-rialmm.github.io/404.html");  // Redirect to main 404 page
-        }
-      });
-    </script>
-
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+          // Get the current page URL and the expected redirect URLs
+          const currentPath = window.location.pathname;
+          const a03Path = "/ADET/A03/404.html";
+          const main404Path = "/404.html";
+          
+          // If not already on the A03 404 page, redirect to it
+          if (currentPath !== a03Path && currentPath.includes("/ADET/A03/")) {
+              window.location.replace("https://loreen-rialmm.github.io/ADET/A03/404.html");
+          } 
+          // If not already on the main 404 page, redirect to it
+          else if (currentPath !== main404Path) {
+              window.location.replace("https://loreen-rialmm.github.io/404.html");
+          }
+      });
+    </script>
+
   </body>
 </html>
