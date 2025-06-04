@@ -101,7 +101,7 @@ body {
 iframe {
   border: none;            
   width: 80vh;             
-  height: 73vh;            
+  height: 70vh;            
 }
 
 .about-heading {
@@ -159,7 +159,7 @@ iframe {
 .mouse {
   width: 140px;
   transform: translateY(100px);
-  top: 30px;
+  top: 10px;
   right: 0;
   position: absolute;
 }
