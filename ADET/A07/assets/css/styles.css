@@ -111,7 +111,7 @@ iframe {
 .snoopy {
   width: 170px;
   transform: translateX(130px);
-  top: 60px;
+  top: 80px;
   left: 0;
   position: absolute;
 }
@@ -119,15 +119,15 @@ iframe {
 .guitar {
   width: 120px;
   transform: translateX(290px);
-  bottom: 50px;
-  left: 0;
+  bottom: 80px;
+  left: -50px;
   position: absolute;
 }
 
 .happy {
   width: 140px;
   transform: translateX(-160px);
-  top: 80px;
+  top: 100px;
   right: 0;
   position: absolute;
 }
@@ -135,7 +135,7 @@ iframe {
 .headphones {
   width: 200px;
   transform: translateX(-90px);
-  bottom: 40px;
+  bottom: 80px;
   right: 0;
   position: absolute;
 }
@@ -149,17 +149,17 @@ iframe {
 }
 
 .lpplayer {
-  width: 240px;
+  width: 220px;
   transform: translateX(20px);
   bottom: 30px;
-  left: 0;
+  left: -30px;
   position: absolute;
 }
 
 .mouse {
   width: 140px;
   transform: translateY(100px);
-  top: 0;
+  top: 30px;
   right: 0;
   position: absolute;
 }
@@ -167,7 +167,7 @@ iframe {
 .musicnotes {
   width: 240px;
   transform: translateY(-260px);
-  bottom: 0;
+  bottom: 30px;
   right: 0;
   position: absolute;
 }
