@@ -4,6 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" property="og:title" content="loreen-rialmm">
+    <meta name="type" property="og:type" content="website">
+    <meta name="url" property="og:url" content="loreen-rialmm.github.io">
+    <meta name="image" property="og:image" content="https://loreen-rialmm.github.io/images/loreenLogo.png">
+    <meta name="description" property="og:description" content="Portfolio website of Ma. Loreen M. Marajas">
+    
     <title>Loreen's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,216 +20,207 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link rel="icon" href="/images/loreenLogo.png">
+    <link rel="icon" href="images/loreenLogo.png">
 
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body id="body">
-    <nav class="navbar navbar-expand-lg tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="">
-                <img src="images/loreenLogo.png" width="100" height="40" class="d-inline-block align-top" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse container" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                </ul>
-                <div class="ms-auto">
-                    <div style="cursor: pointer;" onclick="changeColorMode()" class="d-flex align-items-center">
-                        <i class="bi-moon" id="btnColor"></i>
-                    </div>
-                </div> 
-            </div>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top shadow px-4 py-2" style="background-color: var(--secondaryColor);">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/loreenLogo.png" style="width: 100px; height: 40px;" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <section id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6 d-flex">
-                    <img src="images/aboutPic.jpg" class="aboutPic" alt="Profile Image">
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="breatheContainer">
-                        <div class="breatheAnimation text-center">
-                            <span>Loreen</span>
-                        </div>
-                    </div>
-                    <div class="introInfo">Hello and welcome! I’m Loreen Marajas, an IT student from the
-                        Polytechnic University of the Philippines - Sto. Tomas Campus.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container aboutContainer">
-            <div class="aboutTitle text-center" data-aos="fade-up" data-aos-delay="200">ABOUT ME</div>
-            <div class="aboutInfo" data-aos="fade-up" data-aos-delay="400">
-                My journey in web development is fueled
-                by a passion for crafting interactive, engaging digital experiences. Driven by a creative
-                vision, I focus on designing websites that are both visually striking and highly functional,
-                making sure each one delivers a smooth, intuitive user experience. Each project I work on is a
-                step forward in my goal of mastering both front-end and back-end development, with a strong
-                focus on staying current with the latest trends and technologies. Explore my portfolio to see
-                the projects that have defined my skills along the way, and let’s work together to bring
-                something truly inspiring to life!
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2 class="skillsTitle" data-aos="fade-up" data-aos-delay="200">Creative & Technical Expertise</h2>
-    </section>
-
-    <div class="categoryContainer" data-aos="fade-up" data-aos-delay="300">
-        <div class="categoryTitle">Programming Languages & Database</div>
-        <div class="creativeSkillsGallery">
-            <div class="creativeSkillsLogo">
-                <img src="images/phpLogo.png" alt="PHP Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/javaLogo.png" alt="Java Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/cLogo.png" alt="C Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/c++Logo.png" alt="C++ Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/pythonLogo.png" alt="Python Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/sqlLogo.png" alt="SQL Logo">
-            </div>
-        </div>
-    </div>
-    
-    <div class="categoryContainer" data-aos="fade-up" data-aos-delay="300">
-        <div class="categoryTitle">Web Development Technologies</div>
-        <div class="creativeSkillsGallery">
-            <div class="creativeSkillsLogo">
-                <img src="images/htmlLogo.png" alt="HTML Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/cssLogo.png" alt="CSS Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/javascriptLogo.png" alt="JavaScript Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/gitLogo.png" alt="Git Logo">
-            </div>
-        </div>
-    </div>
-    
-    <div class="categoryContainer" data-aos="fade-up" data-aos-delay="300">
-        <div class="categoryTitle">Design Tools</div>
-        <div class="creativeSkillsGallery">
-            <div class="creativeSkillsLogo">
-                <img src="images/figmaLogo.png" alt="Figma Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/photoshopLogo.png" alt="Photoshop Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/canvaLogo.png" alt="Canva Logo">
-            </div>
-            <div class="creativeSkillsLogo">
-                <img src="images/ibispaintLogo.png" alt="IbisPaint Logo">
-            </div>
-        </div>
-    </div>
-
-    <section id="projects">
-        <div class="row">
-            <div class="col-12 text-center mt-5" data-aos="fade-up" data-aos-delay="200">
-                <h1 class="projectTitle">PROJECTS</h1>
-            </div>
-        </div>
-    
-        <div class="row projectRow" data-aos="fade-up" data-aos-delay="300">
-            <div class="col-md-5 projectImage">
-                <img src="images/webDevLogo.png" alt="Web Development">
-            </div>
-            <div class="col-md-7 contentText">
-                <h2>WEB DEVELOPMENT</h2>
-                <p>
-                    This section showcases the projects I have worked on during my 3rd Year, 1st Semester in Web Development. 
-                    These projects highlight my skills in front-end and back-end development, combining creativity with 
-                    functionality to build engaging and user-friendly websites.
+    <div class="container my-5">
+      <section id="home" class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">home</div>
+              <hr class="my-0" />
+              <div class="card-body text-center">
+                <img src="images/pfp1.png" alt="Profile" class="rounded-circle border border-3 border-light mx-auto d-block" style="width: 150px; height: 150px; object-fit: cover; margin-top: 1rem;"/>
+                <div class="mt-4 heading">hi! I'm Ma. Loreen M. Marajas</div>
+                <p class="text-muted mb-4">
+                  I'm an IT student from the Polytechnic University of the Philippines - Sto. Tomas Campus.
                 </p>
-                <a href="./webdev/index.html" class="exploreButton">Explore</a>
+                <a href="#about" class="btn-primary">
+                  Know More
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    
-        <div class="row projectRow mb-5" data-aos="fade-up" data-aos-delay="400">
-            <div class="col-md-5 projectImage">
-                <img src="images/appDevLogo.png" alt="App Dev and Emerging Technologies">
-            </div>
-            <div class="col-md-7 contentText">
-                <h2>APP DEVELOPMENT</h2>
-                <p>
-                    This section will feature the projects I will be working on during my 3rd Year, 2nd Semester in App Development 
-                    and Emerging Technologies. These projects will focus on building innovative applications that leverage modern 
-                    tools and technologies to deliver efficient and user-centric solutions.
-                </p>
-                <a href="./ADET/index.html" class="exploreButton">Explore</a>
-            </div>
-        </div>
-    </section>
+      </section>
 
-    <footer>
-        <div class="container-fluid">
-            <div class="footerContent">
-                <div class="footerTitle">CONNECT WITH ME</div>
-                <ul class="socials">
-                    <li>
-                        <a class="text-caps-small mx-2" href="mailto:marajasmaloreen@gmail.com" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-envelope" style="font-size: 48px;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-caps-small" href="https://github.com/loreen-rialmm" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-github" style="font-size: 48px;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-caps-small" href="https://www.instagram.com/ria_oreen/" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-instagram" style="font-size: 48px;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-caps-small" href="https://www.facebook.com/loreen.marajas" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-facebook" style="font-size: 48px;"></i>
-                        </a>
-                    </li>
-                </ul>
+      <section id="about" class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">
+                about me
+              </div>
+              <hr class="my-0" />
+              <div class="card-body">
+                <div class="row align-items-center g-4">
+                  <div class="col-md-4 text-center">
+                    <img src="images/aboutPic.jpg" alt="Profile" class="border border-3 border-light" style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="aboutInfo mb-3" data-aos="fade-up" data-aos-delay="300">
+                      My journey in web development is fueled by a passion for crafting interactive, engaging digital experiences. 
+                      Driven by a creative vision, I focus on designing websites that are both visually striking and highly 
+                      functional, making sure each one delivers a smooth, intuitive user experience. Each project I work on is a 
+                      step forward in my goal of mastering both front-end and back-end development, with a strong focus on staying 
+                      current with the latest trends and technologies. Explore my portfolio to see the projects that have defined 
+                      my skills along the way, and let’s work together to bring something truly inspiring to life!
+                    </div>
+                    <a href="#skills" class="btn-secondary" >
+                      See My Skills
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="footerCopyright">
-                <span>© 2024 Loreen Marajas</span>
-            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="mb-5"></section>
+
+      <section id="projects" class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">
+                my projects
+              </div>
+              <hr class="my-0" />
+              <div class="card-body">
+                <div class="row align-items-center g-4">
+                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/webDevLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/> 
+                  </div>
+                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
+                    <div class="heading">WEB DEVELOPMENT</div>
+
+                    <div class="aboutInfo mb-3">
+                      This section showcases the projects I have worked on
+                      during my 3rd Year, 1st Semester in Web Development. These
+                      projects highlight my skills in front-end and back-end
+                      development, combining creativity with functionality to
+                      build engaging and user-friendly websites.
+                    </div>
+                    <a href="./webdev/index.html" class="btn-primary">Explore</a>
+                  </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="row align-items-center g-4">
+                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/appDevLogo.png" alt="App Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                  </div>
+                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
+                    <div class="heading">APP DEVELOPMENT</div>
+
+                    <div class="aboutInfo mb-3" data-aos="fade-up" data-aos-delay="400">
+                      This section will feature the projects I will be working
+                      on during my 3rd Year, 2nd Semester in App Development and
+                      Emerging Technologies. These projects will focus on
+                      building innovative applications that leverage modern
+                      tools and technologies to deliver efficient and
+                      user-centric solutions.
+                    </div>
+                    <a href="./ADET/index.html" class="btn-primary">Explore</a>
+                  </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="row align-items-center g-4">
+                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/sideQuestsLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                  </div>
+                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
+                    <div class="heading">SIDE QUESTS DEVELOPMENT</div>
+
+                    <div class="aboutInfo mb-3" data-aos="fade-up" data-aos-delay="400">
+                      This section showcases projects that reflect both my
+                      creativity and technical skills. From web applications to
+                      mini-games, each project highlights my passion for
+                      building interactive and user-focused digital experiences.
+                    </div>
+                    <a href="./SD/index.html" class="btn-primary">Explore</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer style="background-color: var(--secondaryColor);" class="text-dark mt-5 pt-4 pb-3">
+      <div class="container text-center">
+        <h5 class="fw-bold mb-4">CONNECT WITH ME</h5>
+
+        <!-- Social Icons -->
+        <ul class="list-inline mb-4">
+          <li class="list-inline-item mx-3">
+            <a href="mailto:marajasmaloreen@gmail.com" target="_blank" rel="noopener noreferrer" class="text-dark" >
+              <i class="bi bi-envelope" style="font-size: 2rem"></i>
+            </a>
+          </li>
+          <li class="list-inline-item mx-3">
+            <a href="https://github.com/loreen-rialmm" target="_blank" rel="noopener noreferrer" class="text-dark" >
+              <i class="bi bi-github" style="font-size: 2rem"></i>
+            </a>
+          </li>
+          <li class="list-inline-item mx-3">
+            <a href="https://www.instagram.com/ria_oreen" target="_blank" rel="noopener noreferrer" class="text-dark" >
+              <i class="bi bi-instagram" style="font-size: 2rem"></i>
+            </a>
+          </li>
+          <li class="list-inline-item mx-3">
+            <a href="https://www.facebook.com/loreen.marajas" target="_blank" rel="noopener noreferrer" class="text-dark">
+              <i class="bi bi-facebook" style="font-size: 2rem"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Copyright -->
+        <div class="small">&copy; 2025 Loreen Marajas</div>
+      </div>
     </footer>
     
 

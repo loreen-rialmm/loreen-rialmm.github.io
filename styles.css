@@ -1,299 +1,131 @@
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    min-height: 100%;
-    overflow-x: hidden;
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    background-color: #FFF5EE;
-}
-
 @font-face {
-    font-family: 'TheFont';
-    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
+    font-family: "TheFont";
+    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+        format("woff2");
 }
 
-#body.dark-mode {
-    background-color: #2F2F2F;
-    color: #EDFFCD;
+:root {
+    --primaryFont: "Manrope", sans-serif;
+    --headingFont: "TheFont", sans-serif;
+    --subheadingFont: "Arial", sans-serif;
+    --primaryColor: #01463c;
+    --secondaryColor: #cee8d0;
+    --bgColor: #fff5ee;
+    --text-color-light: #fffefe;
+    --text-color-dark: #141414;
 }
 
-#body.dark-mode .navbar {
-    background-color: #2F2F2F;
+body {
+    font-family: var(--primaryFont);    
 }
 
-#body.dark-mode .nav-link {
-    color: #EDFFCD;
+::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
 }
 
-#body.dark-mode .breatheAnimation span {
-    color: #C3EDAA; 
+::-webkit-scrollbar-track {
+    background: var(--bgColor);
 }
 
-#body.dark-mode .introInfo {
-    color: #EDFFCD; 
+::-webkit-scrollbar-thumb {
+    background: var(--primaryColor);
+    border-radius: 10px;
 }
 
-#body.dark-mode .aboutTitle {
-    color: #C3EDAA; 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color-dark);
 }
 
-#body.dark-mode .aboutInfo {
-    border: 2px solid #C3EDAA; 
-    color: #EDFFCD; 
+.heading {
+    font-family: var(--primaryFont);
+    font-size: clamp(1rem, 2.6rem, 3.2rem);
+    font-size: 2.6rem;
+    font-weight: bolder;
+    color: var(--primaryColor);
 }
 
-#body.dark-mode .skillsTitle {
-    color: #C3EDAA; 
+.subheading {
+    font-family: var(--primaryFont);
+    font-size: clamp(1rem, 1.4rem, 1.8rem);
+    font-size: 1.4rem;
+    font-weight: bolder;
 }
 
-#body.dark-mode .projectTitle {
-    color: #C3EDAA; 
+.btn-primary {
+    font-family: var(--subheadingFont);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--primaryColor);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.breatheAnimation span {
-    font-family: 'TheFont';
-    font-size: clamp(7vw, 13vw, 15vh);
-    color: #01463C;
-    animation: letter-breathe 3s ease-in-out infinite;
-    animation-delay: 1s;
+.btn-primary:hover {
+    background-color: var(--primaryColor);
+    color: var(--bgColor);
 }
 
-@keyframes letter-breathe {
-    from,
-    to {
-        font-variation-settings: 'wght' 100;
-    }
-
-    40% {
-        font-variation-settings: 'wght' 700;
-    }
+.btn-secondary {
+    font-family: var(--subheadingFont);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primaryColor);
+    border-radius: 5px;
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: all 0.1s ease;
 }
 
-.aboutPic {
-    height: auto;
-    width: 100%;
-    margin-top: 8px;
-    border-radius: 20px;
-    display: block;
+.btn-secondary:hover {
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    background-color: var(--bgColor);
+
 }
 
-.introInfo {
-    font-family: "Roboto Mono", serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    color: #4E7567;
+.nav-link.active {
+  color: var(--primaryColor) !important;
+  font-weight: bold;
 }
 
-.aboutContainer {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.aboutTitle {
-    font-size: 48px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 12px;
-    color: #01463C;
-}
-
-.aboutInfo {
-    font-family: "Roboto Mono", serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    margin: 0px;
-    border: 2px solid #01463C; 
-    padding: 20px;            
-    border-radius: 15px;      
-    color: #4E7567;
-}
-
-.skillsTitle {
-    text-align: center;
-    margin-top: 40px;
-    color: #01463C;
-}
-
-.categoryContainer {
-    background-color: #99AFA7;  
-    padding: 20px;
+.card {
     border-radius: 12px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: "Roboto Mono", serif;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.categoryTitle {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #01463C; 
-    margin-bottom: 20px;
-}
-
-.creativeSkillsGallery {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.creativeSkillsLogo img {
-    width: 80px; 
-    height: auto;
-    filter: grayscale(40%); 
+.skill-logo {
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    filter: grayscale(40%);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.creativeSkillsLogo img:hover {
-    transform: scale(1.1);  
+.skill-logo:hover {
+    transform: scale(1.1);
     filter: grayscale(0%);
 }
 
-.projectTitle {
-    color: #01463C;
+@media (max-width: 575.98px) {
+body {
+    font-size: 0.9rem;
 }
-
-.projectRow {
-    background-color: #99AFA7;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.heading {
+    font-size: 1.7rem;
 }
-
-.projectImage img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
+.subheading {
+    font-size: 1.2rem;
 }
-
-.contentText {
-    padding: 30px;
+.btn-primary,
+.btn-secondary {
+    font-size: 0.8rem;
 }
-
-h2 {
-    color: #01463C;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #4E7567;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-family: "Roboto Mono", serif;
-}
-
-.exploreButton {
-    border: 2px solid #01463C;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    color: #01463C;
-}
-
-.exploreButton:hover {
-    background-color: #01463C;
-    color: #FFF5EE;
-}
-
-.socials {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.socials li {
-    margin: 0 10px;
-}
-
-.text-caps-small {
-    color: #615d59;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.text-caps-small i {
-    font-size: 24px;
-}
-
-.text-caps-small:hover {
-    color: #01463C;
-}
-
-.footerCopyright {
-    color: #01463C;
-    font-family: Rubik, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    text-align: center;
-    background-color: #CEE8D0;
-}
-
-.container-fluid {
-    width: 100%;
-    padding: 0;
-}
-
-.footerContent {
-    margin-bottom: 10px;
-}
-
-.footerTitle {
-    font-size: 18px;
-    color: #01463C;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 50px;
-        letter-spacing: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    .introInfo {
-        text-align: center;
-        font-size: 1.25rem;
-    }
-    .aboutContainer {
-        padding-left: 12px;
-        padding-right: 12px; 
-    }
-    .aboutInfo {
-        font-size: 1.25rem;
-    }
-    h1 {
-        font-size: 35px;
-        letter-spacing: 2px;
-    }
 }
