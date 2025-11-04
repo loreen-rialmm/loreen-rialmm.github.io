@@ -1,77 +1,127 @@
+//Navbar JS Functions
 var navLinks = document.querySelectorAll('.nav-link');
+
 navLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-        navLinks.forEach(function(nav) {
-        nav.classList.remove('active');
-        });
-        this.classList.add('active');
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    navLinks.forEach(function(nav) {
+      nav.classList.remove('active');
     });
+    this.classList.add('active');
+
+    // Smooth scroll to target section
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
 
+//Skills JS Functions
 var skills = [
-  {
-    category: "Programming Languages & Database",
-    logos: [
-      { src: "images/phpLogo.png", alt: "PHP Logo" },
-      { src: "images/javaLogo.png", alt: "Java Logo" },
-      { src: "images/cLogo.png", alt: "C Logo" },
-      { src: "images/c++Logo.png", alt: "C++ Logo" },
-      { src: "images/pythonLogo.png", alt: "Python Logo" },
-      { src: "images/sqlLogo.png", alt: "SQL Logo" }
-    ]
-  },
-  {
-    category: "Web Development Technologies",
-    logos: [
-      { src: "images/htmlLogo.png", alt: "HTML Logo" },
-      { src: "images/cssLogo.png", alt: "CSS Logo" },
-      { src: "images/javascriptLogo.png", alt: "JavaScript Logo" },
-      { src: "images/gitLogo.png", alt: "Git Logo" }
-    ]
-  },
-  {
-    category: "Design Tools",
-    logos: [
-      { src: "images/figmaLogo.png", alt: "Figma Logo" },
-      { src: "images/photoshopLogo.png", alt: "Photoshop Logo" },
-      { src: "images/canvaLogo.png", alt: "Canva Logo" },
-      { src: "images/ibispaintLogo.png", alt: "IbisPaint Logo" }
-    ]
-  }
+  { name: "PHP", logo: "images/phpLogo.png", category: "Programming", desc: "Server-side scripting for web apps." },
+  { name: "Java", logo: "images/javaLogo.png", category: "Programming", desc: "Object-oriented development & backend." },
+  { name: "C", logo: "images/cLogo.png", category: "Programming", desc: "Fundamental systems programming." },
+  { name: "C++", logo: "images/c++Logo.png", category: "Programming", desc: "Efficient and performance-focused code." },
+  { name: "Python", logo: "images/pythonLogo.png", category: "Programming", desc: "Automation, scripting, and data tasks." },
+  { name: "SQL", logo: "images/sqlLogo.png", category: "Database", desc: "Database management and query design." },
+  { name: "HTML", logo: "images/htmlLogo.png", category: "Web", desc: "Crafting structured and semantic markup." },
+  { name: "CSS", logo: "images/cssLogo.png", category: "Web", desc: "Responsive and modern visual styling." },
+  { name: "JavaScript", logo: "images/javascriptLogo.png", category: "Web", desc: "Interactive and dynamic web features." },
+  { name: "Chart.js", logo: "images/chartjsLogo.png", category: "Web", desc: "Data visualization and chart integration." },
+  { name: "Git", logo: "images/gitLogo.png", category: "Tools", desc: "Version control and collaboration." },
+  { name: "Bootstrap", logo: "images/bootstrapLogo.png", category: "Framework", desc: "Building responsive layouts quickly." },
+  { name: "Figma", logo: "images/figmaLogo.png", category: "Design", desc: "User interface and prototyping." },
+  { name: "Photoshop", logo: "images/photoshopLogo.png", category: "Design", desc: "Creative image design and editing." },
+  { name: "Canva", logo: "images/canvaLogo.png", category: "Design", desc: "Fast and flexible visual design tool." }
 ];
 
-var skillsContainer = document.getElementById("skills");
+var grid = document.querySelector(".skills-grid");
 
-skillsContainer.innerHTML += 
-  "<div class=\"row justify-content-center\">" +
-    "<div class=\"col-12 col-lg-10\">" +
-      "<div class=\"card shadow rounded-4 overflow-hidden\" data-aos=\"fade-up\" data-aos-delay=\"400\">" +
-        "<div class=\"text-white px-4 py-2 fw-bold\" style=\"background-color: var(--primaryColor);\">my skills</div>" +
-        "<hr class=\"my-0\" />" +
-        "<div class=\"card-body\">" +
-          "<div class=\"heading text-center fw-bold mb-4\" data-aos=\"fade-up\" data-aos-delay=\"200\">Creative & Technical Expertise</div>" +
-        "</div>" +
-      "</div>" +
-    "</div>" +
-  "</div>";
+skills.forEach(function(s) {
+  var tile = 
+    '<div class="skill-tile">' +
+      '<img src="' + s.logo + '" alt="' + s.name + '" class="skill-logo" loading="lazy" />' +
+      '<div class="skill-overlay">' +
+        '<div>' +
+          '<div class="skill-title">' + s.name + '</div>' +
+          '<div class="skill-desc">' + s.desc + '</div>' +
+        '</div>' +
+        '<div class="skill-badges">' +
+          '<div class="badge-skill">' + s.category + '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
 
-var cardBody = skillsContainer.querySelector(".card-body");
-
-skills.forEach(function(skillSet, index) {
-  cardBody.innerHTML += 
-    "<div class=\"categoryContainer mb-5\" data-aos=\"fade-up\" data-aos-delay=\"300\">" +
-      "<div class=\"subheading text-center fw-bold mb-3\">" + skillSet.category + "</div>" +
-      "<div class=\"row justify-content-center text-center\">" +
-        skillSet.logos.map(function(logo) {
-          return "<div class=\"col-6 col-md-3 mb-4\">" +
-                   "<img src=\"" + logo.src + "\" alt=\"" + logo.alt + "\" class=\"skill-logo\"/>" +
-                 "</div>";
-        }).join("") +
-      "</div>" +
-    "</div>";
+  grid.innerHTML += tile;
 });
 
-cardBody.innerHTML += 
-  "<div class=\"text-center my-4\">" +
-    "<a href=\"#projects\" class=\"btn-secondary\" data-aos=\"fade-up\" data-aos-delay=\"300\">See Projects</a>" +
-  "</div>";
+//Feauture Video JS Functions
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.modal').forEach(function (modal) {
+    modal.addEventListener('hidden.bs.modal', function () {
+      var video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      // Remove lingering focus before Bootstrap hides modal
+      if (document.activeElement && modal.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Handle all feature preview videos (hover play/pause)
+  document.querySelectorAll('.feature-preview-video').forEach(function(video) {
+    video.addEventListener('mouseenter', function() { video.play(); });
+    video.addEventListener('mouseleave', function() { video.pause(); });
+  });
+
+  // Handle all modals dynamically
+  document.querySelectorAll('.modal').forEach(function(modal) {
+    // When modal is about to hide
+    modal.addEventListener('hide.bs.modal', function () {
+      // Pause & reset video inside
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      // Blur any focused element inside modal to prevent aria-hidden warning
+      if (document.activeElement && modal.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+    });
+
+    // When modal is shown
+    modal.addEventListener('shown.bs.modal', function () {
+      const video = modal.querySelector('video');
+      if (video) video.play();
+    });
+  });
+});
+
+//Scroll to Top Button JS Function
+const scrollBtn = document.getElementById('scrollToTopBtn');
+
+// Show/hide button on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // show after 300px scroll
+    scrollBtn.classList.add('show');
+  } else {
+    scrollBtn.classList.remove('show');
+  }
+});
+
+// Scroll smoothly to top when clicked
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

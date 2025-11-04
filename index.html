@@ -43,9 +43,6 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav gap-3">
             <li class="nav-item">
-              <a class="nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
@@ -60,51 +57,55 @@
     </nav>
 
     <div class="container my-5">
-      <section id="home" class="mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">home</div>
-              <hr class="my-0" />
-              <div class="card-body text-center">
-                <img src="images/pfp1.png" alt="Profile" class="rounded-circle border border-3 border-light mx-auto d-block" style="width: 150px; height: 150px; object-fit: cover; margin-top: 1rem;"/>
-                <div class="mt-4 heading">hi! I'm Ma. Loreen M. Marajas</div>
-                <p class="text-muted mb-4">
-                  I'm an IT student from the Polytechnic University of the Philippines - Sto. Tomas Campus.
-                </p>
-                <a href="#about" class="btn-primary">
-                  Know More
-                </a>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="profile-card p-4 mb-5 d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <!-- Left side: Profile image -->
+            <div class="me-lg-4 text-center text-lg-start">
+              <img src="images/mainPfp.jpg" alt="Profile" class="profile-img">
+            </div>
+
+            <!-- Right side: Text content -->
+            <div class="text-center text-lg-start mt-3 mt-lg-0">
+              <h1 class="fw-bold mb-2">hi! <span class="highlight">I'm Ma. Loreen M. Marajas.</span></h1>
+              <h2 class="text-secondary fw-semibold mb-3" style="font-size: 1.25rem;">
+                Aspiring Web Designer & Developer | Passionate about UI/UX and building user-focused digital experiences.
+              </h2>
+
+              <div class="social-icons">
+                <!-- <a href="#" class="icon" title="Resume"><i class="bi bi-file-earmark-text"></i></a> -->
+                <a href="https://www.linkedin.com/in/ma-loreen-marajas1504" class="icon" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:marajasmaloreen@gmail.com" class="icon" target="_blank" title="Gmail"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.facebook.com/loreen.marajas" class="icon" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/ria_oreen" class="icon" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section id="about" class="mb-5">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10">
             <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
               <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">
-                about me
+                meet loreen
               </div>
               <hr class="my-0" />
               <div class="card-body">
                 <div class="row align-items-center g-4">
                   <div class="col-md-4 text-center">
-                    <img src="images/aboutPic.jpg" alt="Profile" class="border border-3 border-light" style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                    <img src="images/pfp1.png" alt="Profile" 
+                        style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover;"/>
                   </div>
                   <div class="col-md-8">
                     <div class="aboutInfo mb-3" data-aos="fade-up" data-aos-delay="300">
-                      My journey in web development is fueled by a passion for crafting interactive, engaging digital experiences. 
-                      Driven by a creative vision, I focus on designing websites that are both visually striking and highly 
-                      functional, making sure each one delivers a smooth, intuitive user experience. Each project I work on is a 
-                      step forward in my goal of mastering both front-end and back-end development, with a strong focus on staying 
-                      current with the latest trends and technologies. Explore my portfolio to see the projects that have defined 
-                      my skills along the way, and let’s work together to bring something truly inspiring to life!
+                      I’m a 4th-year Information Technology student from the Polytechnic University of the Philippines – Sto. Tomas Campus.  
+                      I’m adaptable, motivated, and always eager to take on new challenges that help me grow both technically and personally.  
+                      With a strong curiosity for learning, I aim to contribute meaningfully while continuously improving my skills in web development and design.
                     </div>
-                    <a href="#skills" class="btn-secondary" >
-                      See My Skills
+                    <a href="#about" class="btn-secondary">
+                      More About Me
                     </a>
                   </div>
                 </div>
@@ -115,7 +116,182 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="mb-5"></section>
+      <section id="skills" class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card skills-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">my skills</div>
+              <hr class="my-0" />
+              <div class="card-body">
+                <div class="heading-center" data-aos="fade-up" data-aos-delay="200">
+                  Creative & Technical Expertise
+                </div>
+
+                <!-- Grid: 1 row, 5 columns -->
+                <div class="skills-grid mb-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Projects Section -->
+      <section id="feature-projects" class="my-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="heading-center" data-aos="fade-up" data-aos-delay="200">
+              FEATURE PROJECTS
+            </div>
+
+            <!-- Feature Project -->
+            <div class="row align-items-center g-4" data-aos="fade-up">
+              <!-- Left Image -->
+              <div class="col-12 col-md-7 text-center position-relative" data-aos="fade-right">
+                <video 
+                  class="img-fluid shadow-sm feature-preview-video" 
+                  style="border-radius: 40px;" 
+                  src="videos/Cavegamerecordvid.mp4" 
+                  muted
+                  preload="metadata" 
+                  playsinline
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                ></video>
+              </div>
+
+
+              <!-- Right Content -->
+              <div class="col-12 col-md-5" data-aos="fade-left">
+                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;">#Python</p>
+                <h2 class="fw-bold" style="color: var(--primaryColor);">Maria's Enchanted Escape</h2>
+                <p class="text-secondary mb-4" style="font-size: 1rem;">
+                  In Maria's Enchanted Escape, players must survive as long as possible by jumping and dodging obstacles while aiming for the highest score. Each level introduces new challenges and faster gameplay, keeping the experience exciting and unpredictable.
+                </p>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-3">
+                  <!-- View Code Button -->
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/SD/Maria's%20Enchanted%20Escape" target="_blank" class="btn btn-outline-dark px-4 py-2 rounded-3">
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
+          
+            <!-- Feature Project 2 -->
+            <div class="row align-items-center g-4" data-aos="fade-up">
+              <!-- Left Image -->
+              <div class="col-12 col-md-7 text-center position-relative" data-aos="fade-right">
+                <video 
+                  class="img-fluid shadow-sm feature-preview-video" 
+                  style="border-radius: 40px;" 
+                  src="videos/CleanUprecordvid.mp4" 
+                  muted
+                  preload="metadata" 
+                  playsinline
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal2"
+                ></video>
+              </div>
+
+              <!-- Right Content -->
+              <div class="col-12 col-md-5" data-aos="fade-left">
+                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;">#Java</p>
+                <h2 class="fw-bold" style="color: var(--primaryColor);">InGame: Clean Up</h2>
+                <p class="text-secondary mb-4" style="font-size: 1rem;">
+                  Clean Up Challenge is an engaging and educational game that encourages players to sort through items quickly, deciding which ones Disgust finds acceptable and which ones should be discarded. The game is designed to promote awareness of recycling and proper waste management. Players earn points by correctly sorting items into categories such as recyclable, non-recyclable, and compostable.
+                </p>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
+
+            <!-- Feature Project 3 -->
+            <div class="row align-items-center g-4" data-aos="fade-up">
+              <!-- Left Image -->
+              <div class="col-12 col-md-7 text-center position-relative" data-aos="fade-right">
+                <video 
+                  class="img-fluid shadow-sm feature-preview-video" 
+                  style="border-radius: 40px;" 
+                  src="videos/MyRialmrecordvid.mp4" 
+                  muted
+                  preload="metadata" 
+                  playsinline
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal3"
+                ></video>
+              </div>
+
+
+              <!-- Right Content -->
+              <div class="col-12 col-md-5" data-aos="fade-left">
+                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;">#WebDev #Backend</p>
+                <h2 class="fw-bold" style="color: var(--primaryColor);">My Rialm</h2>
+                <p class="text-secondary mb-4" style="font-size: 1rem;">
+                  Step into My Rialm, where each island reveals a piece of who I am. From the love of Family Island to the adventures of Sponty Trip Island, and the creativity of Film & Music Island, every space tells a story. Explore the people, passions, and memories that shape me—welcome to my world, one island at a time.
+                </p>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-3">
+                  <!-- View Code Button -->
+                  <a href="https://github.com/loreen-rialmm/WD-BE/tree/main/A08" target="_blank" class="btn btn-outline-dark px-4 py-2 rounded-3">
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Modal -->
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content border-0 rounded-4 overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <video id="featureVideo" controls>
+                <source src="videos/Cavegamerecordvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video Modal 2-->
+      <div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content border-0 rounded-4 overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <video id="featureVideo2" controls>
+                <source src="videos/CleanUprecordvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Modal 3-->
+      <div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content border-0 rounded-4 overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <video id="featureVideo2" controls>
+                <source src="videos/MyRialmrecordvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="projects" class="mb-5">
         <div class="row justify-content-center">
@@ -128,7 +304,7 @@
               <div class="card-body">
                 <div class="row align-items-center g-4">
                   <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/webDevLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/> 
+                    <img src="images/webDevLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/> 
                   </div>
                   <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
                     <div class="heading">WEB DEVELOPMENT</div>
@@ -148,7 +324,7 @@
 
                 <div class="row align-items-center g-4">
                   <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/appDevLogo.png" alt="App Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                    <img src="images/appDevLogo.png" alt="App Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/>
                   </div>
                   <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
                     <div class="heading">APP DEVELOPMENT</div>
@@ -169,7 +345,7 @@
 
                 <div class="row align-items-center g-4">
                   <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/sideQuestsLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 15px;"/>
+                    <img src="images/sideQuestsLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/>
                   </div>
                   <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
                     <div class="heading">SIDE QUESTS DEVELOPMENT</div>
@@ -189,6 +365,12 @@
         </div>
       </section>
     </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+      <img src="images/arrow-up.svg" loading="lazy" alt="arrow pointing up">
+    </button>
+
 
     <footer style="background-color: var(--secondaryColor);" class="text-dark mt-5 pt-4 pb-3">
       <div class="container text-center">
