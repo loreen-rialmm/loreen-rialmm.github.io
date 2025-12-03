@@ -19,6 +19,14 @@ body {
     font-family: var(--primaryFont);    
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px; 
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 3px;
@@ -50,6 +58,14 @@ body {
     font-size: clamp(1rem, 1.4rem, 1.8rem);
     font-size: 1.4rem;
     font-weight: bolder;
+}
+
+.body-text {
+    font-family: var(--primaryFont);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
+    line-height: 1.6; 
+    color: var(--text-color-dark);
+    margin-bottom: 1rem;
 }
 
 .btn-primary {
@@ -91,9 +107,9 @@ body {
 
 }
 
-.nav-link.active {
+.navbar .nav-link.active {
+  font-weight: 700;
   color: var(--primaryColor) !important;
-  font-weight: bold;
 }
 
 .profile-card {
@@ -105,7 +121,8 @@ body {
 
 .profile-img {
     width: 300px;
-    height: 300px;
+    max-width: 300px;
+    height: auto;
     border-radius: 40px;
     border: 3px solid #fff;
     object-fit: cover;
@@ -289,9 +306,35 @@ body {
 }
 
 /* Feature Projects styling */
+.feature-project {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-hover-indicator {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.feature-project:hover .video-hover-indicator {
+  opacity: 1;
+}
+
 .feature-preview-video {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.40); 
@@ -302,7 +345,7 @@ body {
   opacity: 0.95;
   transform: scale(1.02);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: scale(1.02) translateY(-6px); 
+  transform: scale(1.02); 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
   border-radius: 40px;
 }
@@ -324,19 +367,19 @@ body {
 /* Scroll to Top Button styling */
 #scrollToTopBtn {
   position: fixed;
-  bottom: 40px; 
-  right: 40px;  
+  bottom: 40px;
+  right: 40px;
   width: 50px;
   height: 50px;
   border: none;
   border-radius: 50%;
-  background-color: var(--primaryColor); 
+  background-color: var(--primaryColor);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  opacity: 0; 
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
   z-index: 1000;
@@ -345,13 +388,28 @@ body {
 #scrollToTopBtn img {
   width: 24px;
   height: 24px;
-  filter: invert(1); 
+  filter: invert(1);
 }
 
 #scrollToTopBtn.show {
   opacity: 1;
   pointer-events: auto;
 }
+
+@media (max-width: 575px) {
+  #scrollToTopBtn {
+    bottom: 20px;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  #scrollToTopBtn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 
 @media (max-width: 575.98px) {
 body {
@@ -368,3 +426,29 @@ body {
     font-size: 0.8rem;
 }
 }
+
+/* CSS For about.html */
+.equal-column {
+    display: flex;
+}
+
+.card-consistent {
+    border-radius: 40px !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+    flex: 1;      
+}
+
+.card-consistent img,
+.card-consistent video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 40px !important;
+}
+
+.row-h-small .card-consistent { height: 400px; }
+.row-h-medium .card-consistent { height: 515px; }
