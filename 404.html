@@ -1,174 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>404 Error</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
+  <!-- Page Information -->
+  <title>404 | Page Not Found — Ma. Loreen M. Marajas</title>
+  <meta name="description" content="The page you're looking for could not be found. Return to Ma. Loreen M. Marajas' portfolio to explore projects, experience, and creative work.">
 
-    <link rel="icon" href="/images/logoIcon.png">
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="404 | Page Not Found — Ma. Loreen M. Marajas">
+  <meta property="og:description" content="This page couldn't be found. Visit the portfolio to explore projects, experience, and creative work.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/404.html">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
 
-        html, body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(to bottom, #FFF3F3, #A07CFF, #FFF3F3);
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
 
-        body {
-            font-family: "Rubik Mono One", monospace;
-            background-color: #F4EBCF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #ae2893;
-            text-align: center;
-        }
+  <!-- Google Fonts: Gantari + Parkinsans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15vw;
-            color: blueviolet;
-        }
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 
-        span {
-            background: transparent;
-            color: #ae2893;
-            text-shadow: -6px 4px 0 #F4EBCF, -16px 8px 0 #ae2893;
-            font-weight: 700;
-            animation: spin 8s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotateY(0deg);
-            }
-
-            50% {
-                transform: rotateY(180deg);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-        .cardNotFound {
-            margin-bottom: 10px;
-            padding: 20px;
-            border-radius: 14px;
-            border: none;
-            background-color: transparent;
-            font-size: 50px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 50px;
-        }
-
-        .marquee {
-            overflow: hidden;
-            display: flex;
-            background-color: var(--clr_light);
-            color: var(--clr_dark);
-            width: 100%;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .marquee h2 {
-            font-size: 32px;
-            white-space: nowrap;
-            text-transform: uppercase;
-            animation: marquee 10s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .homepageButton {
-            display: inline-block;
-            margin-top: 20px;   
-            padding: 10px 20px;
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #ae2893;
-            border: 2px dashed #c780ca;
-            background-color: transparent;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            text-decoration: none;
-            transition: color 0.4s ease-out;
-            border-radius: 14px;
-        }
-
-        .homepageButton::before {
-            content: " ";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(99, 61, 204, 0.5);
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 0.4s ease-out, background-color 0.4s ease-out;
-            z-index: 0;
-        }
-
-        .homepageButton:hover {
-            color:#ae2893;
-        }
-
-        .homepageButton:hover::before {
-            transform: scaleY(1);
-        }
-    </style>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
-    <div class="wrapper">
-        <span>4</span>
-        <span>0</span>
-        <span>4</span>
-    </div>
+<body class="error-404-page">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home" class="logo" aria-label="Go to homepage">
+        <img src="assets/icons/logo.svg" data-light-src="assets/icons/logo.svg" data-dark-src="assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
 
-    <div class="cardNotFound">
-        <h1>NOT FOUND</h1>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="marquee">
-        <h2>Oh no! This page doesn't exist. &nbsp;</h2>
-    </div>
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-    <a href="/index.html" class="homepageButton">
-        Back To Homepage
-    </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
+    </nav>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+  <div class="page">
+    <main class="hero">
+      <p class="code p-3">0x – Error</p>
+      <h1 class="error">ERROR</h1>
+
+      <!-- 404 artwork: from 404_number.svg, with the offset shadow drawn once for all digits -->
+      <svg class="digits" viewBox="0 0 1004 494" role="img" aria-label="404">
+        <defs>
+          <g id="digits">
+            <!-- 4 -->
+            <rect x="0" y="0" width="107.355" height="193.585"/>
+            <rect x="200.57" y="0.364" width="107.355" height="426.474"/>
+            <rect x="36.394" y="131.764" width="200.567" height="97.966"/>
+            <!-- 0 -->
+            <rect x="349" y="88.586" width="95.065" height="390.481"/>
+            <rect x="550.742" y="88.586" width="95.065" height="390.481"/>
+            <rect x="407.833" y="52" width="172.714" height="92.168"/>
+            <rect x="407.833" y="401.674" width="172.714" height="92.168"/>
+            <!-- 4 -->
+            <rect x="677" y="0" width="107.355" height="193.585"/>
+            <rect x="877.57" y="0.364" width="107.355" height="426.474"/>
+            <rect x="713.394" y="131.764" width="200.567" height="97.966"/>
+          </g>
+        </defs>
+        <use href="#digits" class="shade" x="19" y="21"/>
+        <use href="#digits"/>
+      </svg>
+
+      <h2 class="title">Page Not Found</h2>
+
+      <a href="index.html#home" class="btn btn-solid error-home-button">
+        <svg class="arrow" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+          <path d="M19 12H5"></path>
+          <path d="M12 19l-7-7 7-7"></path>
+        </svg>
+        <span>Back to Homepage</span>
+      </a>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
-
 </html>

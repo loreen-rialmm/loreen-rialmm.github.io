@@ -1,0 +1,1678 @@
+/* ========================================
+   PROJECT CARDS — RESTORE ORIGINAL DESIGN
+======================================== */
+
+.compact-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+.compact-project-card,
+.game-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0b0b0b;
+  border: 1px solid #0b0b0b;
+  border-radius: 0;
+  transition: border-color 0.25s ease;
+}
+
+.compact-project-card:hover,
+.game-card:hover {
+  border-color: var(--color-accent, #91f000);
+}
+
+/* Preview area for web projects */
+
+.compact-card-shot {
+  width: calc(100% - 24px);
+  aspect-ratio: 16 / 10;
+  margin: 12px 12px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #161616;
+  border: 1px dashed #454545;
+  color: #999;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Project information */
+
+.compact-project-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem 1.4rem 1.5rem;
+}
+
+.compact-project-body h3,
+.game-card-body h3 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.compact-project-body p,
+.game-card-body > p:not(.game-card-lang) {
+  margin: 0;
+  color: #ddd;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* Buttons */
+
+.compact-project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.compact-project-actions .btn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Keep View Code visible in dark mode */
+.compact-project-actions .btn-on-dark {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover state */
+.compact-project-actions .btn-on-dark:hover {
+  background: #ffffff;
+  color: #0b0b0b;
+  border-color: #ffffff;
+}
+
+/* Programming project previews */
+
+.game-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #161616;
+}
+
+.game-card-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card-shot-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.game-play-icon {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #888;
+  border-radius: 50%;
+  background: #353535;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.game-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.game-card-lang {
+  margin: 0 0 1.25rem;
+  color: #ddd;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .compact-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Three-column shipping approaches */
+.shipping-approaches {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Individual approach cards */
+.shipping-approaches .tile {
+  min-width: 0;
+  padding: 1.125rem;
+  border: 2.5px solid var(--color-border, #d2ccc0);
+  border-radius: 3px;
+  background: #f8f7f3;
+  margin-bottom: 2.5rem;
+}
+
+/* Small uppercase-style card headings */
+.shipping-approaches .tile h4 {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+:root[data-theme="dark"] .shipping-approaches .tile h4 {
+  color: #171717;
+}
+
+/* Image placeholder area */
+.shipping-approaches .approach-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 2px;
+  margin-bottom: 0.65rem;
+}
+
+/* Card descriptions */
+.shipping-approaches .tile p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+:root[data-theme="dark"] .shipping-approaches .tile p {
+  color: #171717;
+}
+
+/* Highlight the final selected direction */
+.shipping-approaches .final-direction {
+  border-color: var(--color-accent);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .shipping-approaches {
+    grid-template-columns: 1fr;
+  }
+
+  .shipping-approaches .approach-image {
+    aspect-ratio: 2.7 / 1;
+  }
+}
+
+#cn-live-event .cs-two-col {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+#cn-live-event .live-event-heading,
+#cn-live-event .live-event-content {
+  min-width: 0;
+}
+
+#cn-live-event .live-event-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+#cn-live-event .live-event-content > p {
+  margin: 0;
+}
+
+#cn-live-event .live-event-preview {
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid var(--color-border, #d2ccc0);
+  border-radius: 3px;
+  background: #f8f7f3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cn-live-event .live-event-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #cn-live-event .cs-two-col {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Final Designs gallery */
+#cn-final-design .final-gallery-group {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #171717;
+  border-radius: 3px;
+  background: transparent;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Group title inside the bordered card */
+#cn-final-design .final-gallery-group h3 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Main image + two stacked images */
+#cn-final-design .final-gallery-pair {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 0.7rem;
+}
+
+/* Stack the two smaller images */
+#cn-final-design .gallery-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* Image frames */
+#cn-final-design .final-gallery-pair figure,
+#cn-final-design .final-gallery-live figure {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: #272727;
+}
+
+/* Main image proportions */
+#cn-final-design .gallery-main {
+  aspect-ratio: 1.4 / 1;
+}
+
+/* Side image proportions */
+#cn-final-design .gallery-side figure {
+  aspect-ratio: 1.75 / 1;
+}
+
+/* Live Event: two images side by side */
+#cn-final-design .final-gallery-live {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+#cn-final-design .final-gallery-live figure {
+  aspect-ratio: 1 / 0.85;
+}
+
+/* Keep entire UI screenshot visible */
+#cn-final-design .final-gallery-pair img,
+#cn-final-design .final-gallery-live img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Zoom interaction */
+#cn-final-design .lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Supporting note */
+#cn-final-design .final-gallery-note {
+  margin-top: 1.25rem;
+  max-width: 70ch;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  #cn-final-design .final-gallery-group {
+    padding: 0.85rem;
+  }
+
+  #cn-final-design .final-gallery-pair {
+    grid-template-columns: 1fr;
+  }
+
+  #cn-final-design .gallery-main {
+    aspect-ratio: 1.4 / 1;
+  }
+
+  #cn-final-design .gallery-side {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  #cn-final-design .gallery-side figure {
+    aspect-ratio: 1 / 1;
+  }
+
+  #cn-final-design .final-gallery-live {
+    grid-template-columns: 1fr;
+  }
+
+  #cn-final-design .final-gallery-live figure {
+    aspect-ratio: 1.4 / 1;
+  }
+}
+
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 90px;
+  background: rgba(10, 10, 10, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.lightbox-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Enlarged image */
+.lightbox-image-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+.lightbox-image-stage img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Clickable thumbnails */
+img.lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Previous and next controls */
+.lightbox-overlay:has(.lightbox-counter) .lightbox-nav-btn {
+  position: fixed;
+  top: 50%;
+  z-index: 2010;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 25, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.lightbox-overlay:has(.lightbox-counter) .lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-overlay:has(.lightbox-counter) .lightbox-next {
+  right: 24px;
+}
+
+.lightbox-overlay:has(.lightbox-counter) .lightbox-nav-btn:hover {
+  background: #86c900;
+  border-color: #86c900;
+  color: #111;
+}
+
+.lightbox-overlay:has(.lightbox-counter) .lightbox-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2010;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* Close button */
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 2020;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: rgba(25, 25, 25, 0.75);
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: #86c900;
+  border-color: #86c900;
+  color: #111;
+}
+
+@media (max-width: 767.98px) {
+  .lightbox-overlay {
+    padding: 60px 12px;
+  }
+
+  .lightbox-overlay:has(.lightbox-counter) .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-overlay:has(.lightbox-counter) .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* Xchange process and exploration */
+.xchange-approaches {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.xchange-approaches .tile {
+  width: 100%;
+  min-width: 0;
+}
+
+.xchange-approaches .approach-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+.xchange-approaches .tile p {
+  margin: 1rem 0;
+}
+
+/* Xchange Final Design */
+#cn-final-design .final-design-grid {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+#cn-final-design .final-design-item {
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #171717;
+  border-radius: 3px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+#cn-final-design .final-design-item h4 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#cn-final-design .final-design-item .compact-card-shot {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+#cn-final-design .final-design-item .compact-card-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#cn-final-design .final-design-item .lightbox-image {
+  cursor: zoom-in;
+}
+
+#cn-final-design .final-design-note {
+  margin-top: 1.5rem;
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  #cn-final-design .final-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #cn-final-design .final-design-item {
+    padding: 0.85rem;
+  }
+
+  #cn-final-design .final-design-item .compact-card-shot {
+    height: auto;
+    margin-top: 0;
+  }
+
+  #cn-final-design .final-design-item .compact-card-shot img {
+    height: auto;
+  }
+}
+
+/* =========================================================
+   XURE CONTEXT PILLBAR
+   ========================================================= */
+.pillbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 28px;
+  padding: 36px 24px;
+  border: 2px solid #d2cbbd;
+  border-radius: 3px;
+}
+
+/* System cards */
+.pillbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-sizing: border-box;
+  width: 130px;
+  min-height: 62px;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border: 2px solid #d2cbbd;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* System labels */
+.pillbar-title {
+  color: #171717;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+:root[data-theme="dark"] .pillbar-title {
+  color: #535353;
+}
+
+.pillbar-description {
+  color: #252524;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+:root[data-theme="dark"] .pillbar-description {
+  color: #50504e;
+}
+
+/* Plus signs */
+.pillbar-plus {
+  color: #537e65;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Highlight Vault */
+.pillbar-featured {
+  border-color: #94EB00;
+  background-color: #deebc8;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] .pillbar-featured {
+  border-color: #F60EA9;
+  background-color: #b9609a;
+}
+
+/* Remove inherited label borders */
+.pillbar .pillbar-title,
+.pillbar .pillbar-description {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  .pillbar {
+    gap: 8px;
+    padding: 24px 10px;
+  }
+
+  .pillbar-item {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    padding: 8px 4px;
+  }
+
+  .pillbar-title {
+    font-size: 12px;
+  }
+
+  .pillbar-description {
+    font-size: 9px;
+  }
+
+  .pillbar-plus {
+    font-size: 12px;
+  }
+}
+
+.pillbar-tags {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.pillbar-tags span {
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #d2cbbd;
+  border-radius: 3px;
+  color: #171717;
+  font-size: 12px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.cs-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.research-column {
+  display: grid;
+  grid-template-rows: 140px auto;
+  gap: 1rem;
+}
+
+.research-text {
+  min-width: 0;
+}
+
+.research-preview {
+  width: 100%;
+}
+
+.research-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vaulting-approaches {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.vaulting-approaches .tile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vaulting-approaches .tile h4 {
+  margin: 0;
+}
+
+.vaulting-approaches .approach-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.vaulting-approaches .tile p {
+  margin: 0;
+}
+
+.co-ownership-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.co-ownership-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.co-ownership-tile h4 {
+  margin: 0;
+}
+
+.co-ownership-tile p {
+  margin: 0;
+}
+
+.co-ownership-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: top;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.co-ownership-tile ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: square;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.co-ownership-tile li {
+  margin-bottom: 0.4rem;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .co-ownership-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .co-ownership-image {
+    max-height: none;
+  }
+}
+
+/* Intro */
+.design-intro {
+  max-width: 70ch;
+}
+
+/* =========================================================
+   VAULT FINAL CONCEPT
+   ========================================================= */
+
+#cn-final-concept .vault-design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+/* Bordered cards */
+#cn-final-concept .vault-design-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #171717;
+  border-radius: 3px;
+  background: transparent;
+}
+
+/* Titles inside cards */
+#cn-final-concept .vault-design-card h3 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Images */
+#cn-final-concept .vault-design-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+#cn-final-concept .vault-design-card img.lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Descriptions below images */
+#cn-final-concept .vault-design-card p {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Featured dashboard */
+#cn-final-concept .vault-design-featured {
+  grid-column: 1 / -1;
+}
+
+#cn-final-concept .vault-design-featured img.vault-dashboard-image {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  #cn-final-concept .vault-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #cn-final-concept .vault-design-card {
+    padding: 0.85rem;
+  }
+
+  #cn-final-concept .vault-design-featured {
+    grid-column: auto;
+  }
+
+  #cn-final-concept .vault-design-featured img.vault-dashboard-image {
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+/* =========================================================
+   XURE WEBSITE - PAGE EXPLORATION
+   ========================================================= */
+
+#cn-page-exploration .page-exploration-intro {
+  max-width: 70ch;
+  margin-bottom: 0;
+}
+
+/* Match the Vault card grid */
+#cn-page-exploration .vault-design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+/* Bordered cards */
+#cn-page-exploration .vault-design-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid var(--color-border, #777);
+  border-radius: 3px;
+  background: transparent;
+}
+
+/* Titles */
+#cn-page-exploration .vault-design-card h3 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Images */
+#cn-page-exploration .vault-design-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+#cn-page-exploration .vault-design-card img.lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Short descriptions below images */
+#cn-page-exploration .vault-design-card p {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Shorter screenshots for Help Center and Articles */
+#cn-page-exploration .vault-design-card:nth-child(3) img,
+#cn-page-exploration .vault-design-card:nth-child(4) img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  object-position: center top;
+}
+
+/* Keep the screenshots contained on mobile */
+@media (max-width: 700px) {
+  #cn-page-exploration .vault-design-card:nth-child(3) img,
+  #cn-page-exploration .vault-design-card:nth-child(4) img {
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  #cn-page-exploration .vault-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #cn-page-exploration .vault-design-card {
+    padding: 0.85rem;
+  }
+}
+
+.medium-closeup {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medium-closeup img {
+  height: 500px;
+  width: auto;
+  max-width: none;
+  display: block;
+  flex-shrink: 0;
+}
+
+
+.tastebuds-screen-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.tastebuds-screen-grid .vault-design-card {
+  min-width: 0;
+}
+
+.tastebuds-screen-grid .vault-design-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+  .tastebuds-screen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   LOW- AND HIGH-FIDELITY COMPARISON
+   ========================================================= */
+
+.design-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.design-comparison-card {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid var(--color-border, #d2cbbf);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.design-comparison-featured {
+  border-color: var(--color-accent, #c77b32);
+}
+
+.design-card-label {
+  margin: 0 0 0.65rem;
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #777);
+}
+
+.design-comparison-featured .design-card-label {
+  color: var(--color-accent, #c77b32);
+}
+
+.design-card-description {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #666);
+}
+
+.design-comparison-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border, #d2cbbf);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.design-comparison-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.design-comparison-image img.lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .design-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-comparison-image {
+    height: auto;
+    min-height: 180px;
+    max-height: 350px;
+  }
+
+  .design-comparison-image img {
+    height: auto;
+    max-height: 350px;
+  }
+}
+
+/* =========================================================
+   TASTEBUDS - HIGH-FIDELITY SCREENS BY AREA
+   ========================================================= */
+
+#cn-design-process .tastebuds-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+/* Individual screen cards */
+#cn-design-process .tastebuds-screen-grid .vault-design-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid var(--color-border, #777);
+  border-radius: 3px;
+  background: transparent;
+}
+
+/* Card titles and descriptions */
+#cn-design-process .tastebuds-screen-grid .vault-design-info h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#cn-design-process .tastebuds-screen-grid .vault-design-info p {
+  margin: 0 0 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Shorter TasteBuds high-fidelity screenshots */
+#cn-design-process .tastebuds-screen-grid .vault-design-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 0;
+}
+
+/* Mobile image sizing */
+@media (max-width: 700px) {
+  #cn-design-process .tastebuds-screen-grid .vault-design-card img {
+    height: auto;
+    max-height: 280px;
+  }
+}
+
+#cn-design-process .tastebuds-screen-grid img.lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Let TasteBuds cards fit their own content */
+#cn-design-process .tastebuds-screen-grid .vault-design-card {
+  height: auto;
+}
+
+/* Keep images directly after the descriptions */
+#cn-design-process .tastebuds-screen-grid .vault-design-card img {
+  margin-top: 0;
+}
+
+#cn-design-process .tastebuds-screen-grid {
+  align-items: start;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  #cn-design-process .tastebuds-screen-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #cn-design-process .tastebuds-screen-grid .vault-design-card {
+    padding: 0.85rem;
+  }
+}
+
+/* TasteBuds mobile design gallery */
+.mobile-design-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.mobile-design-card {
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #171717;
+  border-radius: 3px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-design-card h3 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mobile-design-card figure {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.mobile-design-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Make the 9th card span the full row */
+.mobile-design-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.mobile-design-card:last-child figure {
+  max-width: 100%;
+}
+
+.mobile-design-card:last-child img {
+  width: 100%;
+  height: auto;
+}
+
+.mobile-design-card img.lightbox-image {
+  cursor: zoom-in;
+}
+
+@media (max-width: 700px) {
+  .mobile-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mobile-design-card {
+    padding: 0.85rem;
+  }
+}
+
+
+/* =========================================================
+   PROGRAMMING PROJECTS — GAME VIDEO PREVIEWS
+   ========================================================= */
+
+.game-card-media {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #101010;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Video preview */
+.game-card-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Dark overlay for readable text */
+.game-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+/* Video label */
+.game-card-shot-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 4;
+  max-width: calc(100% - 1.5rem);
+  padding: 0.4rem 0.65rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Clickable overlay */
+.game-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Circular play icon */
+.game-video-play {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding-left: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1rem;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Light-mode hover */
+@media (hover: hover) {
+  .game-card-media:hover {
+    border-color: #94EB00;
+    box-shadow: 0 0 0 1px #94EB00;
+  }
+
+  .game-card-media:hover video {
+    transform: scale(1.04);
+  }
+
+  .game-card-media:hover::after {
+    background: rgba(0, 0, 0, 0.48);
+  }
+
+  .game-card-media:hover .game-video-play {
+    background: #94EB00;
+    color: #101010;
+    transform: scale(1.08);
+  }
+}
+
+/* Dark-mode hover */
+[data-theme="dark"] .game-card-media:hover {
+  border-color: #F60EA9;
+  box-shadow: 0 0 0 1px #F60EA9;
+}
+
+[data-theme="dark"] .game-card-media:hover .game-video-play {
+  background: #F60EA9;
+  color: #101010;
+}
+
+/* Keyboard accessibility */
+.game-video-overlay:focus-visible {
+  outline: 2px solid #94EB00;
+  outline-offset: -5px;
+}
+
+[data-theme="dark"] .game-video-overlay:focus-visible {
+  outline-color: #F60EA9;
+}
+
+/* =========================================================
+   PROGRAMMING PROJECTS — VIDEO PREVIEWS
+   ========================================================= */
+
+/* Video preview container */
+.game-card-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #101010;
+}
+
+/* Preview video */
+.game-card-media .game-preview-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Saved frame shown while the video is paused */
+.game-preview-frame {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+/* Hide the saved frame while the video plays */
+.game-preview-frame[hidden] {
+  display: none;
+}
+
+/* View Full Video overlay */
+.game-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.game-card-media:hover .game-video-overlay,
+.game-video-overlay:focus-visible {
+  opacity: 1;
+}
+
+.game-video-play {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #94EB00;
+  border-radius: 50%;
+  color: #94EB00;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+[data-theme="dark"] .game-video-play {
+  border-color: #F60EA9;
+  color: #F60EA9;
+}
+
+.game-card-media:hover .game-video-play {
+  transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .game-video-overlay {
+    opacity: 1;
+  }
+
+  .game-video-play {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================================================
+   PROGRAMMING PROJECTS — FULL VIDEO MODAL
+   ========================================================= */
+
+.game-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Needed so the hidden attribute still hides the modal */
+.game-video-modal[hidden] {
+  display: none;
+}
+
+.game-video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.game-video-modal-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 960px);
+  background: #101010;
+  border: 1px solid #94EB00;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .game-video-modal-content {
+  border-color: #F60EA9;
+}
+
+.game-video-modal-content video {
+  display: block;
+  width: 100%;
+  max-height: 80vh;
+  background: #000;
+}
+
+.game-video-close {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid #94EB00;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #94EB00;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.game-video-close:hover,
+.game-video-close:focus-visible {
+  background: #94EB00;
+  color: #101010;
+}
+
+[data-theme="dark"] .game-video-close {
+  border-color: #F60EA9;
+  color: #F60EA9;
+}
+
+[data-theme="dark"] .game-video-close:hover,
+[data-theme="dark"] .game-video-close:focus-visible {
+  background: #F60EA9;
+  color: #101010;
+}
+
+@media (max-width: 600px) {
+  .game-video-modal {
+    padding: 1rem;
+  }
+}

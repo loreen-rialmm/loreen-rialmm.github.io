@@ -1,435 +1,382 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" property="og:title" content="loreen-rialmm">
-    <meta name="type" property="og:type" content="website">
-    <meta name="url" property="og:url" content="loreen-rialmm.github.io">
-    <meta name="image" property="og:image" content="https://loreen-rialmm.github.io/images/loreenLogo.png">
-    <meta name="description" property="og:description" content="Portfolio website of Ma. Loreen M. Marajas">
-    
-    <title>Loreen's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
+  <!-- Page Information -->
+  <title>Ma. Loreen M. Marajas | Portfolio</title>
+  <meta name="title" content="Ma. Loreen M. Marajas | Portfolio">
+  <meta name="description" content="Portfolio of Ma. Loreen M. Marajas, showcasing UI/UX design, web development, creative projects, and inspirations.">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ma. Loreen M. Marajas | Portfolio">
+  <meta property="og:description" content="Explore my portfolio featuring UI/UX design, web development, creative projects, and inspirations.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
 
-    <link rel="icon" href="images/loreenLogo.png">
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
 
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
 
-    <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts: Gantari (display/headings) + Parkinsans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top shadow px-4 py-2" style="background-color: var(--secondaryColor);">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
-          <img src="images/loreenLogo.png" style="width: 100px; height: 40px;" />
-        </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home" class="logo">
+        <img src="assets/icons/logo.svg" data-light-src="assets/icons/logo.svg" data-dark-src="assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav gap-3">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- Mobile menu toggle (wired up in Step 5) -->
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="index.html#home" class="nav-link is-active">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
     </nav>
+  </header>
 
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
-          <div class="profile-card p-4 mb-5 d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up" data-aos-delay="200">
-            <!-- Left side: Profile image -->
-            <div class="me-lg-4 text-center text-lg-start">
-              <img src="images/mainPfp.jpg" alt="Profile" class="profile-img">
+  <main>
+
+    <!-- ============ HOME / HERO ============ -->
+    <section id="home" class="section hero-section">
+      <div class="container">
+        <p class="eyebrow reveal-onload">01 – Introduction</p>
+
+        <h1 class="hero-name reveal-onload" style="--load-delay: 0.08s;">
+          MA. LOREEN<br>
+          <span class="hero-name-indent">M. MARAJAS</span>
+        </h1>
+
+        <div class="hero-body row">
+          <div class="col-lg-6">
+            <p class="hero-role reveal-onload" style="--load-delay: 0.16s;">
+              Full-Stack Developer &amp; UI/UX Designer focused on meaningful digital experiences.
+            </p>
+            <p class="hero-desc reveal-onload" style="--load-delay: 0.22s;">
+              I design and develop digital products that balance clean implementation, intuitive experiences, and creative problem-solving.
+            </p>
+
+            <div class="hero-ctas reveal-onload" style="--load-delay: 0.3s;">
+              <a href="projects.html" class="btn btn-solid">
+                Explore Projects <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <button class="btn btn-outline hero-button-copy" type="button" data-copy-email="marajasmaloreen@gmail.com" aria-label="Copy email address">
+                <i class="bi bi-copy hero-copy-icon" aria-hidden="true"></i>
+                <i class="bi bi-check2 hero-copy-check" aria-hidden="true"></i>
+                <span class="hero-copy-label">marajasmaloreen@gmail.com</span>
+                <span class="hero-copy-confirm" aria-hidden="true">Copied!</span>
+              </button>
             </div>
+          </div>
 
-            <!-- Right side: Text content -->
-            <div class="text-center text-lg-start mt-3 mt-lg-0">
-              <h1 class="fw-bold mb-2">hi! <span class="highlight">I'm Ma. Loreen M. Marajas.</span></h1>
-              <h2 class="text-secondary fw-semibold mb-3" style="font-size: 1.25rem;">
-                Aspiring Web Designer & Developer | Passionate about UI/UX and building user-focused digital experiences.
-              </h2>
+          <div class="col-lg-6">
+            <figure class="hero-photo-frame reveal">
+              <img src="assets/images/profile-photo.jpg" alt="Ma. Loreen M. Marajas smiling, seated in front of two paintings">
+            </figure>
+          </div>
+        </div>
 
-              <div class="social-icons">
-                <!-- <a href="#" class="icon" title="Resume"><i class="bi bi-file-earmark-text"></i></a> -->
-                <a href="https://www.linkedin.com/in/ma-loreen-marajas1504" class="icon" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="mailto:marajasmaloreen@gmail.com" class="icon" target="_blank" title="Gmail"><i class="bi bi-envelope"></i></a>
-                <a href="https://www.facebook.com/loreen.marajas" class="icon" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/ria_oreen" class="icon" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-              </div>
-            </div>
+        <div class="hero-footer-bar row g-0">
+          <div class="col-md-6 hero-footer-cell reveal">
+            <p class="mini-label">Product Thinking</p>
+            <h3>UI/UX &amp; Product Design</h3>
+            <p>Creating intuitive user experiences</p>
+          </div>
+          <div class="col-md-6 hero-footer-cell reveal" style="transition-delay: 0.15s;">
+            <p class="mini-label">Technical Craft</p>
+            <h3>Full Stack Development</h3>
+            <p>Building functional web experiences</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <section id="about" class="mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">
-                meet loreen
-              </div>
-              <hr class="my-0" />
-              <div class="card-body">
-                <div class="row align-items-center g-4">
-                  <div class="col-md-4 text-center">
-                    <img src="images/pfp1.png" alt="Profile" 
-                        style="width: 100%; max-width: 250px; aspect-ratio: 1 / 1; object-fit: cover;"/>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="text-secondary fs-5 mb-3" data-aos="fade-up" data-aos-delay="300">
-                      I’m a 4th-year Information Technology student from the Polytechnic University of the Philippines – Sto. Tomas Campus.  
-                      I’m adaptable, motivated, and always eager to take on new challenges that help me grow both technically and personally.  
-                      With a strong curiosity for learning, I aim to contribute meaningfully while continuously improving my skills in web development and design.
-                    </div>
-                    <a href="about.html" class="btn-secondary">
-                      More About Me
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- ============ PROJECTS PREVIEW ============ -->
+    <section id="projects-preview" class="section projects-preview-section">
+      <div class="container">
+        <p class="eyebrow">02 – My Works</p>
 
-      <!-- Skills Section -->
-      <section id="skills" class="mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="card skills-card" data-aos="fade-up" data-aos-delay="400">
-              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">my skills</div>
-              <hr class="my-0" />
-              <div class="card-body">
-                <div class="heading-center" data-aos="fade-up" data-aos-delay="200">
-                  Creative & Technical Expertise
-                </div>
-
-                <!-- Grid: 1 row, 5 columns -->
-                <div class="skills-grid mb-3"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Feature Projects Section -->
-      <section id="feature-projects" class="my-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="heading-center" data-aos="fade-up" data-aos-delay="200">
-              FEATURE PROJECTS
-            </div>
-
-            <!-- Feature Project -->
-            <div class="row align-items-center g-4">
-              <!-- Left Image -->
-              <div class="col-12 col-md-7 text-center position-relative feature-project">
-                <video 
-                  class="img-fluid shadow-sm feature-preview-video" 
-                  style="border-radius: 40px;" 
-                  src="videos/Cavegamerecordvid.mp4" 
-                  muted
-                  preload="metadata" 
-                  playsinline
-                  data-bs-toggle="modal"
-                  data-bs-target="#videoModal"
-                ></video>
-
-                <div class="video-hover-indicator">
-                  View Full Video
-                </div>
-              </div>
-
-              <!-- Right Content -->
-              <div class="col-12 col-md-5">
-                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;" data-aos="fade-up">#Python</p>
-                <h2 class="fw-bold" style="color: var(--primaryColor);" data-aos="fade-up">Maria's Enchanted Escape</h2>
-                <p class="text-secondary fs-5 mb-4" style="font-size: 1rem;">
-                  In Maria's Enchanted Escape, players must survive as long as possible by jumping and dodging obstacles while aiming for the highest score. Each level introduces new challenges and faster gameplay, keeping the experience exciting and unpredictable.
-                </p>
-
-                <!-- Buttons -->
-                <div class="d-flex flex-wrap gap-3">
-                  <!-- View Code Button -->
-                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/SD/Maria's%20Enchanted%20Escape" target="_blank" class="btn btn-outline-dark px-4 py-2 rounded-3">
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Divider -->
-            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
-          
-            <!-- Feature Project 2 -->
-            <div class="row align-items-center g-4">
-              <!-- Left Image -->
-              <div class="col-12 col-md-7 text-center position-relative feature-project">
-                <video 
-                  class="img-fluid shadow-sm feature-preview-video" 
-                  style="border-radius: 40px;" 
-                  src="videos/CleanUprecordvid.mp4" 
-                  muted
-                  preload="metadata" 
-                  playsinline
-                  data-bs-toggle="modal"
-                  data-bs-target="#videoModal2"
-                ></video>
-
-                <div class="video-hover-indicator">
-                  View Full Video
-                </div>
-              </div>
-
-              <!-- Right Content -->
-              <div class="col-12 col-md-5">
-                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;" data-aos="fade-up">#Java</p>
-                <h2 class="fw-bold" style="color: var(--primaryColor);" data-aos="fade-up">InGame: Clean Up</h2>
-                <p class="text-secondary fs-5 mb-4" style="font-size: 1rem;">
-                  Clean Up Challenge is an engaging and educational game that encourages players to sort through items quickly, deciding which ones Disgust finds acceptable and which ones should be discarded. The game is designed to promote awareness of recycling and proper waste management. Players earn points by correctly sorting items into categories such as recyclable, non-recyclable, and compostable.
-                </p>
-              </div>
-            </div>
-
-            <!-- Divider -->
-            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
-
-            <!-- Feature Project 3 -->
-            <div class="row align-items-center g-4">
-              <!-- Left Image -->
-              <div class="col-12 col-md-7 text-center position-relative feature-project">
-                <video 
-                  class="img-fluid shadow-sm feature-preview-video" 
-                  style="border-radius: 40px;" 
-                  src="videos/MyRialmrecordvid.mp4" 
-                  muted
-                  preload="metadata" 
-                  playsinline
-                  data-bs-toggle="modal"
-                  data-bs-target="#videoModal3"
-                ></video>
-
-                <div class="video-hover-indicator">
-                  View Full Video
-                </div>
-              </div>
-
-              <!-- Right Content -->
-              <div class="col-12 col-md-5">
-                <p class="text-uppercase text-muted mb-2" style="letter-spacing: 1px;" data-aos="fade-up">#WebDev #Backend</p>
-                <h2 class="fw-bold" style="color: var(--primaryColor);" data-aos="fade-up">My Rialm</h2>
-                <p class="text-secondary fs-5 mb-4" style="font-size: 1rem;">
-                  Step into My Rialm, where each island reveals a piece of who I am. From the love of Family Island to the adventures of Sponty Trip Island, and the creativity of Film & Music Island, every space tells a story. Explore the people, passions, and memories that shape me—welcome to my world, one island at a time.
-                </p>
-
-                <!-- Buttons -->
-                <div class="d-flex flex-wrap gap-3">
-                  <!-- View Code Button -->
-                  <a href="https://github.com/loreen-rialmm/WD-BE/tree/main/A08" target="_blank" class="btn btn-outline-dark px-4 py-2 rounded-3">
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Divider -->
-            <hr style="border: 2px solid var(--primaryColor); opacity: 1; margin-top: 3rem; margin-bottom: 3rem;">
-          </div>
-        </div>
-      </section>
-
-      <!-- Video Modal -->
-      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content border-0 rounded-4 overflow-hidden">
-            <div class="ratio ratio-16x9">
-              <video id="featureVideo" controls>
-                <source src="videos/Cavegamerecordvid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video Modal 2-->
-      <div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content border-0 rounded-4 overflow-hidden">
-            <div class="ratio ratio-16x9">
-              <video id="featureVideo2" controls>
-                <source src="videos/CleanUprecordvid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video Modal 3-->
-      <div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content border-0 rounded-4 overflow-hidden">
-            <div class="ratio ratio-16x9">
-              <video id="featureVideo3" controls>
-                <source src="videos/MyRialmrecordvid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section id="projects" class="mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="card shadow rounded-4 overflow-hidden" data-aos="fade-up" data-aos-delay="500">
-              <div class="text-white px-4 py-2 fw-bold" style="background-color: var(--primaryColor);">
-                my projects
-              </div>
-              <hr class="my-0" />
-              <div class="card-body">
-                <div class="row align-items-center g-4">
-                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/webDevLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/> 
-                  </div>
-                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-                    <div class="heading">WEB DEVELOPMENT</div>
-
-                    <div class="text-secondary fs-5 mb-3">
-                      This section showcases the projects I have worked on
-                      during my 3rd Year, 1st Semester in Web Development. These
-                      projects highlight my skills in front-end and back-end
-                      development, combining creativity with functionality to
-                      build engaging and user-friendly websites.
-                    </div>
-                    <a href="./webdev/index.html" class="btn-primary">Explore</a>
-                  </div>
-                </div>
-
-                <hr class="my-4" />
-
-                <div class="row align-items-center g-4">
-                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/appDevLogo.png" alt="App Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/>
-                  </div>
-                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-                    <div class="heading">APP DEVELOPMENT</div>
-
-                    <div class="text-secondary fs-5 mb-3" data-aos="fade-up" data-aos-delay="400">
-                      This section will feature the projects I will be working
-                      on during my 3rd Year, 2nd Semester in App Development and
-                      Emerging Technologies. These projects will focus on
-                      building innovative applications that leverage modern
-                      tools and technologies to deliver efficient and
-                      user-centric solutions.
-                    </div>
-                    <a href="./ADET/index.html" class="btn-primary">Explore</a>
-                  </div>
-                </div>
-
-                <hr class="my-4" />
-
-                <div class="row align-items-center g-4">
-                  <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/sideQuestsLogo.png" alt="Web Development" class="border border-3 border-light" style="width: 100%; max-width: 350px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px;"/>
-                  </div>
-                  <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-                    <div class="heading">SIDE QUESTS DEVELOPMENT</div>
-
-                    <div class="text-secondary fs-5 mb-3" data-aos="fade-up" data-aos-delay="400">
-                      This section showcases projects that reflect both my
-                      creativity and technical skills. From web applications to
-                      mini-games, each project highlights my passion for
-                      building interactive and user-focused digital experiences.
-                    </div>
-                    <a href="./SD/index.html" class="btn-primary">Explore</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" aria-label="Scroll to top">
-      <img src="images/arrow-up.svg" loading="lazy" alt="arrow pointing up">
-    </button>
-
-
-    <footer style="background-color: var(--secondaryColor);" class="text-dark mt-5 pt-4 pb-3">
-      <div class="container text-center">
-        <h5 class="fw-bold mb-4">CONNECT WITH ME</h5>
-
-        <!-- Social Icons -->
-        <ul class="list-inline mb-4">
-          <li class="list-inline-item mx-3">
-            <a href="mailto:marajasmaloreen@gmail.com" target="_blank" rel="noopener noreferrer" class="text-dark" >
-              <i class="bi bi-envelope" style="font-size: 2rem"></i>
+        <!-- UI/UX Design: Xtore on the left -->
+        <div class="preview-row row">
+          <div class="col-lg-6 order-lg-1 preview-panel preview-panel--design">
+            <h2>UI/UX Design</h2>
+            <a href="projects/xtore.html" class="preview-thumb" aria-label="View Xtore UI/UX case study">
+              <img src="assets/images/Xtore-thumbnail.webp" alt="Xtore Thumbnail">
             </a>
-          </li>
-          <li class="list-inline-item mx-3">
-            <a href="https://github.com/loreen-rialmm" target="_blank" rel="noopener noreferrer" class="text-dark" >
-              <i class="bi bi-github" style="font-size: 2rem"></i>
-            </a>
-          </li>
-          <li class="list-inline-item mx-3">
-            <a href="https://www.instagram.com/ria_oreen" target="_blank" rel="noopener noreferrer" class="text-dark" >
-              <i class="bi bi-instagram" style="font-size: 2rem"></i>
-            </a>
-          </li>
-          <li class="list-inline-item mx-3">
-            <a href="https://www.facebook.com/loreen.marajas" target="_blank" rel="noopener noreferrer" class="text-dark">
-              <i class="bi bi-facebook" style="font-size: 2rem"></i>
-            </a>
-          </li>
-        </ul>
+          </div>
 
-        <!-- Copyright -->
-        <div class="small">&copy; 2025 Loreen Marajas</div>
+          <div class="col-lg-6 order-lg-2 preview-details">
+            <h3>Xtore</h3>
+            <p class="preview-role">UI/UX Designer</p>
+            <p>
+              I designed merchant-facing workflows for Xtore, the Xure Store mobile app, focusing on helping sellers manage shipping configurations, Box Break listings, and live selling sessions. As a UI/UX Intern, I translated operational requirements into user flows, wireframes, and high-fidelity interfaces, with attention to interaction patterns, listing states, and error handling. The designs went through review and refinement with my supervisor and development team, with the resulting designs implemented into the application.
+            </p>
+            <ul class="preview-list">
+              <li>Mobile UI/UX design using Figma and FigJam</li>
+              <li>Shipping category management and fulfillment workflows</li>
+              <li>Box Break listing lifecycle and live event interfaces</li>
+              <li>End-to-end user flows, interaction states, and edge-case handling</li>
+            </ul>
+            <a href="projects/xtore.html" class="btn btn-solid">
+              View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Web Development: GymBoost on the right -->
+        <div class="preview-row row">
+          <div class="col-lg-6 order-lg-2 preview-panel preview-panel--dev">
+            <h2>Web<br>Development</h2>
+            <a href="projects/gymboost.html" class="preview-thumb" aria-label="View GymBoost project">
+              <img src="assets/images/Gymboost-thumbnail.webp" alt="GymBoost RFID gym management system">
+            </a>
+          </div>
+
+          <div class="col-lg-6 order-lg-1 preview-details">
+            <h3>GymBoost</h3>
+            <p class="preview-role">Full Stack Developer</p>
+            <p>
+              I helped build GymBoost, a full-stack gym management system that replaced manual registration and attendance processes with a digitized workflow powered by RFID. As a full-stack developer on the team, I worked across the frontend, backend, database, and admin dashboard to turn the system requirements into a functional web application. The system reduced member check-in time by over 90% and achieved strong usability and performance ratings.
+            </p>
+            <ul class="preview-list">
+              <li>PHP + MySQL full-stack architecture with JavaScript and Bootstrap</li>
+              <li>RFID-powered attendance tracking and digitized member registration</li>
+              <li>Real-time administrative dashboard for gym operations</li>
+              <li>4.83/5 ease of use &middot; 4.67/5 performance efficiency</li>
+            </ul>
+            <a href="projects/gymboost.html" class="btn btn-solid">
+              View Project <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="projects.html" class="view-all-banner">
+          <h2>View All<br>Projects</h2>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
-    </footer>
-    
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>
-        AOS.init({
-            duration: 1000,
-            offset: 200,
-            once: true
-        });
-    </script>
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <p class="eyebrow">03 – Experience</p>
+        <h2>Growth &amp;<br>Experience</h2>
+        <p class="section-intro">A collection of experiences, collaborations, and opportunities along the way.</p>
+        <span class="section-intro-underline" aria-hidden="true"></span>
 
-    <script type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <div class="timeline-wrap">
+          <div class="timeline-progress" aria-hidden="true">
+            <span class="timeline-progress-fill"></span>
+          </div>
+
+          <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-photo" data-lightbox-group="experience">
+              <img src="assets/images/xure.webp" alt="Xure Certificate">
+            </div>
+            <div class="timeline-content">
+              <h3>Xure</h3>
+              <p class="timeline-tag">Internship</p>
+              <p>As a UI/UX Intern at Xure, I worked on designing and improving app and website experiences through user flows, interface design, and feature explorations. I collaborated on concepts that focused on making digital experiences more intuitive, accessible, and user-friendly while turning ideas into thoughtful design solutions.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-photo" data-lightbox-group="experience">
+              <img src="assets/images/hackathon.webp" alt="PUP Hackathon Certificate">
+            </div>
+            <div class="timeline-content">
+              <h3>PUP Mini-Hackathon</h3>
+              <p class="timeline-tag">Hackathon</p>
+              <p>Placed 3rd in the PUP Mini-Hackathon, where our team presented Byz: Ride the Buzz, a business proposal for a mobile-based bus navigation system. The concept aimed to improve the daily commuting experience through real-time bus tracking, arrival estimates, route planning, and occupancy updates, helping commuters make more informed and convenient travel decisions.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-photo" data-lightbox-group="experience">
+              <img src="assets/images/salesforce.webp" alt="Salesforce Certificate">
+            </div>
+            <div class="timeline-content">
+              <h3>Salesforce</h3>
+              <p class="timeline-tag">Internship</p>
+              <p>Completed the 8-week Salesforce Supported Virtual Internship Program 2025, where I explored Salesforce fundamentals, data modeling, security, automation, Apex, Visualforce, Lightning Web Components, and Agentforce. The program strengthened my understanding of CRM development and platform capabilities through Trailhead modules and a capstone project.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-photo" data-lightbox-group="experience">
+              <img src="assets/images/devcon.webp" alt="Devcon Certificate">
+            </div>
+            <div class="timeline-content">
+              <h3>Devcon 2024</h3>
+              <p class="timeline-tag">Industry Event</p>
+              <p>Attended Tech Nexus 2024: Empowering Campus Innovators, a DEVCON Campus Summit that brought together students and aspiring tech professionals to explore emerging technologies and industry trends. Through seminars, panel discussions, and breakout sessions, I gained insights into topics such as cybersecurity, artificial intelligence, data analytics, and blockchain technology.</p>
+            </div>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <p class="eyebrow">04 – About</p>
+
+        <div class="about-grid row g-0">
+
+          <!-- LEFT: PROFILE CARD -->
+          <div class="col-lg-3">
+            <div class="about-profile reveal-brick" style="--brick-delay: 0s;">
+
+              <div class="about-photo-frame">
+                <img src="assets/images/profile-photo.jpg" alt="A photo of me" class="about-profile-image">
+              </div>
+
+              <div class="about-traits">
+                <span>Creative Thinker</span>
+                <span>Adaptable</span>
+                <span>Visual Storyteller</span>
+                <span>Purpose-Driven Creator</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MIDDLE: SKILLS -->
+          <div class="col-lg-4">
+            <div class="about-skills">
+
+              <div class="skills-panel reveal-brick" style="--brick-delay: 0.12s;">
+
+                <h2>Skills</h2>
+
+                <div class="skills-group">
+                  <p class="skills-group-label">01/Development</p>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <ul class="skills-list skills-list--square">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-6">
+                      <ul class="skills-list skills-list--square">
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="skills-group skills-group--design reveal-brick" style="--brick-delay: 0.2s;">
+
+                <p class="skills-group-label">02/Design</p>
+
+                <ul class="skills-list skills-list--triangle">
+                  <li>Figma</li>
+                  <li>Photoshop</li>
+                  <li>IbisPaint</li>
+                  <li>Lightroom</li>
+                  <li>CapCut</li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: ABOUT LINKS -->
+          <div class="col-lg-5">
+            <div class="about-actions">
+
+              <a href="creations.html" class="creations-panel reveal-brick" style="--brick-delay: 0.28s;">
+                <img src="assets/images/creations-diamonds.png" alt="" aria-hidden="true" class="creations-graphic">
+
+                <h2>View My<br>Creations</h2>
+
+                <p>Exploring creativity through illustration, digital art, and multimedia.</p>
+              </a>
+              
+              <a href="achievements.html" class="about-cta reveal-brick" style="--brick-delay: 0.36s;">
+                <h2>View<br>Achievements</h2>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <p class="eyebrow">05 – Contact</p>
+        <h2>Reach Out</h2>
+
+        <div class="contact-links">
+          <!-- TODO: replace with real email / LinkedIn / GitHub URLs -->
+          <a href="mailto:marajasmaloreen@gmail.com" class="contact-pill">
+            Email <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://linkedin.com/in/ma-loreen-marajas1504" class="contact-pill" target="_blank" rel="noopener">
+            LinkedIn <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://github.com/loreen-rialmm" class="contact-pill" target="_blank" rel="noopener">
+            GitHub <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>

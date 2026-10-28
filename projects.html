@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Information -->
+  <title>Projects | Ma. Loreen M. Marajas</title>
+  <meta name="description" content="Explore Ma. Loreen M. Marajas' UI/UX design and web development projects, including case studies, creative concepts, and development work.">
+
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Ma. Loreen M. Marajas">
+  <meta property="og:description" content="Explore UI/UX design, web development projects, and creative case studies by Ma. Loreen M. Marajas.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/projects.html">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts: Gantari + Parkinsans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home" class="logo">
+        <img src="assets/icons/logo.svg" data-light-src="assets/icons/logo.svg" data-dark-src="assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link is-active">Projects</a></li>
+        <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- THEME TOGGLE — inert for now, see index.html for notes on wiring up dark mode later -->
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section projects-page-section">
+      <div class="container">
+        <a href="index.html#home" class="breadcrumb">
+          <span class="arrow" aria-hidden="true">&larr;</span> Home
+        </a>
+
+        <h1>Projects</h1>
+        <p class="section-intro">Get to know my background, skills, and the things that shape how I create.</p>
+
+        <!-- Tab toggle: Web Development is the default active tab -->
+        <div class="project-tabs" role="tablist" aria-label="Project categories">
+          <button class="project-tab is-active" id="tab-ui-ux" role="tab" type="button" aria-selected="true" aria-controls="panel-ui-ux" tabindex="0"> UI/UX Design </button>
+          <button class="project-tab" id="tab-web-dev" role="tab" type="button" aria-selected="false" aria-controls="panel-web-dev" tabindex="-1"> Web Development </button>
+          <button class="project-tab" id="tab-programming" role="tab" type="button" aria-selected="false" aria-controls="panel-programming" tabindex="-1"> Programming Projects </button>
+        </div>
+
+        <!-- ===== UI/UX DESIGN PANEL (default visible) ===== -->
+        <div class="project-panel" id="panel-ui-ux" role="tabpanel" aria-labelledby="tab-ui-ux">
+
+          <article class="project-row reveal">
+            <div class="project-row-media">
+              <a href="projects/xtore.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View Xtore case study">
+                <img src="assets/images/Xtore-thumbnail.webp" alt="Xtore UI/UX design case study thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+            <div class="project-row-details">
+              <p class="project-index">01</p>
+              <h2>Xtore — Designing the Seller Experience</h2>
+              <p>Designing merchant-facing workflows for shipping management, Box Break, and Live Events within the Xure Store mobile app — with close attention to states, edge cases, and fallbacks.</p>
+              <a href="projects/xtore.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <hr class="project-divider">
+
+          <article class="project-row reveal">
+            <div class="project-row-media">
+              <a href="projects/vault.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View Vault and Co-Ownership case study">
+                <img src="assets/images/Vault-thumbnail.webp" alt="Vault and Co-Ownership UI/UX concept thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+            <div class="project-row-details">
+              <p class="project-index">02</p>
+              <h2>Vault &amp; Co-Ownership — Designing Digital Ownership</h2>
+              <p>A concept exploring how a physical collectible could become a vaulted, trackable, shareable digital asset — designed from scratch with no existing process to iterate on. Not launched.</p>
+              <a href="projects/vault.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <hr class="project-divider">
+
+          <article class="project-row project-row--reverse reveal">
+            <div class="project-row-details">
+              <p class="project-index">03</p>
+              <h2>Xchange — Rethinking the Marketplace Experience</h2>
+              <p>A look at how Xure's marketplace was organized — exploring a Featured Merchants section, then choosing to remove it in favor of keeping search and browsing front and center.</p>
+              <a href="projects/xchange.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+            <div class="project-row-media">
+              <a href="projects/xchange.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View Xchange case study">
+                <img src="assets/images/Xchange-thumbnail.webp" alt="Xchange marketplace UI/UX design case study thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+          </article>
+
+          <hr class="project-divider">
+
+          <article class="project-row project-row--reverse reveal">
+            <div class="project-row-details">
+              <p class="project-index">04</p>
+              <h2>Xure Website — Improving the Web Experience</h2>
+              <p>A focused redesign of the Xure website's information structure — About, Articles, FAQs, and Sell on Xure — completed in Figma as an unpublished concept.</p>
+              <a href="projects/website.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+            <div class="project-row-media">
+              <a href="projects/website.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View Xure Website case study">
+                <img src="assets/images/Website-thumbnail.webp" alt="Xure Website redesign case study thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+          </article>
+
+          <hr class="project-divider">
+
+          <article class="project-row reveal">
+            <div class="project-row-media">
+              <a href="projects/tastebuds.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View TasteBuds case study">
+                <img src="assets/images/TasteBuds-thumbnail.webp" alt="TasteBuds food discovery website and mobile app design thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+            <div class="project-row-details">
+              <p class="project-index">05</p>
+              <h2>Designing TasteBuds</h2>
+              <p>A food discovery platform designed first as a web experience for a college course in 2025, then independently reimagined for mobile in 2026 — one product, two platform-specific approaches.</p>
+              <a href="projects/tastebuds.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- ===== WEB DEVELOPMENT PANEL (hidden by default) ===== -->
+        <div class="project-panel" id="panel-web-dev" role="tabpanel" aria-labelledby="tab-web-dev" hidden>
+
+          <article class="project-row reveal">
+            <div class="project-row-media">
+              <a href="projects/gymboost.html" class="compact-card-shot" style="aspect-ratio: 4/3; margin: 0; width: 100%; display: flex;" aria-label="View Gymboost project">
+                <img src="assets/images/Gymboost-thumbnail.webp" alt="Gymboost thumbnail" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #161616;">
+              </a>
+            </div>
+            <div class="project-row-details">
+              <p class="project-index">01</p>
+              <h2>GymBoost</h2>
+              <p>I helped build GymBoost, a full-stack gym management system that replaced manual registration and attendance processes with a digitized workflow powered by RFID. As a full-stack developer on the team, I worked across the frontend, backend, database, and admin dashboard.</p>
+              <a href="projects/gymboost.html" class="btn btn-dark">
+                View Case Study <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <hr class="project-divider">
+
+          <div class="compact-project-grid">
+
+            <div class="compact-project-card">
+              <div class="compact-card-shot">
+                <img src="assets/images/project-jjk.webp" alt="Project JJK homepage">
+              </div>
+              <div class="compact-project-body">
+                <h3>Project JJK</h3>
+                <p>A gateway to the world of Jujutsu Kaisen — opening/ending music videos, detailed sorcerer and cursed spirit profiles, and an immersive exploration of the series' lore.</p>
+                <div class="compact-project-actions">
+                  <a href="https://loreen-rialmm.github.io/webdev/Project%20JJK/index.html" class="btn btn-solid btn-sm" target="_blank" rel="noopener">View Website</a>
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/webdev/Project%20JJK" class="btn btn-on-dark btn-sm" target="_blank" rel="noopener">View Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="compact-project-card">
+              <div class="compact-card-shot">
+                <img src="assets/images/project-adventure.webp" alt="Project Adventure Time homepage">
+              </div>
+              <div class="compact-project-body">
+                <h3>Adventure Time</h3>
+                <p>A parallax-scrolling journey through the Land of Ooo, introducing the show's main characters through a playful, visually engaging web experience.</p>
+                <div class="compact-project-actions">
+                  <a href="https://loreen-rialmm.github.io/webdev/Parallax%20Project/index.html" class="btn btn-solid btn-sm" target="_blank" rel="noopener">View Website</a>
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/webdev/Parallax%20Project" class="btn btn-on-dark btn-sm" target="_blank" rel="noopener">View Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="compact-project-card">
+              <div class="compact-card-shot">
+                <img src="assets/images/project-harmoodia.webp" alt="Project Harmoodia homepage">
+              </div>
+              <div class="compact-project-body">
+                <h3>Harmoodia</h3>
+                <p>A mood-based music discovery experience — pick an emoji and get a curated song with Spotify content, artist info, and a lyrics link. No login required.</p>
+                <div class="compact-project-actions">
+                  <a href="https://loreen-rialmm.github.io/ADET/A07/index.html" class="btn btn-solid btn-sm" target="_blank" rel="noopener">View Website</a>
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/ADET/A07" class="btn btn-on-dark btn-sm" target="_blank" rel="noopener">View Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="compact-project-card">
+              <div class="compact-card-shot">
+                <img src="assets/images/project-kstop.webp" alt="Project K-Stop homepage">
+              </div>
+              <div class="compact-project-body">
+                <h3>K-Stop</h3>
+                <p>A point-of-sale system built for a K-pop merchandise store, supporting the management and sale of albums, photocards, posters, and other merch.</p>
+                <div class="compact-project-actions">
+                  <a href="https://loreen-rialmm.github.io/ADET/A04/index.html" class="btn btn-solid btn-sm" target="_blank" rel="noopener">View Website</a>
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/ADET/A04" class="btn btn-on-dark btn-sm" target="_blank" rel="noopener">View Code</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        
+        <!-- ===== PROGRAMMING PROJECTS PANEL ===== -->
+        <div class="project-panel" id="panel-programming" role="tabpanel" aria-labelledby="tab-programming" hidden>
+          <div class="compact-project-grid">
+
+            <!-- Python Game -->
+            <div class="game-card">
+              <div class="game-card-media">
+
+                <video class="game-preview-video" muted loop playsinline preload="auto">
+                  <source src="videos/Cavegamerecordvid.mp4" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+
+                <button class="game-video-overlay" type="button" aria-label="View full Python game video">
+                  <span class="game-video-play" aria-hidden="true">▶</span>
+                  <span>View Full Video</span>
+                </button>
+
+              </div>
+
+              <div class="game-card-body">
+                <p class="game-card-lang">Python</p>
+                <h3>Maria's Enchanted Escape</h3>
+                <p>
+                  In Maria's Enchanted Escape, players must survive as long as possible by jumping and dodging obstacles while aiming for the highest score. Each level introduces new challenges and faster gameplay, keeping the experience exciting and unpredictable.
+                </p>
+
+                <div class="compact-project-actions">
+                  <a href="https://github.com/loreen-rialmm/loreen-rialmm.github.io/tree/main/SD/Maria's%20Enchanted%20Escape" class="btn btn-on-dark btn-sm" target="_blank" rel="noopener">
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Java Game -->
+            <div class="game-card">
+              <div class="game-card-media">
+
+                <video class="game-preview-video" muted loop playsinline preload="auto">
+                  <source src="videos/CleanUprecordvid.mp4" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+
+                <button class="game-video-overlay" type="button" aria-label="View full Java game video">
+                  <span class="game-video-play" aria-hidden="true">▶</span>
+                  <span>View Full Video</span>
+                </button>
+
+              </div>
+
+              <div class="game-card-body">
+                <p class="game-card-lang">Java</p>
+                <h3>InGame: Clean Up</h3>
+                <p>
+                  Clean Up Challenge is an engaging and educational game that encourages players to sort through items quickly, deciding which ones Disgust finds acceptable and which ones should be discarded. The game is designed to promote awareness of recycling and proper waste management. Players earn points by correctly sorting items into categories such as recyclable, non-recyclable, and compostable.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ===== FULL VIDEO MODAL ===== -->
+          <div class="game-video-modal" id="game-video-modal" hidden>
+            <div class="game-video-modal-backdrop"></div>
+
+            <div class="game-video-modal-content" role="dialog" aria-modal="true" aria-label="Full gameplay video">
+              <button class="game-video-close" type="button" aria-label="Close video">
+                &times;
+              </button>
+
+              <video controls playsinline>
+                Your browser does not support HTML video.
+              </video>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

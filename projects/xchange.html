@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Information -->
+  <title>Xchange — Rethinking the Marketplace Experience | Ma. Loreen M. Marajas</title>
+  <meta name="description" content="Rethinking how Xure's marketplace is organized, improving browsing and filtering while choosing what to leave out.">
+
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Xchange — Rethinking the Marketplace Experience | Ma. Loreen M. Marajas">
+  <meta property="og:description" content="Explore the marketplace design decisions behind Xchange, including browsing, listing organization, and filters.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/projects/xchange.html">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts: Gantari + Parkinsans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Case Study Stylesheet -->
+  <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#home" class="logo">
+        <img src="../assets/icons/logo.svg" data-light-src="../assets/icons/logo.svg" data-dark-src="../assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link is-active">Projects</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section cs-hero">
+      <div class="container">
+        <a href="../projects.html" class="breadcrumb"><span class="arrow" aria-hidden="true">&larr;</span> Projects</a>
+
+        <p class="cs-hero-meta"><span>03</span><span aria-hidden="true">/</span><span class="status">Design direction</span></p>
+
+        <h1 class="reveal-onload">Rethinking the Marketplace Experience</h1>
+        <p class="sub reveal-onload" style="--load-delay: 0.08s;">Xchange &middot; Marketplace within the Xure app</p>
+        <p class="desc reveal-onload" style="--load-delay: 0.14s;">
+          Xchange is where Xure users browse and buy — listings from public sellers, Xtore merchants, and creators all live in one marketplace. My work looked at how that marketplace was organized, tried out a direction that added more to the page, and then walked that direction back in favor of something simpler.
+        </p>
+
+        <div class="cs-meta-row">
+          <div><p class="k">Role</p><p class="v">UI/UX Intern</p></div>
+          <div><p class="k">Platform</p><p class="v">Mobile app</p></div>
+          <div><p class="k">Tools</p><p class="v">Figma &middot; FigJam</p></div>
+          <div><p class="k">Status</p><p class="v">Design direction</p></div>
+        </div>
+
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/Xchange-thumbnail.webp" alt="Xchange preview" class="lightbox-image">
+        </div>
+      </div>
+    </section>
+    <nav class="case-nav" aria-label="Case study sections">
+      <div class="container case-nav-scroll">
+        <a href="#cn-overview" class="case-nav-link">Overview</a>
+        <a href="#cn-context" class="case-nav-link">Context</a>
+        <a href="#cn-challenge" class="case-nav-link">Challenge</a>
+        <a href="#cn-goals" class="case-nav-link">Goals</a>
+        <a href="#cn-process-exploration" class="case-nav-link">Process &amp; Exploration</a>
+        <a href="#cn-featured-merchants" class="case-nav-link">Featured Merchants</a>
+        <a href="#cn-simplification" class="case-nav-link">Simplification</a>
+        <a href="#cn-final-design" class="case-nav-link">Final Design</a>
+        <a href="#cn-reflection" class="case-nav-link">Reflection</a>
+      </div>
+    </nav>
+
+    <section class="cs-section" id="cn-overview">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">Overview</p>
+          <h2>More content does not always mean a better experience</h2>
+        </div>
+        <div>
+          <p>Xchange is Xure's marketplace surface — search, browse, and filters, spanning listings from public sellers, Xtore merchants, and creators. Rather than adding new layers to it, most of the meaningful work in this project came from deciding what to hold back.</p>
+          <p class="section-intro">This case study is about a decision, not just a deliverable: a section I designed and then chose to remove, and why that removal was the right call for the product.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-context">
+      <div class="container cs-two-col">
+
+        <!-- Left column -->
+        <div class="live-event-heading">
+          <p class="eyebrow-num">Context</p>
+          <h2>What Xchange already had</h2>
+        </div>
+
+        <!-- Right column -->
+        <div class="live-event-content">
+          <p>
+            The original Xchange design included quick-access shortcuts for Orders, Bids, and Chats, alongside the search bar, featured merchants, and product listings. The profile icon was positioned beside the cart, while the filter button was placed beside the search bar. Although these elements provided convenient access to important functions, the overall layout placed more emphasis on utilities than on product discovery.
+          </p>
+
+          <div class="live-event-preview">
+            <img src="../assets/images/xure stuff/Xchange/Original Xchange.webp" alt="Existing Xchange marketplace interface" class="lightbox-image" loading="lazy">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-challenge">
+      <div class="container">
+        <p class="eyebrow-num">Challenge</p>
+        <h2>Making a crowded marketplace easier to scan</h2>
+        <p style="max-width: 70ch;">With three distinct seller types and several filter dimensions competing for space, the goal was to make discovery feel more intuitive — improving how quickly someone could find what they were looking for, and how easily a merchant's listings could surface — without adding more surface area for a user to parse before they reach an item.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-goals">
+      <div class="container">
+        <p class="eyebrow-num">Goals</p>
+        <h2>What "better" needed to mean here</h2>
+        <div class="feature-tiles">
+          <div class="tile"><p style="margin:0;">Improve product discovery without adding visual noise to the browse screen.</p></div>
+          <div class="tile"><p style="margin:0;">Give merchant listings fair visibility inside the existing structure.</p></div>
+          <div class="tile"><p style="margin:0;">Keep search and filtering as the primary, unobstructed path to an item.</p></div>
+          <div class="tile"><p style="margin:0;">Question every addition against whether it earns its place on the screen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-process-exploration">
+      <div class="container">
+        <p class="eyebrow-num">Process &amp; Exploration</p>
+        <h2>Exploring the navigation and hierarchy</h2>
+        <p>
+          I explored different ways to organize marketplace categories, improve
+          filter access, and present co-ownership listings more clearly.
+        </p>
+
+        <div class="feature-tiles xchange-approaches">
+
+          <div class="tile">
+            <h4>Approach 1: Category Tabs for Easier Navigation</h4>
+            <img src="../assets/images/xure stuff/Xchange/Approach 1 Tabs.webp" alt="Marketplace exploration with dedicated category tabs" class="approach-image lightbox-image" loading="lazy">
+            <p>
+              Introduced dedicated tabs for All, Xchange, Auction, and Co-ownership
+              while simplifying the layout to prioritize product discovery.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h4>Approach 2: Improved Filter Accessibility</h4>
+            <img src="../assets/images/xure stuff/Xchange/Approach 2 Tab.webp" alt="Marketplace exploration with filters beside category tabs" class="approach-image lightbox-image" loading="lazy">
+            <p>
+              Moved the filter button beside the category tabs to make filtering
+              easier to find while browsing products.
+            </p>
+          </div>
+
+          <div class="tile">
+            <h4>Approach 3: Dedicated Co-ownership Product Presentation</h4>
+            <img src="../assets/images/xure stuff/Xchange/Approach 3 Tabs.webp" alt="Co-ownership listings with ownership progress indicators" class="approach-image lightbox-image" loading="lazy">
+            <p>
+              Added ownership progress indicators to show the shares already owned
+              and those still available at a glance.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-featured-merchants">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">Featured Merchants</p>
+          <h2>A section I designed, then removed</h2>
+        </div>
+        <div>
+          <p>All exploration added a Featured Merchants section near the top of Xchange, giving merchants a dedicated, higher-visibility spot in the marketplace. It was a reasonable idea on its own — merchants benefit from visibility, and a curated row is a familiar marketplace pattern.</p>
+          <div class="live-event-preview">
+            <img src="../assets/images/xure stuff/Xchange/Featured Merchants.webp" alt="Existing Xchange marketplace interface" class="lightbox-image" loading="lazy">
+          </div>
+          <br>
+          <p>But placed at the top of the browse screen, it pushed search and the item grid further down and added a section a user had to scroll past before reaching what Xchange is actually for: finding and buying items.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-simplification">
+      <div class="container">
+        <p class="eyebrow-num">Simplification</p>
+        <h2>Deciding what to take out</h2>
+        <p style="max-width: 70ch;">Xchange's primary purpose is browsing and discovering items — anything that delays that, even something genuinely useful on its own, works against the core experience.</p>
+        <div class="feature-tiles">
+          <div class="tile">
+            <h4>With Featured Merchants</h4>
+            <p>Adds a dedicated merchant-visibility section above the fold. Helps merchants, but pushes search and browsing down and adds a section to scroll past before reaching items.</p>
+          </div>
+          <div class="tile" style="border-color: var(--color-accent);">
+            <h4>Final direction</h4>
+            <p>Removes the standalone section. Merchant listings stay visible through the existing Xtore filter instead, keeping the browse screen focused on search and discovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-final-design">
+      <div class="container">
+        <p class="eyebrow-num">Final Design</p>
+        <h2>The final marketplace direction</h2>
+
+        <div class="final-design-grid">
+          <div class="final-design-item">
+            <h4>Latest Design on App</h4>
+            <div class="compact-card-shot reveal">
+              <img src="../assets/images/xure stuff/Xchange/Latest Design on App.webp" alt="Latest design of Xchange on the app" class="lightbox-image" loading="lazy">
+            </div>
+          </div>
+
+          <div class="final-design-item">
+            <h4>Filter</h4>
+            <div class="compact-card-shot reveal">
+              <img src="../assets/images/xure stuff/Xchange/Filter.webp" alt="Xchange filter interface" class="lightbox-image" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <p class="section-intro" style="margin-top: 1.5rem;">
+          The final direction kept Xchange's browsing and filtering structure
+          at the center of the screen and did not carry the Featured Merchants
+          section forward. The exploration itself, and the reasoning for setting
+          it aside, was documented and shared as part of the design process.
+        </p>
+      </div>
+    </section>
+
+    <section class="cs-section reflection-section" id="cn-reflection">
+      <div class="container">
+        <p class="eyebrow-num">Reflection</p>
+        <h2>What I learned</h2>
+
+        <div class="feature-tiles reflection-tiles">
+
+          <!-- 01. Core Task -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">01</span>
+            <p>Not every good idea belongs on the same screen as the core task.</p>
+          </div>
+
+          <!-- 02. Design Decisions -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">02</span>
+            <p>Removing something you designed is still a design decision.</p>
+          </div>
+
+          <!-- 03. Information Hierarchy -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">03</span>
+            <p>Information hierarchy is a series of trade-offs, not just a layout choice.</p>
+          </div>
+
+          <!-- 04. Simplicity -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">04</span>
+            <p>A simpler screen can serve more people than a more complete one.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center; padding-top: 2rem;">
+      <div class="container">
+        <a href="xtore.html" class="btn btn-outline" rel="prev"><span class="arrow" aria-hidden="true">&larr;</span> Previous: Xtore</a>
+        <a href="vault.html" class="btn btn-outline" style="margin-left: 1rem;" rel="next">Next: Vault &amp; Co-Ownership <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="../projects.html" class="btn btn-dark" style="margin-left: 1rem;">All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/projects.js"></script>
+</body>
+</html>

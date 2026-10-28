@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Information -->
+  <title>Xtore — Designing the Seller Experience | Ma. Loreen M. Marajas</title>
+  <meta name="description" content="Designing merchant-facing workflows for shipping management, Box Break, and Live Events within the Xure Store mobile experience.">
+
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Xtore — Designing the Seller Experience | Ma. Loreen M. Marajas">
+  <meta property="og:description" content="Explore the design of merchant-facing workflows for shipping management, Box Break, and Live Events in the Xure Store mobile app.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/projects/xtore.html">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts: Gantari + Parkinsans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Case Study Stylesheet -->
+  <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#home" class="logo">
+        <img src="../assets/icons/logo.svg" data-light-src="../assets/icons/logo.svg" data-dark-src="../assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link is-active">Projects</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section cs-hero">
+      <div class="container">
+        <a href="../projects.html" class="breadcrumb"><span class="arrow" aria-hidden="true">&larr;</span> Projects</a>
+
+        <p class="cs-hero-meta"><span>01</span><span aria-hidden="true">/</span><span class="status">Implemented</span></p>
+
+        <h1 class="reveal-onload">Designing the Seller Experience</h1>
+        <p class="sub reveal-onload" style="--load-delay: 0.08s;">Xtore &middot; Xure Store mobile app</p>
+        <p class="desc reveal-onload" style="--load-delay: 0.14s;">
+          Designing merchant-facing workflows for shipping management, Box Break, and Live Events within the Xure Store mobile experience — with particular attention to the states, edge cases, and fallbacks each workflow needed to support.
+        </p>
+
+        <div class="cs-meta-row">
+          <div><p class="k">Role</p><p class="v">UI/UX Intern</p></div>
+          <div><p class="k">Platform</p><p class="v">Mobile app</p></div>
+          <div><p class="k">Tools</p><p class="v">Figma &middot; FigJam</p></div>
+          <div><p class="k">Status</p><p class="v">Implemented</p></div>
+        </div>
+
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/Xtore-thumbnail.webp" alt="Xtore preview" class="lightbox-image">
+        </div>
+      </div>
+    </section>
+    <nav class="case-nav" aria-label="Case study sections">
+      <div class="container case-nav-scroll">
+        <a href="#cn-overview" class="case-nav-link">Overview</a>
+        <a href="#cn-my-role" class="case-nav-link">My Role</a>
+        <a href="#cn-challenge" class="case-nav-link">Challenge</a>
+        <a href="#cn-process" class="case-nav-link">Process</a>
+        <a href="#cn-shipping-management" class="case-nav-link">Shipping Management</a>
+        <a href="#cn-box-break" class="case-nav-link">Box Break</a>
+        <a href="#cn-live-event" class="case-nav-link">Live Event</a>
+        <a href="#cn-key-design-decision" class="case-nav-link">Key Design Decision</a>
+        <a href="#cn-final-design" class="case-nav-link">Final Design</a>
+        <a href="#cn-reflection" class="case-nav-link">Reflection</a>
+      </div>
+    </nav>
+
+    <section class="cs-section" id="cn-overview">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">Overview</p>
+          <h2>The seller side of Xtore</h2>
+        </div>
+        <div>
+          <p>The Xtore mobile app gives merchants quick access to day-to-day store operations — inventory, orders, and live selling — while a separate web dashboard handles more advanced management and configuration. My work focused on the merchant-facing mobile workflows: shipping, Box Break, and Live Events.</p>
+          <p class="section-intro">I worked independently on these areas as one of two UI/UX interns on Xtore; the other intern was responsible for Wallet and Order Transactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-my-role">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">My Role</p>
+          <h2>Contribution</h2>
+        </div>
+        <div>
+                  
+        <div class="pillbar pillbar-tags">
+          <span>User flow exploration</span>
+          <span>Wireframing</span>
+          <span>UI design</span>
+          <span>Interaction design</span>
+          <span>Error &amp; fallback states</span>
+          <span>State management</span>
+          <span>Prototyping</span>
+          <span>Design documentation</span>
+          <span>Developer collaboration</span>
+          <span>Iteration</span>
+        </div>
+
+          <p>I worked directly with my supervisor through the initial design stages. After revisions, the development team reviewed the designs before further refinement and approval — and some work was shared with the CEO for feedback early in development.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-challenge">
+      <div class="container">
+        <p class="eyebrow-num">Challenge</p>
+        <h2>Designing for the workflow, not just the screen</h2>
+        <p style="max-width: 70ch;">Designing merchant tools meant thinking beyond the ideal user journey. Each feature had to account for different states, actions, fallbacks, and possible outcomes — while staying simple enough for merchants to use during actual day-to-day operations, not just in a demo.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-process">
+      <div class="container">
+        <p class="eyebrow-num">Process</p>
+        <h2>From rough flow to implementation</h2>
+        <div class="pillbar">
+          <span>Rough flow</span><span>&rarr;</span><span>Wireframes</span><span>&rarr;</span><span>Exploration</span><span>&rarr;</span><span>High-fidelity UI</span><span>&rarr;</span><span>Review</span><span>&rarr;</span><span>Refinement</span><span>&rarr;</span><span>Implementation</span>
+        </div>
+        <p>Planning started with rough FigJam sketches focused on placement and sequencing — thinking through the end-to-end process before any visual design began. For every feature, I mapped what the merchant would need to do from the start of the task through to completion, before deciding how any single screen should look.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-shipping-management">
+      <div class="container">
+        <p class="eyebrow-num">Shipping Management</p>
+        <h2>Refining how merchants organize shipping categories</h2>
+        <p>Merchants needed a way to create and manage reusable shipping categories while keeping package dimensions, weight, fulfillment methods, and category status easy to review. The design exploration focused on improving how these details were presented and how merchants navigated their shipping configurations.</p>
+        <div class="feature-tiles shipping-approaches">
+          <div class="tile">
+            <h4><b>Approach A</b></h4>
+            <img src="../assets/images/xure stuff/Xtore/1st Draft Shipping Category.webp" alt="Shipping categories grouped by fulfillment method" class="approach-image lightbox-image">
+            <p>Grouped categories by status; fulfillment details were less prominent.</p>
+          </div>
+
+          <div class="tile">
+            <h4><b>Approach B</b></h4>
+            <img src="../assets/images/xure stuff/Xtore/2nd Draft Shipping Category.webp" alt="Shipping categories grouped by status" class="approach-image lightbox-image">
+            <p>Improved detail visibility and scanability with clearer status indicators and filters.</p>
+          </div>
+
+          <div class="tile final-direction">
+            <h4><b>Final direction</b></h4>
+            <img src="../assets/images/xure stuff/Xtore/Approved Page Shipping Category.webp" alt="Shipping categories organized by status and fulfillment method" class="approach-image lightbox-image">
+            <p>Grouped categories by fulfillment method; easier to browse courier delivery and pick-up options.</p>
+          </div>
+        </div>
+        <h4><b>Beyond the happy path</b></h4>
+        <p class="section-intro" style="margin-top: 1.25rem; max-width: 90ch;">Every shipping screen also needed an edit state, a delete confirmation, a success state, an empty state for a merchant with no shipping set up yet, and a fallback for when a shipping update failed to save.</p>
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/xure stuff/Xtore/Edit SC - A.webp" alt="Edit shipping category A version" class="lightbox-image">
+        </div>
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/xure stuff/Xtore/Edit SC - B.webp" alt="Edit shipping category B version" class="lightbox-image">
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-box-break">
+      <div class="container">
+        <p class="eyebrow-num">Box Break</p>
+        <h2>Designing a listing with six possible states</h2>
+        <p>Box Break listings move through a lifecycle with real consequences at each stage — a listing that's "Live" behaves and displays very differently from one that's merely "Upcoming," and a cancelled listing needed to be unmistakably different from both.</p>
+        <div class="pillbar">
+          <span>Draft</span><span>&rarr;</span><span>Upcoming</span><span>&rarr;</span><span>Slots available</span><span>&rarr;</span><span>Live</span><span>&rarr;</span><span>Live ended</span>
+        </div>
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/xure stuff/Xtore/Box Break Status.webp" alt="Box Break Status" class="lightbox-image">
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-live-event">
+      <div class="container cs-two-col">
+
+        <div class="live-event-heading">
+          <p class="eyebrow-num">Live Event</p>
+          <h2>Designing for the seller during a live session</h2>
+        </div>
+
+        <div class="live-event-content">
+          <p>
+            Live Event covers setup, the live interface itself, monitoring,
+            and seller controls — all while the session is actively running,
+            which meant the design had to prioritize glanceable status
+            over dense information.
+          </p>
+
+          <div class="live-event-preview">
+            <img src="../assets/images/xure stuff/Xtore/Live Event Preview.webp" alt="Live Event dashboard for setup and monitoring" class="lightbox-image">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-key-design-decision">
+      <div class="container">
+        <p class="eyebrow-num">Key Design Decision</p>
+        <h2>Designing beyond the happy path</h2>
+        <p style="max-width: 70ch;">One of my biggest learnings from Xtore was that designing a feature doesn't stop at the main successful flow. I had to account for editing, deleting, errors, fallbacks, empty states, and every stage a listing could actually be in.</p>
+        <table class="decision-table">
+          <tr><th>Feature</th><th>States designed</th></tr>
+          <tr><td>Shipping</td><td>Active, Inactive</td></tr>
+          <tr><td>Box Break</td><td>Draft, Upcoming, Slots available, Live, Live ended, Cancelled</td></tr>
+          <tr><td>General</td><td>Empty, Error, Success, Edit, Delete</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-final-design">
+      <div class="container">
+
+        <p class="eyebrow-num">Final Designs</p>
+        <h2>Final Designs</h2>
+
+        <!-- Shipping Category -->
+        <div class="final-gallery-group">
+          <h3>Shipping Category</h3>
+
+          <div class="final-gallery-pair">
+            <figure class="gallery-main">
+              <img src="../assets/images/xure stuff/Xtore/Shipping Category.webp" alt="Shipping category management interface" class="lightbox-image" loading="lazy">
+            </figure>
+
+            <div class="gallery-side">
+              <figure>
+                <img src="../assets/images/xure stuff/Xtore/Shipping Category Flow - A.webp" alt="Shipping Courier Dlow" class="lightbox-image" loading="lazy">
+              </figure>
+
+              <figure>
+                <img src="../assets/images/xure stuff/Xtore/Shipping Category Flow - B.webp" alt="Shipping Pickup Flow" class="lightbox-image" loading="lazy">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box Break -->
+        <div class="final-gallery-group">
+          <h3>Box Break</h3>
+
+          <div class="final-gallery-pair">
+            <figure class="gallery-main">
+              <img src="../assets/images/xure stuff/Xtore/Box Break Flow.webp" alt="Box Break Flow" class="lightbox-image" loading="lazy">
+            </figure>
+
+            <div class="gallery-side">
+              <figure>
+                <img src="../assets/images/xure stuff/Xtore/Edit Box Break.webp" alt="Box Break Edit" class="lightbox-image" loading="lazy">
+              </figure>
+
+              <figure>
+                <img src="../assets/images/xure stuff/Xtore/Box Break Status.webp" alt="Box Break Status" class="lightbox-image" loading="lazy">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Event -->
+        <div class="final-gallery-group">
+          <h3>Live Event (Concept)</h3>
+
+          <div class="final-gallery-live">
+            <figure>
+              <img src="../assets/images/xure stuff/Xtore/Live Event Concept.webp" alt="Live Event concept" class="lightbox-image" loading="lazy">
+            </figure>
+
+            <figure>
+              <img src="../assets/images/xure stuff/Xtore/Live Box Break Concept.webp" alt="Live Box Break concept" class="lightbox-image" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+        <p class="section-intro final-gallery-note">
+          These designs were implemented into the Xtore application.
+          Because Xtore is a merchant-only surface, the experience isn't
+          publicly accessible to every Xure user.
+        </p>
+
+      </div>
+    </section>
+    
+    <section class="cs-section reflection-section" id="cn-reflection">
+      <div class="container">
+        <p class="eyebrow-num">Reflection</p>
+        <h2>What I learned</h2>
+
+        <div class="feature-tiles reflection-tiles">
+
+          <!-- 01. User Journey -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">01</span>
+            <p> Think through the complete user journey, not just the ideal path.</p>
+          </div>
+
+          <!-- 02. Edge Cases -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">02</span>
+            <p> Design for edge cases and fallbacks as a first-class part of the work.</p>
+          </div>
+
+          <!-- 03. UI States -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">03</span>
+            <p> Consider every state a screen can be in before finalizing its UI.</p>
+          </div>
+
+          <!-- 04. Operational Workflows -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">04</span>
+            <p> Make complex operational workflows feel simple to use daily.</p>
+          </div>
+
+          <!-- 05. Developer Collaboration -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">05</span>
+            <p> Collaborate closely with developers who have to build each state.</p>
+          </div>
+
+          <!-- 06. Iteration -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">06</span>
+            <p> Treat revisions as part of the design process, not a detour from it.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center; padding-top: 2rem;">
+      <div class="container">
+        <a href="xchange.html" class="btn btn-outline" rel="next">Next: Xchange <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="../projects.html" class="btn btn-dark" style="margin-left: 1rem;">All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/projects.js"></script>
+</body>
+</html>

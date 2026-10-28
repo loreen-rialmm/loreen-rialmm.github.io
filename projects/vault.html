@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Information -->
+  <title>Vault &amp; Co-Ownership — Designing Digital Ownership | Ma. Loreen M. Marajas</title>
+  <meta name="description" content="A concept exploring how a physical collectible could become a vaulted, trackable, shareable digital asset.">
+
+  <!-- Open Graph: Social Media Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vault &amp; Co-Ownership — Designing Digital Ownership | Ma. Loreen M. Marajas">
+  <meta property="og:description" content="Explore a digital ownership concept for vaulting physical collectibles, tracking assets, and enabling co-ownership.">
+  <meta property="og:url" content="https://loreen-rialmm.github.io/projects/vault.html">
+  <meta property="og:image" content="https://loreen-rialmm.github.io/assets/images/portfolio-preview.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdffee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10130a" media="(prefers-color-scheme: dark)">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts: Gantari + Parkinsans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700;800;900&family=Parkinsans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Case Study Stylesheet -->
+  <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#home" class="logo">
+        <img src="../assets/icons/logo.svg" data-light-src="../assets/icons/logo.svg" data-dark-src="../assets/icons/logo-dark.svg" alt="MLM logo" class="logo-img">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+        <li><a href="../projects.html" class="nav-link is-active">Projects</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label">Light</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section cs-hero">
+      <div class="container">
+        <a href="../projects.html" class="breadcrumb"><span class="arrow" aria-hidden="true">&larr;</span> Projects</a>
+
+        <p class="cs-hero-meta"><span>02</span><span aria-hidden="true">/</span><span class="status">Concept</span></p>
+
+        <h1 class="reveal-onload">Designing Digital Ownership</h1>
+        <p class="sub reveal-onload" style="--load-delay: 0.08s;">Xure Vault &amp; Co-Ownership &middot; Concept, not launched</p>
+        <p class="desc reveal-onload" style="--load-delay: 0.14s;">
+          Vault explored how a physical collectible could become a vaulted, trackable, and potentially shareable digital asset — and how buying a fraction of something could be made to feel as clear as buying all of it. Unlike Xtore and Xchange, there was no existing process to redesign; the process had to be invented.
+        </p>
+
+        <div class="cs-meta-row">
+          <div><p class="k">Role</p><p class="v">UI/UX Intern</p></div>
+          <div><p class="k">Platform</p><p class="v">Mobile app</p></div>
+          <div><p class="k">Tools</p><p class="v">FigJam &middot; Figma</p></div>
+          <div><p class="k">Status</p><p class="v">Concept</p></div>
+        </div>
+
+        <div class="concept-note">
+          <span aria-hidden="true">&#9432;</span>
+          <span><b>This is a concept project.</b> Vault &amp; Co-Ownership was explored and designed during the internship but was not implemented or launched. Screens shown here are design explorations, not shipped product.</span>
+        </div>
+
+        <div class="compact-card-shot reveal">
+          <img src="../assets/images/Vault-thumbnail.webp" alt="Vault preview" class="lightbox-image">
+        </div>
+      </div>
+    </section>
+    <nav class="case-nav" aria-label="Case study sections">
+      <div class="container case-nav-scroll">
+        <a href="#cn-overview" class="case-nav-link">Overview</a>
+        <a href="#cn-context" class="case-nav-link">Context</a>
+        <a href="#cn-my-role" class="case-nav-link">My Role</a>
+        <a href="#cn-challenge" class="case-nav-link">Challenge</a>
+        <a href="#cn-research" class="case-nav-link">Research</a>
+        <a href="#cn-process" class="case-nav-link">Process</a>
+        <a href="#cn-vaulting" class="case-nav-link">Vaulting</a>
+        <a href="#cn-co-ownership" class="case-nav-link">Co-Ownership</a>
+        <a href="#cn-key-design-decisions" class="case-nav-link">Key Design Decisions</a>
+        <a href="#cn-final-concept" class="case-nav-link">Final Concept</a>
+        <a href="#cn-reflection" class="case-nav-link">Reflection</a>
+      </div>
+    </nav>
+
+    <section class="cs-section" id="cn-overview">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">Overview</p>
+          <h2>How do you design a product system that doesn't exist yet?</h2>
+        </div>
+        <div>
+          <p>Vault imagined a new kind of ownership inside Xure: a physical collectible could be vaulted — verified, stored, and tracked — then optionally listed for co-ownership, where more than one person could hold a share of the same item. There was no prior version of this experience to iterate on; the process, the vocabulary, and the flows all had to be defined from scratch.</p>
+          <p class="section-intro">This is the most conceptual case study in the portfolio, and the most structural: the interesting problems were less about individual screens and more about how the pieces of an entirely new system fit together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-context">
+      <div class="container">
+        <p class="eyebrow-num">Context</p>
+        <h2>Where Vault sits in Xure</h2>
+        <p style="max-width: 70ch;">Xure already had a marketplace (Xchange) and a merchant tool (Xtore). Vault introduced a third kind of relationship to an item: not just listing it for sale or buying it outright, but storing it, verifying it, and — if the owner chose — sharing ownership of it with others. The experience needed to connect back into Xchange for listing and browsing co-ownership shares, without feeling like a bolted-on separate app.</p>
+        <div class="pillbar">
+          <div class="pillbar-item">
+            <span class="pillbar-title">Xtore</span>
+            <span class="pillbar-description">Merchant tools</span>
+          </div>
+
+          <span class="pillbar-plus">+</span>
+
+          <div class="pillbar-item pillbar-featured">
+            <span class="pillbar-title">Vault</span>
+            <span class="pillbar-description">New system</span>
+          </div>
+
+          <span class="pillbar-plus">+</span>
+
+          <div class="pillbar-item">
+            <span class="pillbar-title">Xchange</span>
+            <span class="pillbar-description">Marketplace</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-my-role">
+      <div class="container cs-two-col">
+        <div>
+          <p class="eyebrow-num">My Role</p>
+          <h2>Contribution</h2>
+        </div>
+        <div>
+          <div class="pillbar pillbar-tags">
+            <span>Competitor research</span>
+            <span>FigJam exploration</span>
+            <span>System structuring</span>
+            <span>User flow design</span>
+            <span>UI design</span>
+            <span>Owner &amp; co-owner scenarios</span>
+            <span>State &amp; scenario mapping</span>
+            <span>Xchange integration</span>
+          </div>
+          <p>I began with competitor research and open FigJam brainstorming before moving into Figma — mapping the shape of the system before designing any individual screen. Areas I worked through included Vault Access, the Vault Dashboard, Vaulted Items, Vault Requests, the Marketplace connection, Add Item flows, Vault Submission, Shipping/Vaulting, Certificate Status, Vault Payment, Xpert Appraisal Requests, Fractional Ownership, Co-Ownership Listings, Vault History, and both the Seller and Buyer points of view.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-challenge">
+      <div class="container">
+        <p class="eyebrow-num">Challenge</p>
+        <h2>Three problems, at once</h2>
+        <div class="feature-tiles">
+          <div class="tile"><p style="margin:0;">Building a product system where an established process did not already exist.</p></div>
+          <div class="tile"><p style="margin:0;">Introducing a large new feature into Xure without making the app feel drastically different.</p></div>
+          <div class="tile"><p style="margin:0;">Presenting complex ownership information clearly, without overwhelming the user.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-research">
+      <div class="container cs-two-col">
+
+        <!-- Left column -->
+        <div class="research-column">
+          <div class="research-text">
+            <p class="eyebrow-num">Research</p>
+            <h2>Starting from what already exists</h2>
+          </div>
+
+          <div class="research-preview">
+            <img src="../assets/images/xure stuff/Vault/vault-brainstorm.webp" alt="FigJam overview brainstorm" class="lightbox-image">
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="research-column">
+          <div class="research-text">
+            <p>
+              Since Vault had no internal precedent, I looked outward first.
+              I used Fanatics Collect as a competitive reference point for how
+              a vaulted-collectibles experience could be structured, then ran
+              open brainstorming in FigJam to adapt those ideas to Xure's
+              context before any UI work began.
+            </p>
+          </div>
+
+          <div class="research-preview">
+            <img src="../assets/images/xure stuff/Vault/vault-closeup.webp" alt="FigJam brainstorming closeup" class="lightbox-image">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-process">
+      <div class="container">
+        <p class="eyebrow-num">Process</p>
+        <h2>Structuring the system before the screens</h2>
+        <p>The overall experience was structured around three connected stages, each with its own flows, states, and decisions:</p>
+        <div class="feature-tiles cols-3">
+          <div class="tile">
+            <h4>1. Vaulting</h4>
+            <p>An owner submits an item — manually or from existing inventory — has it shipped and verified, and receives a certificate reflecting its status in the vault.</p>
+          </div>
+          <div class="tile">
+            <h4>2. Listing for Co-Ownership</h4>
+            <p>A vaulted item's owner can list it for fractional ownership, defining how the item is shared and surfacing that listing through Xchange.</p>
+          </div>
+          <div class="tile">
+            <h4>3. Buying &amp; Managing Co-Ownership</h4>
+            <p>Buyers acquire a share of the item and manage their stake alongside other co-owners, with ownership history tracked over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="cs-section" id="cn-vaulting">
+        <div class="container">
+          <p class="eyebrow-num">Vaulting</p>
+          <h2>Getting an item into the vault</h2>
+          <p>
+            The submission flow needed clear progress indicators, since vaulting
+            an item involves several real-world steps — shipping, appraisal, and
+            certification — that happen outside the app and take time.
+          </p>
+
+          <div class="feature-tiles vaulting-approaches">
+
+            <div class="tile">
+              <h4>Add Manually</h4>
+              <img src="../assets/images/xure stuff/Vault/Vault Add Manually.webp" alt="Vaulting flow for manually adding an item" class="approach-image lightbox-image" loading="lazy">
+              <p>
+                Allows owners to submit items that are not already listed in Xure
+                by entering the item details directly.
+              </p>
+            </div>
+
+            <div class="tile">
+              <h4>Add from Inventory</h4>
+              <img src="../assets/images/xure stuff/Vault/Vault Inventory.webp" alt="Vaulting flow for selecting an existing inventory item" class="approach-image lightbox-image" loading="lazy">
+              <p>
+                Lets owners select items already tracked in Xure, reducing the
+                need to enter the same information again.
+              </p>
+            </div>
+
+            <div class="tile">
+              <h4>Empty State</h4>
+              <img src="../assets/images/xure stuff/Vault/Vault Empty State.webp" alt="Empty state introducing the vaulting feature" class="approach-image lightbox-image" loading="lazy">
+              <p>
+                Introduces the vaulting feature, explains its purpose, and provides
+                a clear starting point for adding an item instead of leaving users
+                at an empty screen.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    <section class="cs-section" id="cn-co-ownership">
+      <div class="container">
+        <p class="eyebrow-num">Co-Ownership</p>
+        <h2>Owner and co-owner see different things</h2>
+        <p>
+          Because the same item could be viewed by the person who listed it
+          and the people who bought a share of it, the seller and buyer
+          perspectives needed distinct views built on a shared ownership model.
+        </p>
+
+        <div class="feature-tiles co-ownership-tiles">
+
+          <!-- Seller POV -->
+          <div class="tile co-ownership-tile">
+            <h4>Seller POV</h4>
+
+            <p>The owner lists a vaulted item for fractional ownership, sets how it's shared, and tracks incoming requests and current co-owners.</p>
+
+            <img src="../assets/images/xure stuff/Vault/Seller POV.webp" alt="Seller co-ownership interface" class="co-ownership-image lightbox-image" loading="lazy">
+
+            <ul>
+              <li>Create co-ownership listing</li>
+              <li>Review vault requests</li>
+              <li>Monitor current co-owners</li>
+              <li>View vault &amp; sale history</li>
+            </ul>
+          </div>
+
+          <!-- Buyer POV -->
+          <div class="tile co-ownership-tile">
+            <h4>Buyer POV</h4>
+
+            <p>The buyer browses co-ownership listings through Xchange, buys a share, and manages that stake alongside the item's other owners.</p>
+
+            <img src="../assets/images/xure stuff/Vault/Buyer POV.webp" alt="Buyer co-ownership interface" class="co-ownership-image lightbox-image" loading="lazy">
+
+            <ul>
+              <li>Browse via Xchange integration</li>
+              <li>Buy a fractional share</li>
+              <li>Manage owned stake</li>
+              <li>View shared ownership history</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="cn-key-design-decisions">
+      <div class="container">
+        <p class="eyebrow-num">Key Design Decisions</p>
+        <h2>Making complexity feel manageable</h2>
+        <p style="max-width: 70ch;">The hardest part of Vault wasn't any single screen — it was deciding how much ownership information a person needed to see at once, and when.</p>
+        <table class="decision-table">
+          <tr><th>Decision</th><th>Why</th></tr>
+          <tr><td>Step indicators throughout submission</td><td>Vaulting spans real-world time; users need to know where they are in a process that doesn't finish instantly.</td></tr>
+          <tr><td>Separate Seller / Buyer POV</td><td>The same item means something different depending on whether you listed it or bought into it.</td></tr>
+          <tr><td>Vault connects to Xchange rather than duplicating it</td><td>Keeps one marketplace surface instead of introducing a second, competing one.</td></tr>
+          <tr><td>Certificate status shown before ownership detail</td><td>Trust in the item's verification needed to be established before asking users to reason about shares.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    
+    <section class="cs-section" id="cn-final-concept">
+      <div class="container">
+        <p class="eyebrow-num">Final Concept</p>
+        <h2>The Vault system, end to end</h2>
+
+        <div class="vault-design-grid">
+
+          <article class="vault-design-card vault-design-featured">
+            <h3>Vault Dashboard</h3>
+            <img
+              src="../assets/images/xure stuff/Vault/Vault Dashboard.webp"
+              alt="Vault dashboard overview"
+              class="lightbox-image vault-dashboard-image"
+              loading="lazy"
+            >
+            <p>
+              A central dashboard for tracking vaulted items and ownership activity.
+            </p>
+          </article>
+
+          <article class="vault-design-card">
+            <h3>Listing for Co-Ownership</h3>
+            <img
+              src="../assets/images/xure stuff/Vault/Listing for Co-ownership.webp"
+              alt="Co-ownership listing design"
+              class="lightbox-image"
+              loading="lazy"
+            >
+            <p>
+              Lets owners list their items and define available ownership shares.
+            </p>
+          </article>
+
+          <article class="vault-design-card">
+            <h3>Buying Co-Ownership</h3>
+            <img
+              src="../assets/images/xure stuff/Vault/Buying co-ownership.webp"
+              alt="Co-ownership buying flow"
+              class="lightbox-image"
+              loading="lazy"
+            >
+            <p>
+              Guides buyers through reviewing and purchasing fractional ownership.
+            </p>
+          </article>
+
+          <article class="vault-design-card">
+            <h3>Redeem Item</h3>
+            <img
+              src="../assets/images/xure stuff/Vault/Redeem Item.webp"
+              alt="Vaulted item redemption flow"
+              class="lightbox-image"
+              loading="lazy"
+            >
+            <p>
+              Shows how owners can request the return of their vaulted items.
+            </p>
+          </article>
+
+          <article class="vault-design-card">
+            <h3>Vault History</h3>
+            <img
+              src="../assets/images/xure stuff/Vault/Vault History.webp"
+              alt="Vault history and transaction tabs"
+              class="lightbox-image"
+              loading="lazy"
+            >
+            <p>
+              Organizes past sales, transfers, and co-ownership activity.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="cs-section reflection-section" id="cn-reflection">
+      <div class="container">
+        <p class="eyebrow-num">Reflection</p>
+        <h2>What I learned</h2>
+
+        <div class="feature-tiles reflection-tiles">
+
+          <!-- 01. System Structure -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">01</span>
+            <p>Structure the system before you design any individual screen.</p>
+          </div>
+
+          <!-- 02. Product Consistency -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">02</span>
+            <p>A new feature should feel native to the product it's joining, not bolted on.</p>
+          </div>
+
+          <!-- 03. Progress and Status -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">03</span>
+            <p>Progress and status matter most when a process spans real-world time.</p>
+          </div>
+
+          <!-- 04. Different User Perspectives -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">04</span>
+            <p>The same object can need two different interfaces depending on who's looking at it.</p>
+          </div>
+
+          <!-- 05. Competitive Research -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">05</span>
+            <p>Competitive research is a starting point, not a template to copy.</p>
+          </div>
+
+          <!-- 06. Specific Screen Design -->
+          <div class="tile reflection-tile">
+            <span class="reflection-number">06</span>
+            <p>Conceptual work still needs to resolve down to real, specific screens.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center; padding-top: 2rem;">
+      <div class="container">
+        <a href="xchange.html" class="btn btn-outline" rel="prev"><span class="arrow" aria-hidden="true">&larr;</span> Previous: Xchange</a>
+        <a href="website.html" class="btn btn-outline" style="margin-left: 1rem;" rel="next">Next: Xure Website <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="../projects.html" class="btn btn-dark" style="margin-left: 1rem;">All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Loreen Marajas</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/projects.js"></script>
+</body>
+</html>
